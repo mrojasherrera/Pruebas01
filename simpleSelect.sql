@@ -1,1 +1,1 @@
-select * from customer;
+select customer_num, fname, lname from customer;
