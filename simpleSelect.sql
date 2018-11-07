@@ -1,2 +1,3 @@
 select customer_num, fname, lname from customer
-	where state = 'Ca';
+	where state = 'Ca'
+	order by lname, fname;
