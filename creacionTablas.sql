@@ -1,6 +1,7 @@
 select * from gd_esquema.Maestra
 
---if(exist)
+if exist(Clinte)
+drop cliente
 
 
 
