@@ -1,8 +1,16 @@
 select * from gd_esquema.Maestra
 
-if exist(Clinte)
-drop cliente
+IF OBJECT_ID ('dbo.new_employees', 'U') IS NOT NULL  
+   DROP TABLE new_employees;  
+GO  
 
+--
+
+if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'nombre_esquema'))
+  begin
+      exec ('CREATE SCHEMA[NOMBRE_ESQUEMA] AUTHORIZATION [nombre_usuario]');
+      print 'exquema creado';
+    end
 
 
 create table Cliente
