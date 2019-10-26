@@ -141,7 +141,7 @@ IF OBJECT_ID ('LOS_BORBOTONES.Cupon', 'U') IS NOT NULL
 GO
 
 create table LOS_BORBOTONES.Cupon
-(Cupo_Id int IDENTITY,
+(Cupon_Id int IDENTITY,
 Oferta_Codigo nvarchar(50),
 Cli_Dni numeric(18, 0),
 Cli_Dest_Nombre nvarchar(255),
