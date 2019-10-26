@@ -14,4 +14,4 @@ insert into LOS_BORBOTONES.Proveedor
 		from gd_esquema.Maestra
 		where Provee_RS is not null
 
-
+--
