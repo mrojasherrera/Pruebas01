@@ -1,8 +1,6 @@
 /********* ESPECIFICACION DE LA BASE DE DATOS QUE SE VA A USAR *********/
 USE GD2C2019
 
-select * from gd_esquema.Maestra
-
 IF OBJECT_ID ('dbo.new_employees', 'U') IS NOT NULL  
    DROP TABLE new_employees;  
 GO  
