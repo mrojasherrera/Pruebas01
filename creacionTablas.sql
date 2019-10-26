@@ -1,3 +1,6 @@
+/********* ESPECIFICACION DE LA BASE DE DATOS QUE SE VA A USAR *********/
+USE GD2C2019
+
 select * from gd_esquema.Maestra
 
 IF OBJECT_ID ('dbo.new_employees', 'U') IS NOT NULL  
@@ -5,13 +8,16 @@ IF OBJECT_ID ('dbo.new_employees', 'U') IS NOT NULL
 GO  
 
 --
-
+/********* SE CREA EL ESQUEMA *********/
 if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'nombre_esquema'))
   begin
       exec ('CREATE SCHEMA[NOMBRE_ESQUEMA] AUTHORIZATION [nombre_usuario]');
       print 'exquema creado';
     end
 
+/***************************************/
+/********* CREACION DE TABLAS *********/
+/***************************************/
 
 create table Cliente
 (Cli_Nombre nvarchar(255),
