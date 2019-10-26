@@ -16,10 +16,10 @@ if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS
 /***************************************/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Cliente', 'U') IS NOT NULL  
-   DROP TABLE Cliente;  
+   DROP TABLE LOS_BORBOTONES.Cliente;  
 GO
 
-create table Cliente
+create table LOS_BORBOTONES.Cliente
 (Cli_Nombre nvarchar(255),
 Cli_Apellido nvarchar(255),
 Cli_Dni numeric(18, 0),
@@ -37,10 +37,10 @@ Habilitado bit DEFAULT(1)
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Proveedor', 'U') IS NOT NULL  
-   DROP TABLE Proveedor;  
+   DROP TABLE LOS_BORBOTONES.Proveedor;  
 GO
 
-create table Proveedor
+create table LOS_BORBOTONES.Proveedor
 (Provee_RS nvarchar(100),
 Provee_Dom nvarchar(100),
 Provee_Ciudad nvarchar(255),
@@ -56,10 +56,10 @@ User_name nvarchar(50)
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Usuario', 'U') IS NOT NULL  
-   DROP TABLE Usuario;  
+   DROP TABLE LOS_BORBOTONES.Usuario;  
 GO
 
-create table Usuario
+create table LOS_BORBOTONES.Usuario
 (User_name nvarchar(50),
 Password nvarchar(32),
 Habilitado bit DEFAULT(1),
@@ -68,10 +68,10 @@ Cant_Log_Fallidos tinyint
 
 ---
 IF OBJECT_ID ('LOS_BORBOTONES.Rol_Usuario', 'U') IS NOT NULL  
-   DROP TABLE Rol_Usuario;  
+   DROP TABLE LOS_BORBOTONES.Rol_Usuario;  
 GO
 
-create table Rol_Usuario
+create table LOS_BORBOTONES.Rol_Usuario
 (User_name nvarchar(50),
 Rol_Id INT
 );
@@ -79,10 +79,10 @@ Rol_Id INT
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Role', 'U') IS NOT NULL  
-   DROP TABLE Role;  
+   DROP TABLE LOS_BORBOTONES.Role;  
 GO
 
-create table Role
+create table LOS_BORBOTONES.Role
 (Rol_Id  int IDENTITY,
 Rol_Nombre nvarchar(255)
 );
@@ -90,10 +90,10 @@ Rol_Nombre nvarchar(255)
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Func_Rol', 'U') IS NOT NULL  
-   DROP TABLE Func_Rol;  
+   DROP TABLE LOS_BORBOTONES.Func_Rol;  
 GO
 
-Create table Func_Rol
+Create table LOS_BORBOTONES.Func_Rol
 (Rol_Id int,
 Func_Id int
 );
@@ -101,10 +101,10 @@ Func_Id int
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Funcionalidad', 'U') IS NOT NULL  
-   DROP TABLE Funcionalidad;  
+   DROP TABLE LOS_BORBOTONES.Funcionalidad;  
 GO
 
-Create table Funcionalidad
+Create table LOS_BORBOTONES.Funcionalidad
 (Func_Id int IDENTITY,
 Func_Nombre nvarchar(255)
 );
@@ -112,9 +112,9 @@ Func_Nombre nvarchar(255)
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Carga', 'U') IS NOT NULL  
-   DROP TABLE Carga;  
+   DROP TABLE LOS_BORBOTONES.Carga;  
 GO
-create table Carga
+create table LOS_BORBOTONES.Carga
 (Carga_Id int IDENTITY,
 Cli_Dni numeric(18, 0),
 Carga_Credito numeric(18, 2),
@@ -126,10 +126,10 @@ Datos_Tarjeta nvarchar(255)
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.TipoDePago', 'U') IS NOT NULL  
-   DROP TABLE TipoDePago;  
+   DROP TABLE LOS_BORBOTONES.TipoDePago;  
 GO
 
-create table TipoDePago
+create table LOS_BORBOTONES.TipoDePago
 (Tipo_Pago_Id int IDENTITY,
 Tipo_Pago_Desc nvarchar(100)
 );
@@ -137,10 +137,10 @@ Tipo_Pago_Desc nvarchar(100)
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Cupon', 'U') IS NOT NULL  
-   DROP TABLE Cupon;  
+   DROP TABLE LOS_BORBOTONES.Cupon;  
 GO
 
-create table Cupon
+create table LOS_BORBOTONES.Cupon
 (Cupo_Id int IDENTITY,
 Oferta_Codigo nvarchar(50),
 Cli_Dni numeric(18, 0),
@@ -161,10 +161,10 @@ Factura_Nro numeric(18, 0)
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Factura', 'U') IS NOT NULL  
-   DROP TABLE Factura;  
+   DROP TABLE LOS_BORBOTONES.Factura;  
 GO
 
-create table Factura
+create table LOS_BORBOTONES.Factura
 (Factura_Nro numeric(18, 0),
 Factura_Fecha datetime,
 Factura_Importe numeric(18, 2)
@@ -173,10 +173,10 @@ Factura_Importe numeric(18, 2)
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Oferta', 'U') IS NOT NULL  
-   DROP TABLE Oferta;  
+   DROP TABLE LOS_BORBOTONES.Oferta;  
 GO
 
-create table Oferta
+create table LOS_BORBOTONES.Oferta
 (Oferta_Codigo nvarchar(50),
 Oferta_Precio numeric(18, 2),
 Oferta_PrecioFicticio numeric(18, 2),
