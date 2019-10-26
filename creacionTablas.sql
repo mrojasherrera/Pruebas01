@@ -179,7 +179,7 @@ GO
 create table LOS_BORBOTONES.Oferta
 (Oferta_Codigo nvarchar(50),
 Oferta_Precio numeric(18, 2),
-Oferta_PrecioFicticio numeric(18, 2),
+Oferta_Precio_Ficticio numeric(18, 2),
 Oferta_Fecha datetime,
 Oferta_Fecha_Venc datetime,
 Oferta_Cantidad numeric(18, 0),
