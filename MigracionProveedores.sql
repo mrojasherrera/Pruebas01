@@ -4,7 +4,7 @@ version: 1.0
 fecha 2019-10-26
 */
 use GD2C2019
-  
+
 
 insert into LOS_BORBOTONES.Proveedor
 	(Provee_RS, Provee_Dom, Provee_Ciudad, Provee_Telefono, Provee_CUIT,
