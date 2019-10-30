@@ -157,7 +157,7 @@ Oferta_Entregado_Fecha datetime,
 Oferta_Fecha_Venc datetime,
 Factura_Nro numeric(18, 0)
 );
-
+  
 ---
 
 IF OBJECT_ID ('LOS_BORBOTONES.Factura', 'U') IS NOT NULL  

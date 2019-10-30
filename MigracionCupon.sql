@@ -4,7 +4,7 @@ Version V1.0
 fecha: 2019-10-26
 */
 use GD2C2019
-
+  
 
 insert into LOS_BORBOTONES.Cupon (
 	Oferta_Codigo, Cli_Dni, Cli_Dest_Nombre, Cli_Dest_Apellido, Cli_Dest_Dni,
