@@ -154,7 +154,7 @@ Cli_Dest_Fecha_Nac datetime,
 Cli_Dest_Ciudad nvarchar(255),
 Oferta_Fecha_Compra datetime,
 Oferta_Entregado_Fecha datetime,
-Cupon_Fecha_Vto datetime,
+Oferta_Fecha_Venc datetime,
 Factura_Nro numeric(18, 0)
 );
 
