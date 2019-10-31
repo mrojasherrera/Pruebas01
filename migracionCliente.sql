@@ -30,3 +30,11 @@ insert into LOS_BORBOTONES.Carga (Cli_Dni, Carga_Credito, Carga_Fecha, Tipo_Pago
 select Cli_Dni, Carga_Credito, Carga_Fecha, Tipo_Pago_Id 
 from gd_esquema.Maestra g join LOS_BORBOTONES.TipoDePago t on (g.Tipo_Pago_Desc = t.Tipo_Pago_Desc)
 
+/***Migracion factura***/
+
+insert into LOS_BORBOTONES.Factura
+(Factura_Nro, Factura_Fecha, Factura_Importe)
+select Factura_Nro, Factura_Fecha, SUM(Oferta_Cantidad*Oferta_Precio) from gd_esquema.Maestra
+where Oferta_Fecha_Compra is not null AND Factura_Nro is not null
+group by Factura_Nro, Factura_Fecha
+order by Factura_Nro
