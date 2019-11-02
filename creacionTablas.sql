@@ -311,7 +311,7 @@ PRIMARY KEY (Carga_Id);
 /*** PK TipoDePago ***/
 ALTER TABLE LOS_BORBOTONES.TipoDePago
 ADD CONSTRAINT PK_TipoDePago
-PRIMARY KEY (TipoDePago_Id);
+PRIMARY KEY (Tipo_De_Pago_Id);
 
 /*** PK Cupon ***/
 ALTER TABLE LOS_BORBOTONES.Cupon
