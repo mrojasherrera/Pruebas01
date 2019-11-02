@@ -311,7 +311,7 @@ PRIMARY KEY (Carga_Id);
 /*** PK TipoDePago ***/
 ALTER TABLE LOS_BORBOTONES.TipoDePago
 ADD CONSTRAINT PK_TipoDePago
-PRIMARY KEY (Tipo_De_Pago_Id);
+PRIMARY KEY (Tipo_Pago_Id);
 
 /*** PK Cupon ***/
 ALTER TABLE LOS_BORBOTONES.Cupon
@@ -336,12 +336,12 @@ PRIMARY KEY (Cli_DNI);
 /*** FK tabla Cliente ***/
 ALTER TABLE LOS_BORBOTONES.Cliente
 ADD CONSTRAINT FK_Cliente
-FOREIGN KEY (user_name) REFERENCES LOS_BORBOTONES.Ususario(user_name);
+FOREIGN KEY (user_name) REFERENCES LOS_BORBOTONES.Usuario(user_name);
 
 /*** FK tabla Proveedor ***/
 ALTER TABLE LOS_BORBOTONES.Proveedor
 ADD CONSTRAINT FK_Proveedor
-FOREIGN KEY (user_name) REFERENCES LOS_BORBOTONES.Ususario(user_name);
+FOREIGN KEY (user_name) REFERENCES LOS_BORBOTONES.Usuario(user_name);
 
 /*** FK tabla Carga ***/
 ALTER TABLE LOS_BORBOTONES.Carga
