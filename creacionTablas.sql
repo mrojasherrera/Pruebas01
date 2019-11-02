@@ -12,7 +12,7 @@ if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS
 
 /***************************************/
 /********* CREACION DE TABLAS *********/
-/***************************************/
+/*************************************/
 
 /***Tabla Cliente***/
 
@@ -187,7 +187,9 @@ Provee_CUIT nvarchar(20)
 )
 
 
-/* *********** MIGRACIÓN DE DATOS ********* */
+/***************************************/
+/********* MIGRACIÓN DE DATOS *********/
+/*************************************/
 
 /*** Migracion tabla cliente ***/
 
@@ -267,7 +269,10 @@ insert into LOS_BORBOTONES.Cupon (
 		where Oferta_Codigo is not null;
 
 
-/*** Creacion de Constrain ***/
+/******************************************/
+/********* CREACION DE CONSTRAIN *********/
+/****************************************/
+
 /*
 Cliente
 	Proveedor
@@ -311,3 +316,16 @@ PRIMARY KEY (User_name, Rol_Id);
 ALTER TABLE LOS_BORBOTONES.
 ADD CONSTRAINT PK_
 PRIMARY KEY ();
+
+
+
+
+
+
+
+
+
+/*** FK tabla Cliente ***/
+ALTER TABLE LOS_BORBOTONES.Cliente
+ADD CONSTRAINT FK_Cliente
+FOREIGN KEY (user_name) REFERENCES LOS_BORBOTONES.Ususario(user_name);
