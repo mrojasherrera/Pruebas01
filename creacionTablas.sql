@@ -1,8 +1,6 @@
 /********* ESPECIFICACION DE LA BASE DE DATOS QUE SE VA A USAR *********/
 USE GD2C2019
 
-  
-
 --
 /********* SE CREA EL ESQUEMA *********/
 if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS_BORBOTONES'))
@@ -11,9 +9,12 @@ if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS
       print 'exquema creado';
     end
 
+
 /***************************************/
 /********* CREACION DE TABLAS *********/
 /***************************************/
+
+/***Tabla Cliente***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Cliente', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Cliente;  
@@ -22,7 +23,7 @@ GO
 create table LOS_BORBOTONES.Cliente
 (Cli_Nombre nvarchar(255),
 Cli_Apellido nvarchar(255),
-Cli_Dni numeric(18, 0),
+Cli_Dni numeric(18, 0) NOT NULL,
 Cli_Direccion nvarchar(255),
 Cli_Telefono numeric(18, 0),
 Cli_Mail nvarchar(255),
@@ -34,18 +35,18 @@ Cli_Saldo numeric(18,2),
 Habilitado bit DEFAULT(1)
 );
 
----
+
+/***Tabla Proveedor***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Proveedor', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Proveedor;  
 GO
-
 create table LOS_BORBOTONES.Proveedor
 (Provee_RS nvarchar(100),
 Provee_Dom nvarchar(100),
 Provee_Ciudad nvarchar(255),
 Provee_Telefono numeric(18, 0),
-Provee_CUIT nvarchar(20),
+Provee_CUIT nvarchar(20) NOT NULL,
 Provee_Rubro nvarchar(100),
 Provee_Mail nvarchar(255),
 Provee_Cod_postal nvarchar(10),
@@ -53,69 +54,68 @@ Provee_Nombre_Contacto nvarchar(255),
 User_name nvarchar(50)
 );
 
----
+
+/***Tabla Ususario***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Usuario', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Usuario;  
 GO
-
 create table LOS_BORBOTONES.Usuario
-(User_name nvarchar(50),
+(User_name nvarchar(50) NOT NULL,
 Password nvarchar(32),
 Habilitado bit DEFAULT(1),
 Cant_Log_Fallidos tinyint
 );
 
----
+/***Tabla Rol_Usuario***/
+
 IF OBJECT_ID ('LOS_BORBOTONES.Rol_Usuario', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Rol_Usuario;  
 GO
-
 create table LOS_BORBOTONES.Rol_Usuario
 (User_name nvarchar(50),
 Rol_Id INT
 );
 
----
 
+/***Tabla Role***/
 IF OBJECT_ID ('LOS_BORBOTONES.Role', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Role;  
 GO
-
 create table LOS_BORBOTONES.Role
-(Rol_Id  int IDENTITY,
+(Rol_Id  int IDENTITY NOT NULL,
 Rol_Nombre nvarchar(255)
 );
 
----
 
+/***Tabla Func_Rol***/
 IF OBJECT_ID ('LOS_BORBOTONES.Func_Rol', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Func_Rol;  
 GO
-
 Create table LOS_BORBOTONES.Func_Rol
 (Rol_Id int,
 Func_Id int
 );
 
----
+
+/***Tabla Funcionalidad***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Funcionalidad', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Funcionalidad;  
 GO
-
 Create table LOS_BORBOTONES.Funcionalidad
-(Func_Id int IDENTITY,
+(Func_Id int IDENTITY NOT NULL,
 Func_Nombre nvarchar(255)
 );
 
----
+
+/***Tabla Carga***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Carga', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Carga;  
 GO
 create table LOS_BORBOTONES.Carga
-(Carga_Id int IDENTITY,
+(Carga_Id int IDENTITY NOT NULL,
 Cli_Dni numeric(18, 0),
 Carga_Credito numeric(18, 2),
 Carga_Fecha datetime,
@@ -123,25 +123,25 @@ Tipo_Pago_Id int,
 Datos_Tarjeta nvarchar(255)
 );
 
----
+
+/***Tabla TipoDePago***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.TipoDePago', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.TipoDePago;  
 GO
-
 create table LOS_BORBOTONES.TipoDePago
-(Tipo_Pago_Id int IDENTITY,
+(Tipo_Pago_Id int IDENTITY NOT NULL,
 Tipo_Pago_Desc nvarchar(100)
 );
 
----
+
+/***Tabla Cupon***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Cupon', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Cupon;  
 GO
-
 create table LOS_BORBOTONES.Cupon
-(Cupon_Id int IDENTITY,
+(Cupon_Id int IDENTITY NOT NULL,
 Oferta_Codigo nvarchar(50),
 Cli_Dni numeric(18, 0),
 Cli_Dest_Nombre nvarchar(255),
@@ -158,26 +158,26 @@ Oferta_Fecha_Venc datetime,
 Factura_Nro numeric(18, 0)
 );
 
----
+
+/***Tabla Factura***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Factura', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Factura;  
 GO
-
 create table LOS_BORBOTONES.Factura
-(Factura_Nro numeric(18, 0),
+(Factura_Nro numeric(18, 0) NOT NULL,
 Factura_Fecha datetime,
 Factura_Importe numeric(18, 2)
 );
 
----
+
+/***Tabla Oferta***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Oferta', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Oferta;  
 GO
-
 create table LOS_BORBOTONES.Oferta
-(Oferta_Codigo nvarchar(50),
+(Oferta_Codigo nvarchar(50) NOT NULL,
 Oferta_Precio numeric(18, 2),
 Oferta_Precio_Ficticio numeric(18, 2),
 Oferta_Fecha datetime,
