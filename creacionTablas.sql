@@ -12,7 +12,7 @@ if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS
 
 /***************************************/
 /********* CREACION DE TABLAS *********/
-/***************************************/
+/*************************************/
 
 /***Tabla Cliente***/
 
@@ -187,7 +187,9 @@ Provee_CUIT nvarchar(20)
 )
 
 
-/* *********** MIGRACIÓN DE DATOS ********* */
+/***************************************/
+/********* MIGRACIÓN DE DATOS *********/
+/*************************************/
 
 /*** Migracion tabla cliente ***/
 
@@ -267,7 +269,10 @@ insert into LOS_BORBOTONES.Cupon (
 		where Oferta_Codigo is not null;
 
 
-/*** Creacion de Constrain ***/
+/******************************************/
+/********* CREACION DE CONSTRAIN *********/
+/****************************************/
+
 /*
 Cliente
 	Proveedor
@@ -290,56 +295,70 @@ PRIMARY KEY ();
 ALTER TABLE LOS_BORBOTONES
 ADD CONSTRAINT FK_
 FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
-
 */
 
-USE GD2C2019
-SELECT * FROM LOS_BORBOTONES.Proveedor;
-
+/*** PK Proveedor ***/
 ALTER TABLE LOS_BORBOTONES.Proveedor
 	ADD CONSTRAINT PK_Proveedor
 	PRIMARY KEY (Provee_CUIT);
 
+/*** PK Usuario ***/
 ALTER TABLE LOS_BORBOTONES.Usuario
 ADD CONSTRAINT PK_Usuario
 PRIMARY KEY (User_name);
 
+/*** PK Rol_Usuario ***/
 ALTER TABLE LOS_BORBOTONES.Rol_Usuario
 ADD CONSTRAINT PK_Rol_Usuario
 PRIMARY KEY (User_name, Rol_Id);
 
+
+/*** PK Rol ***/
 ALTER TABLE LOS_BORBOTONES.Rol	
 ADD CONSTRAINT PK_Rol
 PRIMARY KEY (Rol_Id);
 
+/*** PK Func_Rol ***/
 ALTER TABLE LOS_BORBOTONES.Func_Rol
 ADD CONSTRAINT PK_Func_Rol
 PRIMARY KEY (Rol_id,Func_Id);
 
+/*** PK Funcionalidad ***/
 ALTER TABLE LOS_BORBOTONES.Funcionalidad
 ADD CONSTRAINT PK_Funcionalidad
 PRIMARY KEY (Func_Id);
 
+/*** PK Carga ***/
 ALTER TABLE LOS_BORBOTONES.Carga
 ADD CONSTRAINT PK_Carga
 PRIMARY KEY (Carga_Id);
 
+/*** PK TipoDePago ***/
 ALTER TABLE LOS_BORBOTONES.TipoDePago
 ADD CONSTRAINT PK_TipoDePago
 PRIMARY KEY (TipoDePago_Id);
 
+/*** PK Cupon ***/
 ALTER TABLE LOS_BORBOTONES.Cupon
 ADD CONSTRAINT PK_Cupon
 PRIMARY KEY (Cupon_Id);
 
+/*** PK Factura ***/
 ALTER TABLE LOS_BORBOTONES.Factura
 ADD CONSTRAINT PK_Factura
 PRIMARY KEY (Factura_Nro);
 
+/*** PK Oferta ***/
 ALTER TABLE LOS_BORBOTONES.Oferta
 ADD CONSTRAINT PK_Oferta
 PRIMARY KEY (Oferta_Codigo);
 
+/*** PK Cliente ***/
 ALTER TABLE LOS_BORBOTONES.Cliente
 ADD CONSTRAINT PK_Cliente
 PRIMARY KEY (Cli_DNI);
+
+/*** FK tabla Cliente ***/
+ALTER TABLE LOS_BORBOTONES.Cliente
+ADD CONSTRAINT FK_Cliente
+FOREIGN KEY (user_name) REFERENCES LOS_BORBOTONES.Ususario(user_name);
