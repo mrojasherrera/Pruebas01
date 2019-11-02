@@ -297,7 +297,11 @@ ADD CONSTRAINT FK_
 FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
 */
 
+<<<<<<< HEAD
 /*** PK Proveedor ***/
+=======
+
+>>>>>>> 6795e3cdac26d659dfe68064543f279ddec6943f
 ALTER TABLE LOS_BORBOTONES.Proveedor
 	ADD CONSTRAINT PK_Proveedor
 	PRIMARY KEY (Provee_CUIT);
@@ -313,7 +317,10 @@ ADD CONSTRAINT PK_Rol_Usuario
 PRIMARY KEY (User_name, Rol_Id);
 
 
+<<<<<<< HEAD
 /*** PK Rol ***/
+=======
+>>>>>>> 6795e3cdac26d659dfe68064543f279ddec6943f
 ALTER TABLE LOS_BORBOTONES.Rol	
 ADD CONSTRAINT PK_Rol
 PRIMARY KEY (Rol_Id);
@@ -353,6 +360,7 @@ ALTER TABLE LOS_BORBOTONES.Oferta
 ADD CONSTRAINT PK_Oferta
 PRIMARY KEY (Oferta_Codigo);
 
+
 /*** PK Cliente ***/
 ALTER TABLE LOS_BORBOTONES.Cliente
 ADD CONSTRAINT PK_Cliente
@@ -362,3 +370,22 @@ PRIMARY KEY (Cli_DNI);
 ALTER TABLE LOS_BORBOTONES.Cliente
 ADD CONSTRAINT FK_Cliente
 FOREIGN KEY (user_name) REFERENCES LOS_BORBOTONES.Ususario(user_name);
+
+/*** FK tabla Proveedor ***/
+ALTER TABLE LOS_BORBOTONES.Proveedor
+ADD CONSTRAINT FK_Proveedor
+FOREIGN KEY (user_name) REFERENCES LOS_BORBOTONES.Ususario(user_name);
+
+/*** FK tabla Carga ***/
+ALTER TABLE LOS_BORBOTONES.Carga
+ADD CONSTRAINT FK_Carga
+FOREIGN KEY (Cli_Dni) REFERENCES LOS_BORBOTONES.Cliente(Cli_Dni);
+
+/*** FK tabla Cupon ***/
+ALTER TABLE LOS_BORBOTONES.Cupon
+ADD CONSTRAINT FK_Cupon
+FOREIGN KEY (Oferta_Codigo) REFERENCES LOS_BORBOTONES.Oferta(Oferta_Codigo),
+FOREIGN KEY (Cli_Dni) REFERENCES LOS_BORBOTONES.Cliente(Cli_Dni),
+FOREIGN KEY (Factura_Nro) REFERENCES LOS_BORBOTONES.Factura(Factura_Nro);
+
+>>>>>>> 6795e3cdac26d659dfe68064543f279ddec6943f
