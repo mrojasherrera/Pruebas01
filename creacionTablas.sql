@@ -2,7 +2,9 @@
 USE GD2C2019
 
 
-/********* SE CREA EL ESQUEMA *********/
+/********* SE CREA EL ESESQUEMA *********/
+
+
 if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS_BORBOTONES'))
   begin
       exec ('CREATE SCHEMA[LOS_BORBOTONES] AUTHORIZATION [gdCupon2019]');
@@ -13,27 +15,6 @@ if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS
 /***************************************/
 /********* CREACION DE TABLAS *********/
 /*************************************/
-
-/***Tabla Cliente***/
-
-IF OBJECT_ID ('LOS_BORBOTONES.Cliente', 'U') IS NOT NULL  
-   DROP TABLE LOS_BORBOTONES.Cliente;  
-GO
-create table LOS_BORBOTONES.Cliente
-(Cli_Nombre nvarchar(255),
-Cli_Apellido nvarchar(255),
-Cli_Dni numeric(18, 0) NOT NULL,
-Cli_Direccion nvarchar(255),
-Cli_Telefono numeric(18, 0),
-Cli_Mail nvarchar(255),
-Cli_Fecha_Nac datetime,
-Cli_Ciudad nvarchar(255),
-Cli_CodigoPostal nvarchar(10),
-User_name nvarchar(50),
-Cli_Saldo numeric(18,2),
-Habilitado bit DEFAULT(1)
-);
-
 
 /***Tabla Proveedor***/
 
@@ -53,21 +34,7 @@ Provee_Nombre_Contacto nvarchar(255),
 User_name nvarchar(50)
 );
 
-
-/***Tabla Ususario***/
-
-IF OBJECT_ID ('LOS_BORBOTONES.Usuario', 'U') IS NOT NULL  
-   DROP TABLE LOS_BORBOTONES.Usuario;  
-GO
-create table LOS_BORBOTONES.Usuario
-(User_name nvarchar(50) NOT NULL,
-Password nvarchar(32),
-Habilitado bit DEFAULT(1),
-Cant_Log_Fallidos tinyint
-);
-
 /***Tabla Rol_Usuario***/
-
 IF OBJECT_ID ('LOS_BORBOTONES.Rol_Usuario', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Rol_Usuario;  
 GO
@@ -75,7 +42,6 @@ create table LOS_BORBOTONES.Rol_Usuario
 (User_name nvarchar(50) NOT NULL,
 Rol_Id INT NOT NULL
 );
-
 
 /***Tabla Role***/
 IF OBJECT_ID ('LOS_BORBOTONES.Role', 'U') IS NOT NULL  
@@ -86,7 +52,6 @@ create table LOS_BORBOTONES.Role
 Rol_Nombre nvarchar(255)
 );
 
-
 /***Tabla Func_Rol***/
 IF OBJECT_ID ('LOS_BORBOTONES.Func_Rol', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Func_Rol;  
@@ -95,7 +60,6 @@ Create table LOS_BORBOTONES.Func_Rol
 (Rol_Id int NOT NULL,
 Func_Id int NOT NULL
 );
-
 
 /***Tabla Funcionalidad***/
 
@@ -106,7 +70,6 @@ Create table LOS_BORBOTONES.Funcionalidad
 (Func_Id int IDENTITY NOT NULL,
 Func_Nombre nvarchar(255)
 );
-
 
 /***Tabla Carga***/
 
@@ -122,7 +85,6 @@ Tipo_Pago_Id int,
 Datos_Tarjeta nvarchar(255)
 );
 
-
 /***Tabla TipoDePago***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.TipoDePago', 'U') IS NOT NULL  
@@ -132,7 +94,6 @@ create table LOS_BORBOTONES.TipoDePago
 (Tipo_Pago_Id int IDENTITY NOT NULL,
 Tipo_Pago_Desc nvarchar(100)
 );
-
 
 /***Tabla Cupon***/
 
@@ -157,7 +118,6 @@ Oferta_Fecha_Venc datetime,
 Factura_Nro numeric(18, 0)
 );
 
-
 /***Tabla Factura***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Factura', 'U') IS NOT NULL  
@@ -168,7 +128,6 @@ create table LOS_BORBOTONES.Factura
 Factura_Fecha datetime,
 Factura_Importe numeric(18, 2)
 );
-
 
 /***Tabla Oferta***/
 
@@ -184,8 +143,39 @@ Oferta_Fecha_Venc datetime,
 Oferta_Cantidad numeric(18, 0),
 Oferta_Descripcion nvarchar(255),
 Provee_CUIT nvarchar(20)
-)
+);
 
+/***Tabla Ususario***/
+
+IF OBJECT_ID ('LOS_BORBOTONES.Usuario', 'U') IS NOT NULL  
+   DROP TABLE LOS_BORBOTONES.Usuario;  
+GO
+create table LOS_BORBOTONES.Usuario
+(User_name nvarchar(50) NOT NULL,
+Password nvarchar(32),
+Habilitado bit DEFAULT(1),
+Cant_Log_Fallidos tinyint
+);
+
+/***Tabla Cliente***/
+
+IF OBJECT_ID ('LOS_BORBOTONES.Cliente', 'U') IS NOT NULL  
+   DROP TABLE LOS_BORBOTONES.Cliente;  
+GO
+create table LOS_BORBOTONES.Cliente
+(Cli_Nombre nvarchar(255),
+Cli_Apellido nvarchar(255),
+Cli_Dni numeric(18, 0) NOT NULL,
+Cli_Direccion nvarchar(255),
+Cli_Telefono numeric(18, 0),
+Cli_Mail nvarchar(255),
+Cli_Fecha_Nac datetime,
+Cli_Ciudad nvarchar(255),
+Cli_CodigoPostal nvarchar(10),
+User_name nvarchar(50),
+Cli_Saldo numeric(18,2)   default(0),
+Habilitado bit DEFAULT(1)
+);
 
 /***************************************/
 /********* MIGRACIÓN DE DATOS *********/
@@ -194,10 +184,12 @@ Provee_CUIT nvarchar(20)
 /*** Migracion tabla cliente ***/
 
 insert into LOS_BORBOTONES.Cliente (Cli_Nombre, Cli_Apellido,Cli_Dni, Cli_Direccion, 
-			Cli_Telefono, Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad)
-select distinct Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
-			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad
+			Cli_Telefono, Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, Cli_Saldo)
+select  Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
+			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, (sum(Carga_Credito) - sum(Oferta_Precio))
 from gd_esquema.Maestra
+group by Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
+			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad
 
 /*** Migracion tabla role ***/
 
@@ -273,6 +265,7 @@ insert into LOS_BORBOTONES.Cupon (
 /********* CREACION DE CONSTRAIN *********/
 /****************************************/
 
+/*
 /*** PK Proveedor ***/
 ALTER TABLE LOS_BORBOTONES.Proveedor
 	ADD CONSTRAINT PK_Proveedor
@@ -354,3 +347,4 @@ ADD CONSTRAINT FK_Cupon
 FOREIGN KEY (Oferta_Codigo) REFERENCES LOS_BORBOTONES.Oferta(Oferta_Codigo),
 FOREIGN KEY (Cli_Dni) REFERENCES LOS_BORBOTONES.Cliente(Cli_Dni),
 FOREIGN KEY (Factura_Nro) REFERENCES LOS_BORBOTONES.Factura(Factura_Nro);
+*/
