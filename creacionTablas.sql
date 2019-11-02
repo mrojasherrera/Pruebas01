@@ -1,7 +1,7 @@
 /********* ESPECIFICACION DE LA BASE DE DATOS QUE SE VA A USAR *********/
 USE GD2C2019
 
---
+
 /********* SE CREA EL ESQUEMA *********/
 if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS_BORBOTONES'))
   begin
@@ -19,7 +19,6 @@ if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS
 IF OBJECT_ID ('LOS_BORBOTONES.Cliente', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Cliente;  
 GO
-
 create table LOS_BORBOTONES.Cliente
 (Cli_Nombre nvarchar(255),
 Cli_Apellido nvarchar(255),
