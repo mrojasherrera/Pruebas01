@@ -72,8 +72,8 @@ IF OBJECT_ID ('LOS_BORBOTONES.Rol_Usuario', 'U') IS NOT NULL
    DROP TABLE LOS_BORBOTONES.Rol_Usuario;  
 GO
 create table LOS_BORBOTONES.Rol_Usuario
-(User_name nvarchar(50),
-Rol_Id INT
+(User_name nvarchar(50) NOT NULL,
+Rol_Id INT NOT NULL
 );
 
 
