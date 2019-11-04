@@ -173,7 +173,7 @@ Cli_Fecha_Nac datetime,
 Cli_Ciudad nvarchar(255),
 Cli_CodigoPostal nvarchar(10),
 User_name nvarchar(50),
-Cli_Saldo numeric(18,2)   default(0),
+Cli_Saldo numeric(18,2)   default(0.0),
 Habilitado bit DEFAULT(1)
 );
 
@@ -186,7 +186,7 @@ Habilitado bit DEFAULT(1)
 insert into LOS_BORBOTONES.Cliente (Cli_Nombre, Cli_Apellido,Cli_Dni, Cli_Direccion, 
 			Cli_Telefono, Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, Cli_Saldo)
 select  Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
-			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, (sum(Carga_Credito) - sum(Oferta_Precio))
+			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, coalesce( (sum(Carga_Credito) - sum(Oferta_Precio)),0)
 from gd_esquema.Maestra
 group by Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
 			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad
