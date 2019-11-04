@@ -78,10 +78,10 @@ IF OBJECT_ID ('LOS_BORBOTONES.Carga', 'U') IS NOT NULL
 GO
 create table LOS_BORBOTONES.Carga
 (Carga_Id int IDENTITY NOT NULL,
-Cli_Dni numeric(18, 0),
-Carga_Credito numeric(18, 2),
-Carga_Fecha datetime,
-Tipo_Pago_Id int, 
+Cli_Dni numeric(18, 0) NOT NULL,
+Carga_Credito numeric(18, 2) NOT NULL,
+Carga_Fecha datetime NOT NULL,
+Tipo_Pago_Id int NOT NULL, 
 Datos_Tarjeta nvarchar(255)
 );
 
@@ -200,7 +200,7 @@ insert into LOS_BORBOTONES.Role (Rol_Nombre)
 
 insert into LOS_BORBOTONES.Funcionalidad (Func_Nombre)
 values ('Login y seguridad'), ('ABM de Rol'), ('Registro de Usuario'), ('ABM de Cliente'), ('ABM de Proveedor'), 
-		('Cargar in'), ('Comprar Oferta'), ('Confeccion y publicacion de Ofertas'), ('Facturacion a Proveedor'), ('Listado Estadistico')
+		('Cargar Crédito'), ('Comprar Oferta'), ('Confeccion y publicacion de Ofertas'), ('Facturacion a Proveedor'), ('Listado Estadistico')
 
 /*** Migracion tabla oferta ***/
 
