@@ -265,6 +265,11 @@ insert into LOS_BORBOTONES.Cupon (
 insert into LOS_BORBOTONES.Usuario (User_name, Password)
 select distinct CONCAT('C', Cli_Dni), HASHBYTES('SHA2_256', CAST( Cli_Dni AS varbinary(70))) from gd_esquema.Maestra
 
+insert into LOS_BORBOTONES.Usuario (User_name, Password)
+select distinct CONCAT('P', Provee_CUIT), HASHBYTES('SHA2_256', CAST( Provee_CUIT AS varbinary(70))) from gd_esquema.Maestra
+where Provee_CUIT is not null
+
+
 
 /******************************************/
 /********* CREACION DE CONSTRAIN *********/
