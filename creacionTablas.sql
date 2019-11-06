@@ -152,9 +152,9 @@ IF OBJECT_ID ('LOS_BORBOTONES.Usuario', 'U') IS NOT NULL
 GO
 create table LOS_BORBOTONES.Usuario
 (User_name nvarchar(50) NOT NULL,
-Password nvarchar(32),
+Password varbinary(70) NOT NULL,
 Habilitado bit DEFAULT(1),
-Cant_Log_Fallidos tinyint
+Cant_Log_Fallidos tinyint default(0)
 );
 
 /***Tabla Cliente***/
@@ -259,6 +259,11 @@ insert into LOS_BORBOTONES.Cupon (
 		Factura_Nro
 		from gd_esquema.Maestra
 		where Oferta_Codigo is not null;
+
+/*** Migracion Usuarios ***/
+
+insert into LOS_BORBOTONES.Usuario (User_name, Password)
+select distinct CONCAT('C', Cli_Dni), HASHBYTES('SHA2_256', CAST( Cli_Dni AS varbinary(70))) from gd_esquema.Maestra
 
 
 /******************************************/
