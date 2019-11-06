@@ -181,12 +181,21 @@ Habilitado bit DEFAULT(1)
 /********* MIGRACIÓN DE DATOS *********/
 /*************************************/
 
+/*** Migracion Usuarios ***/
+
+insert into LOS_BORBOTONES.Usuario (User_name, Password)
+select distinct  Cli_Dni, HASHBYTES('SHA2_256', CAST( Cli_Dni AS varbinary(70))) from gd_esquema.Maestra
+
+insert into LOS_BORBOTONES.Usuario (User_name, Password)
+select distinct  Provee_CUIT, HASHBYTES('SHA2_256', CAST( Provee_CUIT AS varbinary(70))) from gd_esquema.Maestra
+where Provee_CUIT is not null
+
 /*** Migracion tabla cliente ***/
 
 insert into LOS_BORBOTONES.Cliente (Cli_Nombre, Cli_Apellido,Cli_Dni, Cli_Direccion, 
-			Cli_Telefono, Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, Cli_Saldo)
+			Cli_Telefono, Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, User_name, Cli_Saldo)
 select  Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
-			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, coalesce( (sum(Carga_Credito) - sum(Oferta_Precio)),0)
+			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, Cli_Dni, coalesce( (sum(Carga_Credito) - sum(Oferta_Precio)),0)
 from gd_esquema.Maestra
 group by Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
 			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad
@@ -237,9 +246,9 @@ insert into LOS_BORBOTONES.Factura
 
 insert into LOS_BORBOTONES.Proveedor
 	(Provee_RS, Provee_Dom, Provee_Ciudad, Provee_Telefono, Provee_CUIT,
-		Provee_Rubro)
+		Provee_Rubro, User_name)
 	select distinct Provee_RS, Provee_Dom, Provee_Ciudad, Provee_Telefono, Provee_CUIT,
-		Provee_Rubro
+		Provee_Rubro, Provee_CUIT
 		from gd_esquema.Maestra
 		where Provee_RS is not null
 
@@ -259,15 +268,6 @@ insert into LOS_BORBOTONES.Cupon (
 		Factura_Nro
 		from gd_esquema.Maestra
 		where Oferta_Codigo is not null;
-
-/*** Migracion Usuarios ***/
-
-insert into LOS_BORBOTONES.Usuario (User_name, Password)
-select distinct CONCAT('C', Cli_Dni), HASHBYTES('SHA2_256', CAST( Cli_Dni AS varbinary(70))) from gd_esquema.Maestra
-
-insert into LOS_BORBOTONES.Usuario (User_name, Password)
-select distinct CONCAT('P', Provee_CUIT), HASHBYTES('SHA2_256', CAST( Provee_CUIT AS varbinary(70))) from gd_esquema.Maestra
-where Provee_CUIT is not null
 
 
 
