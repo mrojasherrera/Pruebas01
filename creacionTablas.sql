@@ -184,20 +184,22 @@ Habilitado bit DEFAULT(1)
 /*** Migracion Usuarios ***/
 
 insert into LOS_BORBOTONES.Usuario (User_name, Password)
-select distinct  Cli_Dni, HASHBYTES('SHA2_256', CAST( Cli_Dni AS varbinary(70))) from gd_esquema.Maestra
+	select distinct  Cli_Dni, HASHBYTES('SHA2_256', CAST( Cli_Dni AS varbinary(70))) 
+	from gd_esquema.Maestra
 
 insert into LOS_BORBOTONES.Usuario (User_name, Password)
-select distinct  Provee_CUIT, HASHBYTES('SHA2_256', CAST( Provee_CUIT AS varbinary(70))) from gd_esquema.Maestra
-where Provee_CUIT is not null
+	select distinct  Provee_CUIT, HASHBYTES('SHA2_256', CAST( Provee_CUIT AS varbinary(70))) 
+	from gd_esquema.Maestra
+	where Provee_CUIT is not null
 
 /*** Migracion tabla cliente ***/
 
 insert into LOS_BORBOTONES.Cliente (Cli_Nombre, Cli_Apellido,Cli_Dni, Cli_Direccion, 
 			Cli_Telefono, Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, User_name, Cli_Saldo)
-select  Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
+	select  Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
 			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, Cli_Dni, coalesce( (sum(Carga_Credito) - sum(Oferta_Precio)),0)
-from gd_esquema.Maestra
-group by Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
+	from gd_esquema.Maestra
+	group by Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
 			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad
 
 /*** Migracion tabla role ***/
@@ -208,21 +210,24 @@ insert into LOS_BORBOTONES.Role (Rol_Nombre)
 /*** Migracion tabla funcionalidad ***/
 
 insert into LOS_BORBOTONES.Funcionalidad (Func_Nombre)
-values ('Login y seguridad'), ('ABM de Rol'), ('Registro de Usuario'), ('ABM de Cliente'), ('ABM de Proveedor'), 
-		('Cargar Crédito'), ('Comprar Oferta'), ('Confeccion y publicacion de Ofertas'), ('Facturacion a Proveedor'), ('Listado Estadistico')
+	values ('Login y seguridad'), ('ABM de Rol'), ('Registro de Usuario'), ('ABM de Cliente'), ('ABM de Proveedor'), 
+			('Cargar Crédito'), ('Comprar Oferta'), ('Confeccion y publicacion de Ofertas'), ('Facturacion a Proveedor'), 
+			('Listado Estadistico')
 
 /*** Migracion tabla oferta ***/
 
 insert into LOS_BORBOTONES.Oferta (Oferta_Codigo, Oferta_Precio, Oferta_Precio_Ficticio, 
 			Oferta_Fecha, Oferta_Fecha_Venc, Oferta_Cantidad, Oferta_Descripcion, Provee_CUIT)
-select distinct Oferta_Codigo ,Oferta_Precio, Oferta_Precio_Ficticio, Oferta_Fecha, 
-			Oferta_Fecha_Venc, Oferta_Cantidad, Oferta_Descripcion, Provee_CUIT from gd_esquema.Maestra
+	select distinct Oferta_Codigo ,Oferta_Precio, Oferta_Precio_Ficticio, Oferta_Fecha, 
+			Oferta_Fecha_Venc, Oferta_Cantidad, Oferta_Descripcion, Provee_CUIT 
+			from gd_esquema.Maestra
 			where Oferta_Codigo is not null 
 
 /*** Migracion tipo de pago ***/
 
 insert into LOS_BORBOTONES.TipoDePago (Tipo_Pago_Desc)
-	select distinct Tipo_Pago_Desc from gd_esquema.Maestra
+	select distinct Tipo_Pago_Desc 
+	from gd_esquema.Maestra
 	where Tipo_Pago_Desc is not null
 
 /*** Migracion Carga ***/
@@ -236,7 +241,8 @@ insert into LOS_BORBOTONES.Carga (Cli_Dni, Carga_Credito, Carga_Fecha, Tipo_Pago
 
 insert into LOS_BORBOTONES.Factura
 	(Factura_Nro, Factura_Fecha, Factura_Importe)
-	select Factura_Nro, Factura_Fecha, SUM(Oferta_Cantidad*Oferta_Precio) from gd_esquema.Maestra
+	select Factura_Nro, Factura_Fecha, SUM(Oferta_Cantidad*Oferta_Precio) 
+	from gd_esquema.Maestra
 	where Oferta_Fecha_Compra is not null AND Factura_Nro is not null
 	group by Factura_Nro, Factura_Fecha
 	order by Factura_Nro
@@ -258,9 +264,7 @@ insert into LOS_BORBOTONES.Cupon (
 	Oferta_Codigo, Cli_Dni, Cli_Dest_Nombre, Cli_Dest_Apellido, Cli_Dest_Dni,
 		Cli_Dest_Direccion, Cli_Dest_Telefono, Cli_Dest_Mail, Cli_Dest_Fecha_Nac,
 		Cli_Dest_Ciudad, Oferta_Fecha_Compra, Oferta_Entregado_Fecha, Oferta_Fecha_Venc,
-		Factura_Nro
-		
-	)
+		Factura_Nro)
 	Select 
 		Oferta_Codigo, Cli_Dni, Cli_Dest_Nombre, Cli_Dest_Apellido, Cli_Dest_Dni,
 		Cli_Dest_Direccion, Cli_Dest_Telefono, Cli_Dest_Mail, Cli_Dest_Fecha_Nac,
@@ -269,7 +273,15 @@ insert into LOS_BORBOTONES.Cupon (
 		from gd_esquema.Maestra
 		where Oferta_Codigo is not null;
 
+/***Migracion Rol_usuario***/
 
+insert into LOS_BORBOTONES.Rol_Usuario (User_name,Rol_Id)
+	select User_name, 2 
+	from LOS_BORBOTONES.Cliente
+
+insert into LOS_BORBOTONES.Rol_Usuario (User_name,Rol_Id)
+	select User_name, 3 
+	from LOS_BORBOTONES.Proveedor
 
 /******************************************/
 /********* CREACION DE CONSTRAIN *********/
