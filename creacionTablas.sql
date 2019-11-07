@@ -40,7 +40,8 @@ IF OBJECT_ID ('LOS_BORBOTONES.Rol_Usuario', 'U') IS NOT NULL
 GO
 create table LOS_BORBOTONES.Rol_Usuario
 (User_name nvarchar(50) NOT NULL,
-Rol_Id INT NOT NULL
+Rol_Id INT NOT NULL,
+Habilitado bit DEFAULT(1)
 );
 
 /***Tabla Role***/
@@ -49,7 +50,8 @@ IF OBJECT_ID ('LOS_BORBOTONES.Role', 'U') IS NOT NULL
 GO
 create table LOS_BORBOTONES.Role
 (Rol_Id  int IDENTITY NOT NULL,
-Rol_Nombre nvarchar(255)
+Rol_Nombre nvarchar(255),
+Habilitado bit DEFAULT(1)
 );
 
 /***Tabla Func_Rol***/
@@ -282,6 +284,12 @@ insert into LOS_BORBOTONES.Rol_Usuario (User_name,Rol_Id)
 insert into LOS_BORBOTONES.Rol_Usuario (User_name,Rol_Id)
 	select User_name, 3 
 	from LOS_BORBOTONES.Proveedor
+
+/***Migracion Func_Rol***/
+
+insert into LOS_BORBOTONES.Func_Rol (Rol_Id, Func_Id)
+ values (1,1),(1,2),(1,3),(1,4),(1,5),(1,9),(1,10),(2,1),(2,6),(2,7),(3,1),(3,8)
+
 
 /******************************************/
 /********* CREACION DE CONSTRAIN *********/
