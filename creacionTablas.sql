@@ -60,7 +60,8 @@ IF OBJECT_ID ('LOS_BORBOTONES.Func_Rol', 'U') IS NOT NULL
 GO
 Create table LOS_BORBOTONES.Func_Rol
 (Rol_Id int NOT NULL,
-Func_Id int NOT NULL
+Func_Id int NOT NULL,
+Habilitado bit DEFAULT(1)
 );
 
 /***Tabla Funcionalidad***/
