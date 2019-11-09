@@ -16,7 +16,7 @@ if(not exists(select * from INFORMATION_SCHEMA.SCHEMATA where SCHEMA_NAME = 'LOS
 /********* CREACION DE TABLAS *********/
 /*************************************/
 
-/***Tabla Proveedor***/
+/***TABLA PROVEEDOR***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Proveedor', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Proveedor;  
@@ -34,7 +34,7 @@ Provee_Nombre_Contacto nvarchar(255),
 User_name nvarchar(50)
 );
 
-/***Tabla Rol_Usuario***/
+/***TABLA ROL_USUARIO***/
 IF OBJECT_ID ('LOS_BORBOTONES.Rol_Usuario', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Rol_Usuario;  
 GO
@@ -44,7 +44,7 @@ Rol_Id INT NOT NULL,
 Habilitado bit DEFAULT(1)
 );
 
-/***Tabla Role***/
+/***TABLA ROLE***/
 IF OBJECT_ID ('LOS_BORBOTONES.Role', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Role;  
 GO
@@ -54,7 +54,7 @@ Rol_Nombre nvarchar(255),
 Habilitado bit DEFAULT(1)
 );
 
-/***Tabla Func_Rol***/
+/***TABLA FUNC_ROL***/
 IF OBJECT_ID ('LOS_BORBOTONES.Func_Rol', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Func_Rol;  
 GO
@@ -64,7 +64,7 @@ Func_Id int NOT NULL,
 Habilitado bit DEFAULT(1)
 );
 
-/***Tabla Funcionalidad***/
+/***TABLA FUNCIONALIDAD***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Funcionalidad', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Funcionalidad;  
@@ -74,7 +74,7 @@ Create table LOS_BORBOTONES.Funcionalidad
 Func_Nombre nvarchar(255)
 );
 
-/***Tabla Carga***/
+/***TABLA CARGA***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Carga', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Carga;  
@@ -88,7 +88,7 @@ Tipo_Pago_Id int NOT NULL,
 Datos_Tarjeta nvarchar(255)
 );
 
-/***Tabla TipoDePago***/
+/***TABLA TIPO DE PAGO***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.TipoDePago', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.TipoDePago;  
@@ -98,7 +98,7 @@ create table LOS_BORBOTONES.TipoDePago
 Tipo_Pago_Desc nvarchar(100)
 );
 
-/***Tabla Cupon***/
+/***TABLA CUPON***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Cupon', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Cupon;  
@@ -121,7 +121,7 @@ Oferta_Fecha_Venc datetime,
 Factura_Nro numeric(18, 0)
 );
 
-/***Tabla Factura***/
+/***TABLA FACTURA***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Factura', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Factura;  
@@ -129,10 +129,13 @@ GO
 create table LOS_BORBOTONES.Factura
 (Factura_Nro numeric(18, 0) NOT NULL,
 Factura_Fecha datetime,
-Factura_Importe numeric(18, 2)
+Factura_Importe numeric(18, 2),
+Fecha_Desde datetime,
+Fecha_Hasta datetime,
+Provee_CUIT nvarchar(20)
 );
 
-/***Tabla Oferta***/
+/***TABLA OFERTA***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Oferta', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Oferta;  
@@ -148,7 +151,7 @@ Oferta_Descripcion nvarchar(255),
 Provee_CUIT nvarchar(20)
 );
 
-/***Tabla Ususario***/
+/***TABLA USUARIO***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Usuario', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Usuario;  
@@ -160,7 +163,7 @@ Habilitado bit DEFAULT(1),
 Cant_Log_Fallidos tinyint default(0)
 );
 
-/***Tabla Cliente***/
+/***TABLA CLIENTE***/
 
 IF OBJECT_ID ('LOS_BORBOTONES.Cliente', 'U') IS NOT NULL  
    DROP TABLE LOS_BORBOTONES.Cliente;  
@@ -184,7 +187,7 @@ Habilitado bit DEFAULT(1)
 /********* MIGRACIÓN DE DATOS *********/
 /*************************************/
 
-/*** Migracion Usuarios ***/
+/*** MIGRACION USUARIOS ***/
 
 insert into LOS_BORBOTONES.Usuario (User_name, Password)
 	select distinct  Cli_Dni, HASHBYTES('SHA2_256', CAST( Cli_Dni AS varbinary(70))) 
@@ -195,7 +198,7 @@ insert into LOS_BORBOTONES.Usuario (User_name, Password)
 	from gd_esquema.Maestra
 	where Provee_CUIT is not null
 
-/*** Migracion tabla cliente ***/
+/*** MIGRACION CLIENTES ***/
 
 insert into LOS_BORBOTONES.Cliente (Cli_Nombre, Cli_Apellido,Cli_Dni, Cli_Direccion, 
 			Cli_Telefono, Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, User_name, Cli_Saldo)
@@ -205,19 +208,19 @@ insert into LOS_BORBOTONES.Cliente (Cli_Nombre, Cli_Apellido,Cli_Dni, Cli_Direcc
 	group by Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
 			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad
 
-/*** Migracion tabla role ***/
+/*** MIGRACION ROLE ***/
 
 insert into LOS_BORBOTONES.Role (Rol_Nombre)
 	values  ('Administrativo'), ('Cliente'), ('Proveerdor')
 
-/*** Migracion tabla funcionalidad ***/
+/*** MIGRACION FUNCIONALIDAD ***/
 
 insert into LOS_BORBOTONES.Funcionalidad (Func_Nombre)
 	values ('Login y seguridad'), ('ABM de Rol'), ('Registro de Usuario'), ('ABM de Cliente'), ('ABM de Proveedor'), 
 			('Cargar Crédito'), ('Comprar Oferta'), ('Confeccion y publicacion de Ofertas'), ('Facturacion a Proveedor'), 
 			('Listado Estadistico')
 
-/*** Migracion tabla oferta ***/
+/*** MIGRACION OFERTA ***/
 
 insert into LOS_BORBOTONES.Oferta (Oferta_Codigo, Oferta_Precio, Oferta_Precio_Ficticio, 
 			Oferta_Fecha, Oferta_Fecha_Venc, Oferta_Cantidad, Oferta_Descripcion, Provee_CUIT)
@@ -226,32 +229,32 @@ insert into LOS_BORBOTONES.Oferta (Oferta_Codigo, Oferta_Precio, Oferta_Precio_F
 			from gd_esquema.Maestra
 			where Oferta_Codigo is not null 
 
-/*** Migracion tipo de pago ***/
+/*** MIGRACION TIPO DE PAGO ***/
 
 insert into LOS_BORBOTONES.TipoDePago (Tipo_Pago_Desc)
 	select distinct Tipo_Pago_Desc 
 	from gd_esquema.Maestra
 	where Tipo_Pago_Desc is not null
 
-/*** Migracion Carga ***/
+/*** MIGRACION CARGA***/
 
 insert into LOS_BORBOTONES.Carga (Cli_Dni, Carga_Credito, Carga_Fecha, Tipo_Pago_Id)
 	select Cli_Dni, Carga_Credito, Carga_Fecha, Tipo_Pago_Id 
 		from gd_esquema.Maestra g join LOS_BORBOTONES.TipoDePago t 
 		on (g.Tipo_Pago_Desc = t.Tipo_Pago_Desc)
 
-/*** Migracion factura ***/
+/*** MIGRACION FACTURA ***/
 
 insert into LOS_BORBOTONES.Factura
-	(Factura_Nro, Factura_Fecha, Factura_Importe)
-	select Factura_Nro, Factura_Fecha, SUM(Oferta_Cantidad*Oferta_Precio) 
+	(Factura_Nro, Factura_Fecha, Factura_Importe, Provee_CUIT, Fecha_Desde, Fecha_Hasta)
+	select Factura_Nro, Factura_Fecha, SUM(Oferta_Cantidad*Oferta_Precio), Provee_CUIT, min(Oferta_Fecha_Compra), max(Oferta_Fecha_Compra)
 	from gd_esquema.Maestra
 	where Oferta_Fecha_Compra is not null AND Factura_Nro is not null
-	group by Factura_Nro, Factura_Fecha
+	group by Factura_Nro, Factura_Fecha, Provee_CUIT
 	order by Factura_Nro
 
 
-/*** Migracion proveedores ***/
+/*** MIGRACION PROVEEDOR ***/
 
 insert into LOS_BORBOTONES.Proveedor
 	(Provee_RS, Provee_Dom, Provee_Ciudad, Provee_Telefono, Provee_CUIT,
@@ -261,22 +264,32 @@ insert into LOS_BORBOTONES.Proveedor
 		from gd_esquema.Maestra
 		where Provee_RS is not null
 
-/*** Migracion Cupones ***/
+/*** MIGRACION CUPON ***/
 
 insert into LOS_BORBOTONES.Cupon (
 	Oferta_Codigo, Cli_Dni, Cli_Dest_Nombre, Cli_Dest_Apellido, Cli_Dest_Dni,
 		Cli_Dest_Direccion, Cli_Dest_Telefono, Cli_Dest_Mail, Cli_Dest_Fecha_Nac,
 		Cli_Dest_Ciudad, Oferta_Fecha_Compra, Oferta_Entregado_Fecha, Oferta_Fecha_Venc,
 		Factura_Nro)
-	Select 
-		Oferta_Codigo, Cli_Dni, Cli_Dest_Nombre, Cli_Dest_Apellido, Cli_Dest_Dni,
-		Cli_Dest_Direccion, Cli_Dest_Telefono, Cli_Dest_Mail, Cli_Dest_Fecha_Nac,
-		Cli_Dest_Ciudad, Oferta_Fecha_Compra, Oferta_Entregado_Fecha, Oferta_Fecha_Venc, 
-		Factura_Nro
-		from gd_esquema.Maestra
-		where Oferta_Codigo is not null;
+	Select distinct
+		g1.Oferta_Codigo, g1.Cli_Dni, g1.Cli_Dest_Nombre, g1.Cli_Dest_Apellido, g1.Cli_Dest_Dni,
+		g1.Cli_Dest_Direccion, g1.Cli_Dest_Telefono, g1.Cli_Dest_Mail, g1.Cli_Dest_Fecha_Nac,
+		g1.Cli_Dest_Ciudad, g1.Oferta_Fecha_Compra, 
+		(select g2.Oferta_Entregado_Fecha from gd_esquema.Maestra g2 
+			where g1.Cli_Dni = g2.Cli_Dni and g1.Oferta_Codigo = g2.Oferta_Codigo 
+					and g1.Oferta_Fecha_Compra = g2.Oferta_Fecha_Compra 
+					and g2.Oferta_Entregado_Fecha is not null) Oferta_Entregado_Fecha, 
+		Oferta_Fecha_Venc, 
+		(select g2.Factura_Nro from gd_esquema.Maestra g2 
+			where g1.Cli_Dni = g2.Cli_Dni and g1.Oferta_Codigo = g2.Oferta_Codigo 
+			and g1.Oferta_Fecha_Compra = g2.Oferta_Fecha_Compra 
+			and g2.Factura_Nro is not null) Factura_Nro
+		from gd_esquema.Maestra g1
+		where Oferta_Fecha_Compra is not null
+		order by Cli_Dni, Oferta_Fecha_Compra
+;
 
-/***Migracion Rol_usuario***/
+/*** MIGRACION ROL_USUARIO ***/
 
 insert into LOS_BORBOTONES.Rol_Usuario (User_name,Rol_Id)
 	select User_name, 2 
@@ -286,7 +299,7 @@ insert into LOS_BORBOTONES.Rol_Usuario (User_name,Rol_Id)
 	select User_name, 3 
 	from LOS_BORBOTONES.Proveedor
 
-/***Migracion Func_Rol***/
+/*** MIGRACION FUNC_ROL ***/
 
 insert into LOS_BORBOTONES.Func_Rol (Rol_Id, Func_Id)
  values (1,1),(1,2),(1,3),(1,4),(1,5),(1,9),(1,10),(2,1),(2,6),(2,7),(3,1),(3,8)
