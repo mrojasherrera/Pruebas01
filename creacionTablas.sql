@@ -127,7 +127,7 @@ IF OBJECT_ID ('LOS_BORBOTONES.Factura', 'U') IS NOT NULL
    DROP TABLE LOS_BORBOTONES.Factura;  
 GO
 create table LOS_BORBOTONES.Factura
-(Factura_Nro numeric(18, 0) NOT NULL,
+(Factura_Nro numeric(18, 0) NOT NULL IDENTITY,
 Factura_Fecha datetime,
 Factura_Importe numeric(18, 2),
 Fecha_Desde datetime,
@@ -245,6 +245,7 @@ insert into LOS_BORBOTONES.Carga (Cli_Dni, Carga_Credito, Carga_Fecha, Tipo_Pago
 
 /*** MIGRACION FACTURA ***/
 
+SET IDENTITY_INSERT LOS_BORBOTONES.Factura ON;
 insert into LOS_BORBOTONES.Factura
 	(Factura_Nro, Factura_Fecha, Factura_Importe, Provee_CUIT, Fecha_Desde, Fecha_Hasta)
 	select Factura_Nro, Factura_Fecha, SUM(Oferta_Cantidad*Oferta_Precio), Provee_CUIT, min(Oferta_Fecha_Compra), max(Oferta_Fecha_Compra)
@@ -252,6 +253,7 @@ insert into LOS_BORBOTONES.Factura
 	where Oferta_Fecha_Compra is not null AND Factura_Nro is not null
 	group by Factura_Nro, Factura_Fecha, Provee_CUIT
 	order by Factura_Nro
+SET IDENTITY_INSERT LOS_BORBOTONES.Factura OFF;
 
 
 /*** MIGRACION PROVEEDOR ***/
@@ -359,6 +361,8 @@ PRIMARY KEY (Cupon_Id);
 ALTER TABLE LOS_BORBOTONES.Factura
 ADD CONSTRAINT PK_Factura
 PRIMARY KEY (Factura_Nro);
+ALTER TABLE LOS_BORBOTONES.Factura
+MODIFY Factura_Nro Numeric(18,0) Identity(153611,1)
 
 /*** PK Oferta ***/
 ALTER TABLE LOS_BORBOTONES.Oferta
