@@ -48,6 +48,7 @@
             this.DniTB = new System.Windows.Forms.TextBox();
             this.ApellidoTB = new System.Windows.Forms.TextBox();
             this.NombreTB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CiudadTB
@@ -222,11 +223,22 @@
             this.NombreTB.Size = new System.Drawing.Size(259, 20);
             this.NombreTB.TabIndex = 21;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(41, 176);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 20);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "DNI:";
+            // 
             // ModificarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 575);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.CiudadTB);
             this.Controls.Add(this.Ciudad);
             this.Controls.Add(this.ModificarBtn);
@@ -276,5 +288,6 @@
         private System.Windows.Forms.TextBox DniTB;
         private System.Windows.Forms.TextBox ApellidoTB;
         private System.Windows.Forms.TextBox NombreTB;
+        private System.Windows.Forms.Label label1;
     }
 }
