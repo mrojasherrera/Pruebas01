@@ -35,6 +35,9 @@
             this.CreditoBtn = new System.Windows.Forms.Button();
             this.FacturarBtn = new System.Windows.Forms.Button();
             this.EstadisticoBtn = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SalirBtn = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -42,7 +45,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(148, 40);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 29);
             this.label1.TabIndex = 0;
@@ -50,7 +53,7 @@
             // 
             // ClienteBtn
             // 
-            this.ClienteBtn.Location = new System.Drawing.Point(153, 83);
+            this.ClienteBtn.Location = new System.Drawing.Point(80, 30);
             this.ClienteBtn.Name = "ClienteBtn";
             this.ClienteBtn.Size = new System.Drawing.Size(135, 56);
             this.ClienteBtn.TabIndex = 1;
@@ -59,7 +62,7 @@
             // 
             // ProveedorBtn
             // 
-            this.ProveedorBtn.Location = new System.Drawing.Point(153, 145);
+            this.ProveedorBtn.Location = new System.Drawing.Point(302, 30);
             this.ProveedorBtn.Name = "ProveedorBtn";
             this.ProveedorBtn.Size = new System.Drawing.Size(135, 56);
             this.ProveedorBtn.TabIndex = 2;
@@ -68,7 +71,7 @@
             // 
             // RolBtn
             // 
-            this.RolBtn.Location = new System.Drawing.Point(153, 207);
+            this.RolBtn.Location = new System.Drawing.Point(80, 121);
             this.RolBtn.Name = "RolBtn";
             this.RolBtn.Size = new System.Drawing.Size(135, 56);
             this.RolBtn.TabIndex = 3;
@@ -77,7 +80,7 @@
             // 
             // CreditoBtn
             // 
-            this.CreditoBtn.Location = new System.Drawing.Point(153, 269);
+            this.CreditoBtn.Location = new System.Drawing.Point(302, 121);
             this.CreditoBtn.Name = "CreditoBtn";
             this.CreditoBtn.Size = new System.Drawing.Size(135, 56);
             this.CreditoBtn.TabIndex = 4;
@@ -86,7 +89,7 @@
             // 
             // FacturarBtn
             // 
-            this.FacturarBtn.Location = new System.Drawing.Point(153, 331);
+            this.FacturarBtn.Location = new System.Drawing.Point(80, 220);
             this.FacturarBtn.Name = "FacturarBtn";
             this.FacturarBtn.Size = new System.Drawing.Size(135, 56);
             this.FacturarBtn.TabIndex = 5;
@@ -95,27 +98,48 @@
             // 
             // EstadisticoBtn
             // 
-            this.EstadisticoBtn.Location = new System.Drawing.Point(153, 393);
+            this.EstadisticoBtn.Location = new System.Drawing.Point(302, 220);
             this.EstadisticoBtn.Name = "EstadisticoBtn";
             this.EstadisticoBtn.Size = new System.Drawing.Size(135, 56);
             this.EstadisticoBtn.TabIndex = 6;
             this.EstadisticoBtn.Text = "Listado Estadístico";
             this.EstadisticoBtn.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.ClienteBtn);
+            this.groupBox1.Controls.Add(this.EstadisticoBtn);
+            this.groupBox1.Controls.Add(this.ProveedorBtn);
+            this.groupBox1.Controls.Add(this.FacturarBtn);
+            this.groupBox1.Controls.Add(this.RolBtn);
+            this.groupBox1.Controls.Add(this.CreditoBtn);
+            this.groupBox1.Location = new System.Drawing.Point(17, 77);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(514, 305);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Funcionalidades";
+            // 
+            // SalirBtn
+            // 
+            this.SalirBtn.Location = new System.Drawing.Point(204, 404);
+            this.SalirBtn.Name = "SalirBtn";
+            this.SalirBtn.Size = new System.Drawing.Size(135, 69);
+            this.SalirBtn.TabIndex = 8;
+            this.SalirBtn.Text = "Salir";
+            this.SalirBtn.UseVisualStyleBackColor = true;
+            // 
             // ListadoAcciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 522);
-            this.Controls.Add(this.EstadisticoBtn);
-            this.Controls.Add(this.FacturarBtn);
-            this.Controls.Add(this.CreditoBtn);
-            this.Controls.Add(this.RolBtn);
-            this.Controls.Add(this.ProveedorBtn);
-            this.Controls.Add(this.ClienteBtn);
+            this.ClientSize = new System.Drawing.Size(583, 513);
+            this.Controls.Add(this.SalirBtn);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "ListadoAcciones";
             this.Text = "ListadoAcciones";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,5 +154,7 @@
         private System.Windows.Forms.Button CreditoBtn;
         private System.Windows.Forms.Button FacturarBtn;
         private System.Windows.Forms.Button EstadisticoBtn;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button SalirBtn;
     }
 }

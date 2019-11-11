@@ -33,8 +33,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Precio = new System.Windows.Forms.NumericUpDown();
             this.Oferta = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.VolverBtn = new System.Windows.Forms.Button();
+            this.ComprarBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Cantidad = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.Precio)).BeginInit();
@@ -87,23 +87,23 @@
             this.Oferta.Size = new System.Drawing.Size(254, 21);
             this.Oferta.TabIndex = 4;
             // 
-            // button1
+            // VolverBtn
             // 
-            this.button1.Location = new System.Drawing.Point(111, 242);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.VolverBtn.Location = new System.Drawing.Point(125, 242);
+            this.VolverBtn.Name = "VolverBtn";
+            this.VolverBtn.Size = new System.Drawing.Size(101, 40);
+            this.VolverBtn.TabIndex = 5;
+            this.VolverBtn.Text = "Volver";
+            this.VolverBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // ComprarBtn
             // 
-            this.button2.Location = new System.Drawing.Point(217, 242);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ComprarBtn.Location = new System.Drawing.Point(252, 242);
+            this.ComprarBtn.Name = "ComprarBtn";
+            this.ComprarBtn.Size = new System.Drawing.Size(101, 40);
+            this.ComprarBtn.TabIndex = 6;
+            this.ComprarBtn.Text = "Comprar";
+            this.ComprarBtn.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -129,8 +129,8 @@
             this.ClientSize = new System.Drawing.Size(425, 306);
             this.Controls.Add(this.Cantidad);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ComprarBtn);
+            this.Controls.Add(this.VolverBtn);
             this.Controls.Add(this.Oferta);
             this.Controls.Add(this.Precio);
             this.Controls.Add(this.label3);
@@ -152,8 +152,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown Precio;
         private System.Windows.Forms.ComboBox Oferta;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button VolverBtn;
+        private System.Windows.Forms.Button ComprarBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown Cantidad;
     }

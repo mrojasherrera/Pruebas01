@@ -284,9 +284,7 @@
         private System.Windows.Forms.Label Direccion;
         private System.Windows.Forms.Label CodPost;
         private System.Windows.Forms.Label FechNac;
-        private System.Windows.Forms.Label REG;
         private System.Windows.Forms.Button VolverBtn;
-        private System.Windows.Forms.Button RegistrarBtn;
         private System.Windows.Forms.Label Ciudad;
         private System.Windows.Forms.TextBox CiudadTB;
         private System.Windows.Forms.Button RegBtn;

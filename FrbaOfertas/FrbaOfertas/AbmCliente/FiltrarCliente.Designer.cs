@@ -111,7 +111,7 @@
             // 
             // VolverBtn
             // 
-            this.VolverBtn.Location = new System.Drawing.Point(98, 381);
+            this.VolverBtn.Location = new System.Drawing.Point(96, 337);
             this.VolverBtn.Name = "VolverBtn";
             this.VolverBtn.Size = new System.Drawing.Size(94, 44);
             this.VolverBtn.TabIndex = 8;
@@ -120,7 +120,7 @@
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(230, 381);
+            this.BuscarBtn.Location = new System.Drawing.Point(228, 337);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(94, 44);
             this.BuscarBtn.TabIndex = 9;
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 443);
+            this.ClientSize = new System.Drawing.Size(390, 405);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.VolverBtn);
