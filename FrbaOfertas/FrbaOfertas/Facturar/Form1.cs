@@ -16,5 +16,7 @@ namespace FrbaOfertas.Facturar
         {
             InitializeComponent();
         }
+
+       
     }
 }

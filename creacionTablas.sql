@@ -147,6 +147,7 @@ Oferta_Precio_Ficticio numeric(18, 2),
 Oferta_Fecha datetime,
 Oferta_Fecha_Venc datetime,
 Oferta_Cantidad numeric(18, 0),
+Oferta_Cantidad_Compra numeric(18, 0),
 Oferta_Descripcion nvarchar(255),
 Provee_CUIT nvarchar(20)
 );
@@ -306,7 +307,7 @@ insert into LOS_BORBOTONES.Rol_Usuario (User_name,Rol_Id)
 insert into LOS_BORBOTONES.Func_Rol (Rol_Id, Func_Id)
  values (1,1),(1,2),(1,3),(1,4),(1,5),(1,9),(1,10),(2,1),(2,6),(2,7),(3,1),(3,8)
 
-
+GO
 /******************************************/
 /********* CREACION DE CONSTRAIN *********/
 /****************************************/
@@ -396,3 +397,14 @@ FOREIGN KEY (Oferta_Codigo) REFERENCES LOS_BORBOTONES.Oferta(Oferta_Codigo),
 FOREIGN KEY (Cli_Dni) REFERENCES LOS_BORBOTONES.Cliente(Cli_Dni),
 FOREIGN KEY (Factura_Nro) REFERENCES LOS_BORBOTONES.Factura(Factura_Nro);
 */
+
+
+/******************************************/
+/********* CREACION DE VISTAS ************/
+/****************************************/
+
+
+create view LOS_BORBOTONES.vistaLogin
+as
+select ro.Rol_Nombre from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario r on (u.User_name = r.User_name) join LOS_BORBOTONES.Role ro on (r.Rol_Id = ro.Rol_Id);
+GO

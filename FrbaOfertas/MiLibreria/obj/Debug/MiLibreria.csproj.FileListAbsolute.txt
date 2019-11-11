@@ -1,0 +1,5 @@
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\MiLibreria\bin\Debug\MiLibreria.dll
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\MiLibreria\bin\Debug\MiLibreria.pdb
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\MiLibreria\obj\Debug\MiLibreria.csprojResolveAssemblyReference.cache
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\MiLibreria\obj\Debug\MiLibreria.dll
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\MiLibreria\obj\Debug\MiLibreria.pdb

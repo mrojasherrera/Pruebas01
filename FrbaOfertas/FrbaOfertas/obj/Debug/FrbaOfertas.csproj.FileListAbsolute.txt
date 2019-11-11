@@ -38,6 +38,10 @@ C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaO
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.ComprarOferta.Comprar.resources
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.CragaCredito.Cargar.resources
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.CrearOferta.Oferta.resources
-C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.Form1.resources
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.Properties.Resources.resources
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.csproj.GenerateResource.Cache
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.Administrativo.ListadoAcciones.resources
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.Facturar.Form1.resources
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\bin\Debug\MiLibreria.dll
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\bin\Debug\MiLibreria.pdb
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.Login.resources
