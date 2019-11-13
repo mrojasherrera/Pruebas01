@@ -163,17 +163,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GD2C2019DataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GD2C2019DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GD2C2019DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IniciarSesion.Designer.cs">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoEstadistico\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListadoEstadistico\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="PantallaUsuarios\PantallaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="PantallaUsuarios\PantallaCliente.Designer.cs">
+      <DependentUpon>PantallaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PantallaUsuarios\PantallaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PantallaUsuarios\PantallaProveedor.Designer.cs">
+      <DependentUpon>PantallaProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -222,8 +239,14 @@
     <EmbeddedResource Include="Facturar\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="IniciarSesion.resx">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaUsuarios\PantallaCliente.resx">
+      <DependentUpon>PantallaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaUsuarios\PantallaProveedor.resx">
+      <DependentUpon>PantallaProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -277,6 +300,17 @@
     </None>
     <None Include="GD2C2019DataSet3.xss">
       <DependentUpon>GD2C2019DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="GD2C2019DataSet4.xsc">
+      <DependentUpon>GD2C2019DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="GD2C2019DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GD2C2019DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GD2C2019DataSet4.xss">
+      <DependentUpon>GD2C2019DataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

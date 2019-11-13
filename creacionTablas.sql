@@ -198,6 +198,8 @@ insert into LOS_BORBOTONES.Usuario (User_name, Password)
 	select distinct  Provee_CUIT, HASHBYTES('SHA2_256', CAST( Provee_CUIT AS varbinary(70))) 
 	from gd_esquema.Maestra
 	where Provee_CUIT is not null
+insert into LOS_BORBOTONES.Usuario(User_name, Password)
+	values('admin', HASHBYTES('SHA2_256', CAST( cast('w23e' as nvarchar(20)) AS varbinary(70))))
 
 /*** MIGRACION CLIENTES ***/
 
@@ -212,7 +214,7 @@ insert into LOS_BORBOTONES.Cliente (Cli_Nombre, Cli_Apellido,Cli_Dni, Cli_Direcc
 /*** MIGRACION ROLE ***/
 
 insert into LOS_BORBOTONES.Role (Rol_Nombre)
-	values  ('Administrativo'), ('Cliente'), ('Proveerdor')
+	values  ('Administrador General'), ('Cliente'), ('Proveedor')
 
 /*** MIGRACION FUNCIONALIDAD ***/
 
@@ -293,6 +295,10 @@ insert into LOS_BORBOTONES.Cupon (
 ;
 
 /*** MIGRACION ROL_USUARIO ***/
+
+insert into LOS_BORBOTONES.Rol_Usuario(User_name, Rol_Id)
+	select User_name, 1 from LOS_BORBOTONES.Usuario
+	where User_name = 'admin'
 
 insert into LOS_BORBOTONES.Rol_Usuario (User_name,Rol_Id)
 	select User_name, 2 
@@ -403,8 +409,8 @@ FOREIGN KEY (Factura_Nro) REFERENCES LOS_BORBOTONES.Factura(Factura_Nro);
 /********* CREACION DE VISTAS ************/
 /****************************************/
 
-
+/*
 create view LOS_BORBOTONES.vistaLogin
 as
 select ro.Rol_Nombre from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario r on (u.User_name = r.User_name) join LOS_BORBOTONES.Role ro on (r.Rol_Id = ro.Rol_Id);
-GO
+GO*/
