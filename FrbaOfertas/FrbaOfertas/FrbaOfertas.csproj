@@ -137,11 +137,11 @@
     <Compile Include="CrearOferta\Oferta.Designer.cs">
       <DependentUpon>Oferta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturar\Form1.cs">
+    <Compile Include="Facturar\Facturar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Facturar\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Facturar\Facturar.Designer.cs">
+      <DependentUpon>Facturar.cs</DependentUpon>
     </Compile>
     <Compile Include="GD2C2019DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -168,11 +168,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GD2C2019DataSet4.xsd</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="IniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="IniciarSesion.Designer.cs">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
+=======
+    <Compile Include="GD2C2019DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GD2C2019DataSet5.xsd</DependentUpon>
+>>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
     </Compile>
     <Compile Include="ListadoEstadistico\Form1.cs">
       <SubType>Form</SubType>
@@ -236,8 +243,8 @@
     <EmbeddedResource Include="CrearOferta\Oferta.resx">
       <DependentUpon>Oferta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Facturar\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Facturar\Facturar.resx">
+      <DependentUpon>Facturar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IniciarSesion.resx">
       <DependentUpon>IniciarSesion.cs</DependentUpon>
@@ -312,6 +319,20 @@
     <None Include="GD2C2019DataSet4.xss">
       <DependentUpon>GD2C2019DataSet4.xsd</DependentUpon>
     </None>
+<<<<<<< HEAD
+=======
+    <None Include="GD2C2019DataSet5.xsc">
+      <DependentUpon>GD2C2019DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="GD2C2019DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GD2C2019DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GD2C2019DataSet5.xss">
+      <DependentUpon>GD2C2019DataSet5.xsd</DependentUpon>
+    </None>
+>>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

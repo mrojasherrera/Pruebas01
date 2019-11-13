@@ -17,12 +17,9 @@ namespace FrbaOfertas.PantallaUsuarios
         public PantallaCliente(String unCliente)
         {
 
-            //String cliente = unCliente;
             InitializeComponent();
             UsuarioTB.Text = unCliente;
             usuario();
-           /*        
-            BienvenidaLBL.Text = "Te registraste como "+tabla.Rows[0][0]+" " + tabla.Rows[0][1];*/
         }
         
         SqlConnection conexion = new SqlConnection("Data Source=localhost\\SQLSERVER2012;Initial Catalog=GD2C2019;Persist Security Info=True;User ID=gdCupon2019;Password=gd2019");
@@ -49,9 +46,7 @@ namespace FrbaOfertas.PantallaUsuarios
         private void SalirBtn_Click(object sender, EventArgs e)
         {
            Close();
-        }
-
-        
+        }             
    
     }
 }

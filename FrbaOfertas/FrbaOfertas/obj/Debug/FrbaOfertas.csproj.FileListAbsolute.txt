@@ -44,6 +44,13 @@ C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaO
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.Facturar.Form1.resources
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\bin\Debug\MiLibreria.dll
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\bin\Debug\MiLibreria.pdb
+<<<<<<< HEAD
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.PantallaUsuarios.PantallaCliente.resources
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.IniciarSesion.resources
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.PantallaUsuarios.PantallaProveedor.resources
+=======
+C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.Login.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\bin\Debug\FrbaOfertas.exe.config
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.exe
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.pdb
+>>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
