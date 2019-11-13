@@ -22,6 +22,8 @@ namespace FrbaOfertas
         {
             // TODO: esta línea de código carga datos en la tabla 'gD2C2019DataSet4.Role' Puede moverla o quitarla según sea necesario.
             this.roleTableAdapter.Fill(this.gD2C2019DataSet4.Role);
+            // TODO: esta línea de código carga datos en la tabla 'gD2C2019DataSet4.Role' Puede moverla o quitarla según sea necesario.
+         
 
         }
         SqlConnection conexion = new SqlConnection("Data Source=localhost\\SQLSERVER2012;Initial Catalog=GD2C2019;Persist Security Info=True;User ID=gdCupon2019;Password=gd2019");

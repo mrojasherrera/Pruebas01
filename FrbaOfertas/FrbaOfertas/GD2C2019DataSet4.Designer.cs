@@ -24,11 +24,7 @@ namespace FrbaOfertas {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class GD2C2019DataSet4 : global::System.Data.DataSet {
         
-<<<<<<< HEAD
         private RoleDataTable tableRole;
-=======
-        private ProveedorDataTable tableProveedor;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -58,13 +54,8 @@ namespace FrbaOfertas {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-<<<<<<< HEAD
                 if ((ds.Tables["Role"] != null)) {
                     base.Tables.Add(new RoleDataTable(ds.Tables["Role"]));
-=======
-                if ((ds.Tables["Proveedor"] != null)) {
-                    base.Tables.Add(new ProveedorDataTable(ds.Tables["Proveedor"]));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -88,15 +79,9 @@ namespace FrbaOfertas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-<<<<<<< HEAD
         public RoleDataTable Role {
             get {
                 return this.tableRole;
-=======
-        public ProveedorDataTable Proveedor {
-            get {
-                return this.tableProveedor;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
         }
         
@@ -167,13 +152,8 @@ namespace FrbaOfertas {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-<<<<<<< HEAD
                 if ((ds.Tables["Role"] != null)) {
                     base.Tables.Add(new RoleDataTable(ds.Tables["Role"]));
-=======
-                if ((ds.Tables["Proveedor"] != null)) {
-                    base.Tables.Add(new ProveedorDataTable(ds.Tables["Proveedor"]));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -208,17 +188,10 @@ namespace FrbaOfertas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-<<<<<<< HEAD
             this.tableRole = ((RoleDataTable)(base.Tables["Role"]));
             if ((initTable == true)) {
                 if ((this.tableRole != null)) {
                     this.tableRole.InitVars();
-=======
-            this.tableProveedor = ((ProveedorDataTable)(base.Tables["Proveedor"]));
-            if ((initTable == true)) {
-                if ((this.tableProveedor != null)) {
-                    this.tableProveedor.InitVars();
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
             }
         }
@@ -231,22 +204,13 @@ namespace FrbaOfertas {
             this.Namespace = "http://tempuri.org/GD2C2019DataSet4.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-<<<<<<< HEAD
             this.tableRole = new RoleDataTable();
             base.Tables.Add(this.tableRole);
-=======
-            this.tableProveedor = new ProveedorDataTable();
-            base.Tables.Add(this.tableProveedor);
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
         private bool ShouldSerializeRole() {
-=======
-        private bool ShouldSerializeProveedor() {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             return false;
         }
         
@@ -306,18 +270,13 @@ namespace FrbaOfertas {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
         public delegate void RoleRowChangeEventHandler(object sender, RoleRowChangeEvent e);
-=======
-        public delegate void ProveedorRowChangeEventHandler(object sender, ProveedorRowChangeEvent e);
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-<<<<<<< HEAD
         public partial class RoleDataTable : global::System.Data.TypedTableBase<RoleRow> {
             
             private global::System.Data.DataColumn columnRol_Nombre;
@@ -326,16 +285,6 @@ namespace FrbaOfertas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public RoleDataTable() {
                 this.TableName = "Role";
-=======
-        public partial class ProveedorDataTable : global::System.Data.TypedTableBase<ProveedorRow> {
-            
-            private global::System.Data.DataColumn columnProvee_CUIT;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProveedorDataTable() {
-                this.TableName = "Proveedor";
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -343,11 +292,7 @@ namespace FrbaOfertas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             internal RoleDataTable(global::System.Data.DataTable table) {
-=======
-            internal ProveedorDataTable(global::System.Data.DataTable table) {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -364,26 +309,16 @@ namespace FrbaOfertas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             protected RoleDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-=======
-            protected ProveedorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             public global::System.Data.DataColumn Rol_NombreColumn {
                 get {
                     return this.columnRol_Nombre;
-=======
-            public global::System.Data.DataColumn Provee_CUITColumn {
-                get {
-                    return this.columnProvee_CUIT;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
             }
             
@@ -398,20 +333,13 @@ namespace FrbaOfertas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             public RoleRow this[int index] {
                 get {
                     return ((RoleRow)(this.Rows[index]));
-=======
-            public ProveedorRow this[int index] {
-                get {
-                    return ((ProveedorRow)(this.Rows[index]));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             public event RoleRowChangeEventHandler RoleRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -426,28 +354,11 @@ namespace FrbaOfertas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void AddRoleRow(RoleRow row) {
-=======
-            public event ProveedorRowChangeEventHandler ProveedorRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ProveedorRowChangeEventHandler ProveedorRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ProveedorRowChangeEventHandler ProveedorRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event ProveedorRowChangeEventHandler ProveedorRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddProveedorRow(ProveedorRow row) {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             public RoleRow AddRoleRow(string Rol_Nombre) {
                 RoleRow rowRoleRow = ((RoleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -455,25 +366,12 @@ namespace FrbaOfertas {
                 rowRoleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRoleRow);
                 return rowRoleRow;
-=======
-            public ProveedorRow AddProveedorRow(string Provee_CUIT) {
-                ProveedorRow rowProveedorRow = ((ProveedorRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        Provee_CUIT};
-                rowProveedorRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowProveedorRow);
-                return rowProveedorRow;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-<<<<<<< HEAD
                 RoleDataTable cln = ((RoleDataTable)(base.Clone()));
-=======
-                ProveedorDataTable cln = ((ProveedorDataTable)(base.Clone()));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 cln.InitVars();
                 return cln;
             }
@@ -481,80 +379,47 @@ namespace FrbaOfertas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-<<<<<<< HEAD
                 return new RoleDataTable();
-=======
-                return new ProveedorDataTable();
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-<<<<<<< HEAD
                 this.columnRol_Nombre = base.Columns["Rol_Nombre"];
-=======
-                this.columnProvee_CUIT = base.Columns["Provee_CUIT"];
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-<<<<<<< HEAD
                 this.columnRol_Nombre = new global::System.Data.DataColumn("Rol_Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRol_Nombre);
                 this.columnRol_Nombre.MaxLength = 255;
-=======
-                this.columnProvee_CUIT = new global::System.Data.DataColumn("Provee_CUIT", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnProvee_CUIT);
-                this.columnProvee_CUIT.AllowDBNull = false;
-                this.columnProvee_CUIT.MaxLength = 20;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             public RoleRow NewRoleRow() {
                 return ((RoleRow)(this.NewRow()));
-=======
-            public ProveedorRow NewProveedorRow() {
-                return ((ProveedorRow)(this.NewRow()));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-<<<<<<< HEAD
                 return new RoleRow(builder);
-=======
-                return new ProveedorRow(builder);
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-<<<<<<< HEAD
                 return typeof(RoleRow);
-=======
-                return typeof(ProveedorRow);
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-<<<<<<< HEAD
                 if ((this.RoleRowChanged != null)) {
                     this.RoleRowChanged(this, new RoleRowChangeEvent(((RoleRow)(e.Row)), e.Action));
-=======
-                if ((this.ProveedorRowChanged != null)) {
-                    this.ProveedorRowChanged(this, new ProveedorRowChangeEvent(((ProveedorRow)(e.Row)), e.Action));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
             }
             
@@ -562,13 +427,8 @@ namespace FrbaOfertas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-<<<<<<< HEAD
                 if ((this.RoleRowChanging != null)) {
                     this.RoleRowChanging(this, new RoleRowChangeEvent(((RoleRow)(e.Row)), e.Action));
-=======
-                if ((this.ProveedorRowChanging != null)) {
-                    this.ProveedorRowChanging(this, new ProveedorRowChangeEvent(((ProveedorRow)(e.Row)), e.Action));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
             }
             
@@ -576,13 +436,8 @@ namespace FrbaOfertas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-<<<<<<< HEAD
                 if ((this.RoleRowDeleted != null)) {
                     this.RoleRowDeleted(this, new RoleRowChangeEvent(((RoleRow)(e.Row)), e.Action));
-=======
-                if ((this.ProveedorRowDeleted != null)) {
-                    this.ProveedorRowDeleted(this, new ProveedorRowChangeEvent(((ProveedorRow)(e.Row)), e.Action));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
             }
             
@@ -590,23 +445,14 @@ namespace FrbaOfertas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-<<<<<<< HEAD
                 if ((this.RoleRowDeleting != null)) {
                     this.RoleRowDeleting(this, new RoleRowChangeEvent(((RoleRow)(e.Row)), e.Action));
-=======
-                if ((this.ProveedorRowDeleting != null)) {
-                    this.ProveedorRowDeleting(this, new ProveedorRowChangeEvent(((ProveedorRow)(e.Row)), e.Action));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             public void RemoveRoleRow(RoleRow row) {
-=======
-            public void RemoveProveedorRow(ProveedorRow row) {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 this.Rows.Remove(row);
             }
             
@@ -633,11 +479,7 @@ namespace FrbaOfertas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-<<<<<<< HEAD
                 attribute2.FixedValue = "RoleDataTable";
-=======
-                attribute2.FixedValue = "ProveedorDataTable";
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -681,7 +523,6 @@ namespace FrbaOfertas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-<<<<<<< HEAD
         public partial class RoleRow : global::System.Data.DataRow {
             
             private RoleDataTable tableRole;
@@ -691,22 +532,10 @@ namespace FrbaOfertas {
             internal RoleRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableRole = ((RoleDataTable)(this.Table));
-=======
-        public partial class ProveedorRow : global::System.Data.DataRow {
-            
-            private ProveedorDataTable tableProveedor;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal ProveedorRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableProveedor = ((ProveedorDataTable)(this.Table));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             public string Rol_Nombre {
                 get {
                     try {
@@ -732,52 +561,28 @@ namespace FrbaOfertas {
             public void SetRol_NombreNull() {
                 this[this.tableRole.Rol_NombreColumn] = global::System.Convert.DBNull;
             }
-=======
-            public string Provee_CUIT {
-                get {
-                    return ((string)(this[this.tableProveedor.Provee_CUITColumn]));
-                }
-                set {
-                    this[this.tableProveedor.Provee_CUITColumn] = value;
-                }
-            }
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
         }
         
         /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
         public class RoleRowChangeEvent : global::System.EventArgs {
             
             private RoleRow eventRow;
-=======
-        public class ProveedorRowChangeEvent : global::System.EventArgs {
-            
-            private ProveedorRow eventRow;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             public RoleRowChangeEvent(RoleRow row, global::System.Data.DataRowAction action) {
-=======
-            public ProveedorRowChangeEvent(ProveedorRow row, global::System.Data.DataRowAction action) {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
             public RoleRow Row {
-=======
-            public ProveedorRow Row {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 get {
                     return this.eventRow;
                 }
@@ -805,11 +610,7 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-<<<<<<< HEAD
     public partial class RoleTableAdapter : global::System.ComponentModel.Component {
-=======
-    public partial class ProveedorTableAdapter : global::System.ComponentModel.Component {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -823,11 +624,7 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-<<<<<<< HEAD
         public RoleTableAdapter() {
-=======
-        public ProveedorTableAdapter() {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             this.ClearBeforeFill = true;
         }
         
@@ -924,7 +721,6 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-<<<<<<< HEAD
             tableMapping.DataSetTable = "Role";
             tableMapping.ColumnMappings.Add("Rol_Nombre", "Rol_Nombre");
             this._adapter.TableMappings.Add(tableMapping);
@@ -933,16 +729,6 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
             this._adapter.InsertCommand.CommandText = "INSERT INTO [LOS_BORBOTONES].[Role] ([Rol_Nombre]) VALUES (@Rol_Nombre)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rol_Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rol_Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-=======
-            tableMapping.DataSetTable = "Proveedor";
-            tableMapping.ColumnMappings.Add("Provee_CUIT", "Provee_CUIT");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [LOS_BORBOTONES].[Proveedor] ([Provee_CUIT]) VALUES (@Provee_CUIT)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Provee_CUIT", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Provee_CUIT", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -958,11 +744,7 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-<<<<<<< HEAD
             this._commandCollection[0].CommandText = "SELECT Rol_Nombre FROM LOS_BORBOTONES.Role";
-=======
-            this._commandCollection[0].CommandText = "SELECT Provee_CUIT FROM LOS_BORBOTONES.Proveedor";
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -970,11 +752,7 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-<<<<<<< HEAD
         public virtual int Fill(GD2C2019DataSet4.RoleDataTable dataTable) {
-=======
-        public virtual int Fill(GD2C2019DataSet4.ProveedorDataTable dataTable) {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -987,15 +765,9 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-<<<<<<< HEAD
         public virtual GD2C2019DataSet4.RoleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             GD2C2019DataSet4.RoleDataTable dataTable = new GD2C2019DataSet4.RoleDataTable();
-=======
-        public virtual GD2C2019DataSet4.ProveedorDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            GD2C2019DataSet4.ProveedorDataTable dataTable = new GD2C2019DataSet4.ProveedorDataTable();
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1003,11 +775,7 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-<<<<<<< HEAD
         public virtual int Update(GD2C2019DataSet4.RoleDataTable dataTable) {
-=======
-        public virtual int Update(GD2C2019DataSet4.ProveedorDataTable dataTable) {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             return this.Adapter.Update(dataTable);
         }
         
@@ -1015,11 +783,7 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(GD2C2019DataSet4 dataSet) {
-<<<<<<< HEAD
             return this.Adapter.Update(dataSet, "Role");
-=======
-            return this.Adapter.Update(dataSet, "Proveedor");
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1041,21 +805,12 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-<<<<<<< HEAD
         public virtual int Insert(string Rol_Nombre) {
             if ((Rol_Nombre == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Rol_Nombre));
-=======
-        public virtual int Insert(string Provee_CUIT) {
-            if ((Provee_CUIT == null)) {
-                throw new global::System.ArgumentNullException("Provee_CUIT");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Provee_CUIT));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1086,11 +841,7 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-<<<<<<< HEAD
         private RoleTableAdapter _roleTableAdapter;
-=======
-        private ProveedorTableAdapter _proveedorTableAdapter;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1112,21 +863,12 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-<<<<<<< HEAD
         public RoleTableAdapter RoleTableAdapter {
             get {
                 return this._roleTableAdapter;
             }
             set {
                 this._roleTableAdapter = value;
-=======
-        public ProveedorTableAdapter ProveedorTableAdapter {
-            get {
-                return this._proveedorTableAdapter;
-            }
-            set {
-                this._proveedorTableAdapter = value;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
             }
         }
         
@@ -1149,15 +891,9 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-<<<<<<< HEAD
                 if (((this._roleTableAdapter != null) 
                             && (this._roleTableAdapter.Connection != null))) {
                     return this._roleTableAdapter.Connection;
-=======
-                if (((this._proveedorTableAdapter != null) 
-                            && (this._proveedorTableAdapter.Connection != null))) {
-                    return this._proveedorTableAdapter.Connection;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
                 return null;
             }
@@ -1172,11 +908,7 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-<<<<<<< HEAD
                 if ((this._roleTableAdapter != null)) {
-=======
-                if ((this._proveedorTableAdapter != null)) {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                     count = (count + 1);
                 }
                 return count;
@@ -1190,21 +922,12 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateUpdatedRows(GD2C2019DataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-<<<<<<< HEAD
             if ((this._roleTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._roleTableAdapter.Update(updatedRows));
-=======
-            if ((this._proveedorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Proveedor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._proveedorTableAdapter.Update(updatedRows));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1218,19 +941,11 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateInsertedRows(GD2C2019DataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-<<<<<<< HEAD
             if ((this._roleTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._roleTableAdapter.Update(addedRows));
-=======
-            if ((this._proveedorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Proveedor.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._proveedorTableAdapter.Update(addedRows));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1244,19 +959,11 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private int UpdateDeletedRows(GD2C2019DataSet4 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-<<<<<<< HEAD
             if ((this._roleTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._roleTableAdapter.Update(deletedRows));
-=======
-            if ((this._proveedorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Proveedor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._proveedorTableAdapter.Update(deletedRows));
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1299,13 +1006,8 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-<<<<<<< HEAD
             if (((this._roleTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._roleTableAdapter.Connection) == false))) {
-=======
-            if (((this._proveedorTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._proveedorTableAdapter.Connection) == false))) {
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -1341,7 +1043,6 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-<<<<<<< HEAD
                 if ((this._roleTableAdapter != null)) {
                     revertConnections.Add(this._roleTableAdapter, this._roleTableAdapter.Connection);
                     this._roleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -1349,15 +1050,6 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
                     if (this._roleTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._roleTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._roleTableAdapter.Adapter);
-=======
-                if ((this._proveedorTableAdapter != null)) {
-                    revertConnections.Add(this._proveedorTableAdapter, this._proveedorTableAdapter.Connection);
-                    this._proveedorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._proveedorTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._proveedorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._proveedorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._proveedorTableAdapter.Adapter);
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                     }
                 }
                 // 
@@ -1418,15 +1110,9 @@ namespace FrbaOfertas.GD2C2019DataSet4TableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-<<<<<<< HEAD
                 if ((this._roleTableAdapter != null)) {
                     this._roleTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._roleTableAdapter]));
                     this._roleTableAdapter.Transaction = null;
-=======
-                if ((this._proveedorTableAdapter != null)) {
-                    this._proveedorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._proveedorTableAdapter]));
-                    this._proveedorTableAdapter.Transaction = null;
->>>>>>> d4052fc842930dc0fe16bd84ed557a62f40b16da
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

@@ -35,14 +35,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.UsuarioTB = new System.Windows.Forms.TextBox();
             this.PassTB = new System.Windows.Forms.TextBox();
-            this.RolCB = new System.Windows.Forms.ComboBox();
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gD2C2019DataSet4 = new FrbaOfertas.GD2C2019DataSet4();
             this.IngresarBtn = new System.Windows.Forms.Button();
             this.SalirBtn = new System.Windows.Forms.Button();
+            this.RolCB = new System.Windows.Forms.ComboBox();
+            this.gD2C2019DataSet4 = new FrbaOfertas.GD2C2019DataSet4();
+            this.roleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.roleTableAdapter = new FrbaOfertas.GD2C2019DataSet4TableAdapters.RoleTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -102,26 +104,9 @@
             this.PassTB.Size = new System.Drawing.Size(177, 20);
             this.PassTB.TabIndex = 1;
             // 
-            // RolCB
-            // 
-            this.RolCB.DataSource = this.roleBindingSource;
-            this.RolCB.DisplayMember = "Rol_Nombre";
-            this.RolCB.FormattingEnabled = true;
-            this.RolCB.Location = new System.Drawing.Point(223, 180);
-            this.RolCB.Name = "RolCB";
-            this.RolCB.Size = new System.Drawing.Size(177, 21);
-            this.RolCB.TabIndex = 2;
-            this.RolCB.ValueMember = "Rol_Nombre";
-            // 
             // roleBindingSource
             // 
             this.roleBindingSource.DataMember = "Role";
-            this.roleBindingSource.DataSource = this.gD2C2019DataSet4;
-            // 
-            // gD2C2019DataSet4
-            // 
-            this.gD2C2019DataSet4.DataSetName = "GD2C2019DataSet4";
-            this.gD2C2019DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // IngresarBtn
             // 
@@ -143,6 +128,27 @@
             this.SalirBtn.UseVisualStyleBackColor = true;
             this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
             // 
+            // RolCB
+            // 
+            this.RolCB.DataSource = this.roleBindingSource1;
+            this.RolCB.DisplayMember = "Rol_Nombre";
+            this.RolCB.FormattingEnabled = true;
+            this.RolCB.Location = new System.Drawing.Point(223, 180);
+            this.RolCB.Name = "RolCB";
+            this.RolCB.Size = new System.Drawing.Size(177, 21);
+            this.RolCB.TabIndex = 21;
+            this.RolCB.ValueMember = "Rol_Nombre";
+            // 
+            // gD2C2019DataSet4
+            // 
+            this.gD2C2019DataSet4.DataSetName = "GD2C2019DataSet4";
+            this.gD2C2019DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // roleBindingSource1
+            // 
+            this.roleBindingSource1.DataMember = "Role";
+            this.roleBindingSource1.DataSource = this.gD2C2019DataSet4;
+            // 
             // roleTableAdapter
             // 
             this.roleTableAdapter.ClearBeforeFill = true;
@@ -152,9 +158,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 341);
+            this.Controls.Add(this.RolCB);
             this.Controls.Add(this.IngresarBtn);
             this.Controls.Add(this.SalirBtn);
-            this.Controls.Add(this.RolCB);
             this.Controls.Add(this.PassTB);
             this.Controls.Add(this.UsuarioTB);
             this.Controls.Add(this.label4);
@@ -166,6 +172,7 @@
             this.Load += new System.EventHandler(this.IniciarSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,11 +186,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox UsuarioTB;
         private System.Windows.Forms.TextBox PassTB;
-        private System.Windows.Forms.ComboBox RolCB;
         private System.Windows.Forms.Button IngresarBtn;
         private System.Windows.Forms.Button SalirBtn;
-        private GD2C2019DataSet4 gD2C2019DataSet4;
         private System.Windows.Forms.BindingSource roleBindingSource;
+        private System.Windows.Forms.ComboBox RolCB;
+        private GD2C2019DataSet4 gD2C2019DataSet4;
+        private System.Windows.Forms.BindingSource roleBindingSource1;
         private GD2C2019DataSet4TableAdapters.RoleTableAdapter roleTableAdapter;
     }
 }
