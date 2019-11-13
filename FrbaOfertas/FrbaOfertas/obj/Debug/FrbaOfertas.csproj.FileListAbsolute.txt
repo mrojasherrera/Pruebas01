@@ -45,3 +45,6 @@ C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaO
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\bin\Debug\MiLibreria.dll
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\bin\Debug\MiLibreria.pdb
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.Login.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\bin\Debug\FrbaOfertas.exe.config
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.exe
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.pdb
