@@ -137,6 +137,12 @@
     <Compile Include="CrearOferta\Oferta.Designer.cs">
       <DependentUpon>Oferta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Facturar\FacturarProv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturar\FacturarProv.Designer.cs">
+      <DependentUpon>FacturarProv.cs</DependentUpon>
+    </Compile>
     <Compile Include="GD2C2019DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -316,9 +322,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Facturar\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

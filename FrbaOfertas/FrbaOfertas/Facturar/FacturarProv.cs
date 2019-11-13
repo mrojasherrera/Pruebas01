@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrbaOfertas.Administrativo
+namespace FrbaOfertas.Facturar
 {
-    public partial class ListadoAcciones : Form
+    public partial class FacturarProv : Form
     {
-        public ListadoAcciones()
+        public FacturarProv()
         {
             InitializeComponent();
-        }
-
-        private void SalirBtn_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

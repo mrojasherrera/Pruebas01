@@ -19,8 +19,16 @@ namespace FrbaOfertas.PantallaUsuarios
 
         private void PublicarBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             CrearOferta.Oferta oferta = new CrearOferta.Oferta();
             oferta.Show();
+        }
+
+        private void SalirBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrbaOfertas.IniciarSesion sesion = new FrbaOfertas.IniciarSesion();
+            sesion.Show();
         }
     }
 }

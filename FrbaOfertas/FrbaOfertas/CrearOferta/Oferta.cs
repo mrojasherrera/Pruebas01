@@ -16,5 +16,12 @@ namespace FrbaOfertas.CrearOferta
         {
             InitializeComponent();
         }
+
+        private void VolverBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PantallaUsuarios.PantallaProveedor pantallaProv = new PantallaUsuarios.PantallaProveedor();
+            pantallaProv.Show();
+        }
     }
 }

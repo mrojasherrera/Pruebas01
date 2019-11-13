@@ -128,6 +128,7 @@
             this.SalirBtn.TabIndex = 8;
             this.SalirBtn.Text = "Salir";
             this.SalirBtn.UseVisualStyleBackColor = true;
+            this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
             // 
             // ListadoAcciones
             // 
