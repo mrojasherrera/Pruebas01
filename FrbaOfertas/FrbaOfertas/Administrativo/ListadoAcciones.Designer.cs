@@ -62,6 +62,7 @@
             this.ClienteBtn.TabIndex = 1;
             this.ClienteBtn.Text = "ABM Cliente";
             this.ClienteBtn.UseVisualStyleBackColor = true;
+            this.ClienteBtn.Click += new System.EventHandler(this.ClienteBtn_Click);
             // 
             // EstadisticoBtn
             // 

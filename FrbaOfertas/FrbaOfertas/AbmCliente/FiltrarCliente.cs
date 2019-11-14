@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace FrbaOfertas.AbmCliente
 {
-    public partial class AccionesCliente : Form
+    public partial class FiltrarCliente : Form
     {
-        public AccionesCliente()
+        public FiltrarCliente()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void VolverBtn_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void NuevoBtn_Click(object sender, EventArgs e)
-        {
-            AbmCliente.NuevoCliente nuevo = new AbmCliente.NuevoCliente();
-            nuevo.Show();
         }
     }
 }

@@ -21,5 +21,11 @@ namespace FrbaOfertas.Administrativo
         {
             Close();
         }
+
+        private void ClienteBtn_Click(object sender, EventArgs e)
+        {
+            AbmCliente.AccionesCliente abmCliente = new AbmCliente.AccionesCliente();
+            abmCliente.Show();
+        }
     }
 }
