@@ -30,16 +30,16 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.MailTB = new System.Windows.Forms.TextBox();
-            this.DniTB = new System.Windows.Forms.TextBox();
-            this.ApellidoTB = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.NombreTB = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.ApellidoTB = new System.Windows.Forms.TextBox();
+            this.DniTB = new System.Windows.Forms.TextBox();
+            this.MailTB = new System.Windows.Forms.TextBox();
             this.BuscarBtn = new System.Windows.Forms.Button();
             this.VolverBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             this.groupBox1.Controls.Add(this.MailTB);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(364, 253);
+            this.groupBox1.Size = new System.Drawing.Size(364, 170);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Buscar cliente";
@@ -65,31 +65,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 205);
+            this.label4.Location = new System.Drawing.Point(21, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 20);
             this.label4.TabIndex = 15;
             this.label4.Text = "MAIL:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(24, 147);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "DNI:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 20);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "APELLIDO:";
             // 
             // label1
             // 
@@ -101,26 +81,15 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "NOMBRE:";
             // 
-            // MailTB
+            // label3
             // 
-            this.MailTB.Location = new System.Drawing.Point(156, 199);
-            this.MailTB.Name = "MailTB";
-            this.MailTB.Size = new System.Drawing.Size(177, 20);
-            this.MailTB.TabIndex = 11;
-            // 
-            // DniTB
-            // 
-            this.DniTB.Location = new System.Drawing.Point(156, 141);
-            this.DniTB.Name = "DniTB";
-            this.DniTB.Size = new System.Drawing.Size(177, 20);
-            this.DniTB.TabIndex = 10;
-            // 
-            // ApellidoTB
-            // 
-            this.ApellidoTB.Location = new System.Drawing.Point(156, 86);
-            this.ApellidoTB.Name = "ApellidoTB";
-            this.ApellidoTB.Size = new System.Drawing.Size(177, 20);
-            this.ApellidoTB.TabIndex = 9;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(21, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "DNI:";
             // 
             // NombreTB
             // 
@@ -129,19 +98,40 @@
             this.NombreTB.Size = new System.Drawing.Size(177, 20);
             this.NombreTB.TabIndex = 8;
             // 
-            // pictureBox1
+            // label2
             // 
-            this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources._29461_200;
-            this.pictureBox1.Location = new System.Drawing.Point(414, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(265, 242);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(101, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "APELLIDO:";
+            // 
+            // ApellidoTB
+            // 
+            this.ApellidoTB.Location = new System.Drawing.Point(156, 68);
+            this.ApellidoTB.Name = "ApellidoTB";
+            this.ApellidoTB.Size = new System.Drawing.Size(177, 20);
+            this.ApellidoTB.TabIndex = 9;
+            // 
+            // DniTB
+            // 
+            this.DniTB.Location = new System.Drawing.Point(156, 100);
+            this.DniTB.Name = "DniTB";
+            this.DniTB.Size = new System.Drawing.Size(177, 20);
+            this.DniTB.TabIndex = 10;
+            // 
+            // MailTB
+            // 
+            this.MailTB.Location = new System.Drawing.Point(156, 130);
+            this.MailTB.Name = "MailTB";
+            this.MailTB.Size = new System.Drawing.Size(177, 20);
+            this.MailTB.TabIndex = 11;
             // 
             // BuscarBtn
             // 
-            this.BuscarBtn.Location = new System.Drawing.Point(222, 310);
+            this.BuscarBtn.Location = new System.Drawing.Point(217, 198);
             this.BuscarBtn.Name = "BuscarBtn";
             this.BuscarBtn.Size = new System.Drawing.Size(94, 44);
             this.BuscarBtn.TabIndex = 11;
@@ -150,7 +140,7 @@
             // 
             // VolverBtn
             // 
-            this.VolverBtn.Location = new System.Drawing.Point(90, 310);
+            this.VolverBtn.Location = new System.Drawing.Point(85, 198);
             this.VolverBtn.Name = "VolverBtn";
             this.VolverBtn.Size = new System.Drawing.Size(94, 44);
             this.VolverBtn.TabIndex = 10;
@@ -158,11 +148,21 @@
             this.VolverBtn.UseVisualStyleBackColor = true;
             this.VolverBtn.Click += new System.EventHandler(this.VolverBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources._29461_200;
+            this.pictureBox1.Location = new System.Drawing.Point(383, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 159);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // FiltrarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 395);
+            this.ClientSize = new System.Drawing.Size(561, 250);
             this.Controls.Add(this.BuscarBtn);
             this.Controls.Add(this.VolverBtn);
             this.Controls.Add(this.pictureBox1);

@@ -53,7 +53,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(343, 181);
+            this.groupBox1.Size = new System.Drawing.Size(326, 142);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
@@ -61,7 +61,7 @@
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(147, 121);
+            this.textBox3.Location = new System.Drawing.Point(127, 109);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(178, 20);
             this.textBox3.TabIndex = 5;
@@ -69,7 +69,7 @@
             // textBox2
             // 
             this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(147, 84);
+            this.textBox2.Location = new System.Drawing.Point(127, 72);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(178, 20);
             this.textBox2.TabIndex = 4;
@@ -78,7 +78,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 121);
+            this.label3.Location = new System.Drawing.Point(6, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 84);
+            this.label2.Location = new System.Drawing.Point(6, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 2;
@@ -97,7 +97,7 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(147, 46);
+            this.textBox1.Location = new System.Drawing.Point(127, 34);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(178, 20);
             this.textBox1.TabIndex = 1;
@@ -106,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 46);
+            this.label1.Location = new System.Drawing.Point(6, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 20);
             this.label1.TabIndex = 0;
@@ -116,16 +116,16 @@
             // 
             this.groupBox2.Controls.Add(this.ModificarBtn);
             this.groupBox2.Controls.Add(this.EliminarBtn);
-            this.groupBox2.Location = new System.Drawing.Point(362, 13);
+            this.groupBox2.Location = new System.Drawing.Point(345, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(289, 181);
+            this.groupBox2.Size = new System.Drawing.Size(172, 142);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
             // 
             // ModificarBtn
             // 
-            this.ModificarBtn.Location = new System.Drawing.Point(88, 34);
+            this.ModificarBtn.Location = new System.Drawing.Point(33, 24);
             this.ModificarBtn.Name = "ModificarBtn";
             this.ModificarBtn.Size = new System.Drawing.Size(120, 42);
             this.ModificarBtn.TabIndex = 1;
@@ -135,7 +135,7 @@
             // 
             // EliminarBtn
             // 
-            this.EliminarBtn.Location = new System.Drawing.Point(88, 100);
+            this.EliminarBtn.Location = new System.Drawing.Point(33, 90);
             this.EliminarBtn.Name = "EliminarBtn";
             this.EliminarBtn.Size = new System.Drawing.Size(120, 42);
             this.EliminarBtn.TabIndex = 2;
@@ -144,7 +144,7 @@
             // 
             // VolverBtn
             // 
-            this.VolverBtn.Location = new System.Drawing.Point(160, 227);
+            this.VolverBtn.Location = new System.Drawing.Point(140, 175);
             this.VolverBtn.Name = "VolverBtn";
             this.VolverBtn.Size = new System.Drawing.Size(120, 42);
             this.VolverBtn.TabIndex = 6;
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 290);
+            this.ClientSize = new System.Drawing.Size(547, 241);
             this.Controls.Add(this.VolverBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

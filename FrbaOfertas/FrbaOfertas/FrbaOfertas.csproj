@@ -74,6 +74,12 @@
     <Compile Include="AbmCliente\NuevoCliente.Designer.cs">
       <DependentUpon>NuevoCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="AbmCliente\RestaurarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmCliente\RestaurarCliente.Designer.cs">
+      <DependentUpon>RestaurarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="AbmProveedor\AccionesProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="AbmRol\NuevoRol.Designer.cs">
       <DependentUpon>NuevoRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\RestaurarRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\RestaurarRol.Designer.cs">
+      <DependentUpon>RestaurarRol.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmRol\RolEncontrado.cs">
       <SubType>Form</SubType>
@@ -221,6 +233,9 @@
     <EmbeddedResource Include="AbmCliente\NuevoCliente.resx">
       <DependentUpon>NuevoCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AbmCliente\RestaurarCliente.resx">
+      <DependentUpon>RestaurarCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AbmProveedor\AccionesProveedor.resx">
       <DependentUpon>AccionesProveedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AbmRol\NuevoRol.resx">
       <DependentUpon>NuevoRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\RestaurarRol.resx">
+      <DependentUpon>RestaurarRol.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmRol\RolEncontrado.resx">
       <DependentUpon>RolEncontrado.cs</DependentUpon>
@@ -355,6 +373,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pc-tools-registry-mechanic-12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-account-profile-user-uploadload-upload--512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

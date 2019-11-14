@@ -29,24 +29,36 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.NuevoRolBtn = new System.Windows.Forms.Button();
             this.FiltrarRolBtn = new System.Windows.Forms.Button();
+            this.NuevoRolBtn = new System.Windows.Forms.Button();
             this.SalirBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RestaurarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.RestaurarBtn);
             this.groupBox1.Controls.Add(this.FiltrarRolBtn);
             this.groupBox1.Controls.Add(this.NuevoRolBtn);
-            this.groupBox1.Location = new System.Drawing.Point(13, 13);
+            this.groupBox1.Location = new System.Drawing.Point(12, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(324, 209);
+            this.groupBox1.Size = new System.Drawing.Size(324, 272);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
+            // 
+            // FiltrarRolBtn
+            // 
+            this.FiltrarRolBtn.Location = new System.Drawing.Point(100, 123);
+            this.FiltrarRolBtn.Name = "FiltrarRolBtn";
+            this.FiltrarRolBtn.Size = new System.Drawing.Size(123, 44);
+            this.FiltrarRolBtn.TabIndex = 1;
+            this.FiltrarRolBtn.Text = "Filtrar Rol";
+            this.FiltrarRolBtn.UseVisualStyleBackColor = true;
+            this.FiltrarRolBtn.Click += new System.EventHandler(this.FiltrarRolBtn_Click);
             // 
             // NuevoRolBtn
             // 
@@ -58,19 +70,9 @@
             this.NuevoRolBtn.UseVisualStyleBackColor = true;
             this.NuevoRolBtn.Click += new System.EventHandler(this.NuevoRolBtn_Click);
             // 
-            // FiltrarRolBtn
-            // 
-            this.FiltrarRolBtn.Location = new System.Drawing.Point(100, 129);
-            this.FiltrarRolBtn.Name = "FiltrarRolBtn";
-            this.FiltrarRolBtn.Size = new System.Drawing.Size(123, 44);
-            this.FiltrarRolBtn.TabIndex = 1;
-            this.FiltrarRolBtn.Text = "Filtrar Rol";
-            this.FiltrarRolBtn.UseVisualStyleBackColor = true;
-            this.FiltrarRolBtn.Click += new System.EventHandler(this.FiltrarRolBtn_Click);
-            // 
             // SalirBtn
             // 
-            this.SalirBtn.Location = new System.Drawing.Point(113, 262);
+            this.SalirBtn.Location = new System.Drawing.Point(414, 265);
             this.SalirBtn.Name = "SalirBtn";
             this.SalirBtn.Size = new System.Drawing.Size(123, 50);
             this.SalirBtn.TabIndex = 1;
@@ -80,12 +82,21 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources.icono_planificar_acciones_comerciales;
-            this.pictureBox1.Location = new System.Drawing.Point(364, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(362, 39);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(232, 198);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // RestaurarBtn
+            // 
+            this.RestaurarBtn.Location = new System.Drawing.Point(100, 207);
+            this.RestaurarBtn.Name = "RestaurarBtn";
+            this.RestaurarBtn.Size = new System.Drawing.Size(123, 44);
+            this.RestaurarBtn.TabIndex = 2;
+            this.RestaurarBtn.Text = "Restaurar Rol";
+            this.RestaurarBtn.UseVisualStyleBackColor = true;
             // 
             // AccionesRol
             // 
@@ -110,5 +121,6 @@
         private System.Windows.Forms.Button NuevoRolBtn;
         private System.Windows.Forms.Button SalirBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button RestaurarBtn;
     }
 }

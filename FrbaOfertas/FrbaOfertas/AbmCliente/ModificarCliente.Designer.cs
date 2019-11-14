@@ -47,15 +47,19 @@
             this.DniTB = new System.Windows.Forms.TextBox();
             this.ApellidoTB = new System.Windows.Forms.TextBox();
             this.NombreTB = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ModificarBtn = new System.Windows.Forms.Button();
             this.VolverBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PassCB = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.PassCB);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.CiudadTB);
             this.groupBox1.Controls.Add(this.Ciudad);
@@ -76,7 +80,7 @@
             this.groupBox1.Controls.Add(this.NombreTB);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(563, 436);
+            this.groupBox1.Size = new System.Drawing.Size(563, 364);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modificar cliente";
@@ -85,7 +89,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 119);
+            this.label1.Location = new System.Drawing.Point(21, 93);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 59;
@@ -93,16 +97,16 @@
             // 
             // CiudadTB
             // 
-            this.CiudadTB.Location = new System.Drawing.Point(274, 296);
+            this.CiudadTB.Location = new System.Drawing.Point(277, 223);
             this.CiudadTB.Name = "CiudadTB";
-            this.CiudadTB.Size = new System.Drawing.Size(262, 20);
+            this.CiudadTB.Size = new System.Drawing.Size(259, 20);
             this.CiudadTB.TabIndex = 58;
             // 
             // Ciudad
             // 
             this.Ciudad.AutoSize = true;
             this.Ciudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ciudad.Location = new System.Drawing.Point(22, 294);
+            this.Ciudad.Location = new System.Drawing.Point(21, 223);
             this.Ciudad.Name = "Ciudad";
             this.Ciudad.Size = new System.Drawing.Size(83, 20);
             this.Ciudad.TabIndex = 57;
@@ -112,7 +116,7 @@
             // 
             this.FechNac.AutoSize = true;
             this.FechNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechNac.Location = new System.Drawing.Point(21, 385);
+            this.FechNac.Location = new System.Drawing.Point(21, 287);
             this.FechNac.Name = "FechNac";
             this.FechNac.Size = new System.Drawing.Size(218, 20);
             this.FechNac.TabIndex = 56;
@@ -122,7 +126,7 @@
             // 
             this.CodPost.AutoSize = true;
             this.CodPost.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodPost.Location = new System.Drawing.Point(21, 338);
+            this.CodPost.Location = new System.Drawing.Point(21, 255);
             this.CodPost.Name = "CodPost";
             this.CodPost.Size = new System.Drawing.Size(158, 20);
             this.CodPost.TabIndex = 55;
@@ -132,7 +136,7 @@
             // 
             this.Direccion.AutoSize = true;
             this.Direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Direccion.Location = new System.Drawing.Point(21, 252);
+            this.Direccion.Location = new System.Drawing.Point(21, 194);
             this.Direccion.Name = "Direccion";
             this.Direccion.Size = new System.Drawing.Size(113, 20);
             this.Direccion.TabIndex = 54;
@@ -142,7 +146,7 @@
             // 
             this.Telefono.AutoSize = true;
             this.Telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Telefono.Location = new System.Drawing.Point(22, 204);
+            this.Telefono.Location = new System.Drawing.Point(21, 161);
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(107, 20);
             this.Telefono.TabIndex = 53;
@@ -152,7 +156,7 @@
             // 
             this.Mail.AutoSize = true;
             this.Mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Mail.Location = new System.Drawing.Point(21, 160);
+            this.Mail.Location = new System.Drawing.Point(21, 125);
             this.Mail.Name = "Mail";
             this.Mail.Size = new System.Drawing.Size(56, 20);
             this.Mail.TabIndex = 52;
@@ -162,7 +166,7 @@
             // 
             this.Apellido.AutoSize = true;
             this.Apellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Apellido.Location = new System.Drawing.Point(21, 75);
+            this.Apellido.Location = new System.Drawing.Point(21, 61);
             this.Apellido.Name = "Apellido";
             this.Apellido.Size = new System.Drawing.Size(101, 20);
             this.Apellido.TabIndex = 51;
@@ -180,35 +184,35 @@
             // 
             // FechNacTB
             // 
-            this.FechNacTB.Location = new System.Drawing.Point(274, 385);
+            this.FechNacTB.Location = new System.Drawing.Point(277, 287);
             this.FechNacTB.Name = "FechNacTB";
             this.FechNacTB.Size = new System.Drawing.Size(259, 20);
             this.FechNacTB.TabIndex = 49;
             // 
             // CodPostTB
             // 
-            this.CodPostTB.Location = new System.Drawing.Point(274, 338);
+            this.CodPostTB.Location = new System.Drawing.Point(277, 255);
             this.CodPostTB.Name = "CodPostTB";
             this.CodPostTB.Size = new System.Drawing.Size(259, 20);
             this.CodPostTB.TabIndex = 48;
             // 
             // DireccionTB
             // 
-            this.DireccionTB.Location = new System.Drawing.Point(277, 252);
+            this.DireccionTB.Location = new System.Drawing.Point(277, 194);
             this.DireccionTB.Name = "DireccionTB";
             this.DireccionTB.Size = new System.Drawing.Size(259, 20);
             this.DireccionTB.TabIndex = 47;
             // 
             // TelefonoTB
             // 
-            this.TelefonoTB.Location = new System.Drawing.Point(277, 204);
+            this.TelefonoTB.Location = new System.Drawing.Point(277, 161);
             this.TelefonoTB.Name = "TelefonoTB";
             this.TelefonoTB.Size = new System.Drawing.Size(259, 20);
             this.TelefonoTB.TabIndex = 46;
             // 
             // MailTB
             // 
-            this.MailTB.Location = new System.Drawing.Point(277, 160);
+            this.MailTB.Location = new System.Drawing.Point(277, 125);
             this.MailTB.Name = "MailTB";
             this.MailTB.Size = new System.Drawing.Size(259, 20);
             this.MailTB.TabIndex = 45;
@@ -216,14 +220,14 @@
             // DniTB
             // 
             this.DniTB.Enabled = false;
-            this.DniTB.Location = new System.Drawing.Point(277, 119);
+            this.DniTB.Location = new System.Drawing.Point(277, 93);
             this.DniTB.Name = "DniTB";
             this.DniTB.Size = new System.Drawing.Size(259, 20);
             this.DniTB.TabIndex = 44;
             // 
             // ApellidoTB
             // 
-            this.ApellidoTB.Location = new System.Drawing.Point(277, 75);
+            this.ApellidoTB.Location = new System.Drawing.Point(277, 61);
             this.ApellidoTB.Name = "ApellidoTB";
             this.ApellidoTB.Size = new System.Drawing.Size(259, 20);
             this.ApellidoTB.TabIndex = 43;
@@ -235,19 +239,9 @@
             this.NombreTB.Size = new System.Drawing.Size(259, 20);
             this.NombreTB.TabIndex = 42;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources.images;
-            this.pictureBox1.Location = new System.Drawing.Point(600, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(324, 323);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // ModificarBtn
             // 
-            this.ModificarBtn.Location = new System.Drawing.Point(789, 398);
+            this.ModificarBtn.Location = new System.Drawing.Point(755, 300);
             this.ModificarBtn.Name = "ModificarBtn";
             this.ModificarBtn.Size = new System.Drawing.Size(120, 51);
             this.ModificarBtn.TabIndex = 40;
@@ -256,7 +250,7 @@
             // 
             // VolverBtn
             // 
-            this.VolverBtn.Location = new System.Drawing.Point(633, 398);
+            this.VolverBtn.Location = new System.Drawing.Point(599, 300);
             this.VolverBtn.Name = "VolverBtn";
             this.VolverBtn.Size = new System.Drawing.Size(120, 51);
             this.VolverBtn.TabIndex = 39;
@@ -264,11 +258,38 @@
             this.VolverBtn.UseVisualStyleBackColor = true;
             this.VolverBtn.Click += new System.EventHandler(this.VolverBtn_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(21, 316);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 20);
+            this.label2.TabIndex = 60;
+            this.label2.Text = "CONTRASEÑA:";
+            // 
+            // PassCB
+            // 
+            this.PassCB.Location = new System.Drawing.Point(277, 316);
+            this.PassCB.Name = "PassCB";
+            this.PassCB.Size = new System.Drawing.Size(259, 20);
+            this.PassCB.TabIndex = 61;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources.images;
+            this.pictureBox1.Location = new System.Drawing.Point(599, 38);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(257, 214);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // ModificarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 472);
+            this.ClientSize = new System.Drawing.Size(885, 396);
             this.Controls.Add(this.ModificarBtn);
             this.Controls.Add(this.VolverBtn);
             this.Controls.Add(this.pictureBox1);
@@ -306,5 +327,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ModificarBtn;
         private System.Windows.Forms.Button VolverBtn;
+        private System.Windows.Forms.TextBox PassCB;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -83,6 +83,16 @@ namespace FrbaOfertas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _account_profile_user_uploadload_upload__512 {
+            get {
+                object obj = ResourceManager.GetObject("_account_profile_user_uploadload_upload__512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add {
             get {
                 object obj = ResourceManager.GetObject("add", resourceCulture);
@@ -166,6 +176,16 @@ namespace FrbaOfertas.Properties {
         internal static System.Drawing.Bitmap Oplata {
             get {
                 object obj = ResourceManager.GetObject("Oplata", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pc_tools_registry_mechanic_12 {
+            get {
+                object obj = ResourceManager.GetObject("pc_tools_registry_mechanic_12", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

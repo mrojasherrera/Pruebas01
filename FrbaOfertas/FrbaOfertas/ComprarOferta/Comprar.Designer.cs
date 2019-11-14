@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.UsuarioTB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Cantidad = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -36,8 +38,6 @@
             this.Precio = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.UsuarioTB = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.ComprarBtn = new System.Windows.Forms.Button();
             this.VolverBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,6 +58,24 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
+            // 
+            // UsuarioTB
+            // 
+            this.UsuarioTB.Enabled = false;
+            this.UsuarioTB.Location = new System.Drawing.Point(234, 26);
+            this.UsuarioTB.Name = "UsuarioTB";
+            this.UsuarioTB.Size = new System.Drawing.Size(151, 20);
+            this.UsuarioTB.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(119, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "USUARIO:";
             // 
             // groupBox2
             // 
@@ -126,24 +144,6 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "OFERTA:";
             // 
-            // UsuarioTB
-            // 
-            this.UsuarioTB.Enabled = false;
-            this.UsuarioTB.Location = new System.Drawing.Point(234, 26);
-            this.UsuarioTB.Name = "UsuarioTB";
-            this.UsuarioTB.Size = new System.Drawing.Size(151, 20);
-            this.UsuarioTB.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(119, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "USUARIO:";
-            // 
             // ComprarBtn
             // 
             this.ComprarBtn.Location = new System.Drawing.Point(289, 308);
@@ -184,7 +184,7 @@
             this.Controls.Add(this.VolverBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "Comprar";
-            this.Text = "Form1";
+            this.Text = "Comprar";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

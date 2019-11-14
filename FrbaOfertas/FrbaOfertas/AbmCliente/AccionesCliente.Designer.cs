@@ -32,6 +32,7 @@
             this.NuevoBtn = new System.Windows.Forms.Button();
             this.FiltrarBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.RestaurarBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -39,18 +40,19 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.RestaurarBtn);
             this.groupBox1.Controls.Add(this.NuevoBtn);
             this.groupBox1.Controls.Add(this.FiltrarBtn);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(311, 203);
+            this.groupBox1.Size = new System.Drawing.Size(247, 232);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
             // 
             // NuevoBtn
             // 
-            this.NuevoBtn.Location = new System.Drawing.Point(82, 46);
+            this.NuevoBtn.Location = new System.Drawing.Point(66, 28);
             this.NuevoBtn.Name = "NuevoBtn";
             this.NuevoBtn.Size = new System.Drawing.Size(140, 44);
             this.NuevoBtn.TabIndex = 1;
@@ -60,7 +62,7 @@
             // 
             // FiltrarBtn
             // 
-            this.FiltrarBtn.Location = new System.Drawing.Point(82, 116);
+            this.FiltrarBtn.Location = new System.Drawing.Point(66, 98);
             this.FiltrarBtn.Name = "FiltrarBtn";
             this.FiltrarBtn.Size = new System.Drawing.Size(140, 44);
             this.FiltrarBtn.TabIndex = 2;
@@ -69,7 +71,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(94, 239);
+            this.button1.Location = new System.Drawing.Point(281, 185);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 44);
             this.button1.TabIndex = 7;
@@ -77,12 +79,21 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // RestaurarBtn
+            // 
+            this.RestaurarBtn.Location = new System.Drawing.Point(66, 173);
+            this.RestaurarBtn.Name = "RestaurarBtn";
+            this.RestaurarBtn.Size = new System.Drawing.Size(140, 44);
+            this.RestaurarBtn.TabIndex = 3;
+            this.RestaurarBtn.Text = "Restaurar Cliente";
+            this.RestaurarBtn.UseVisualStyleBackColor = true;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources.icono_planificar_acciones_comerciales;
-            this.pictureBox1.Location = new System.Drawing.Point(348, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(281, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 190);
+            this.pictureBox1.Size = new System.Drawing.Size(138, 142);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
@@ -91,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 301);
+            this.ClientSize = new System.Drawing.Size(454, 269);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
@@ -110,5 +121,6 @@
         private System.Windows.Forms.Button FiltrarBtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button RestaurarBtn;
     }
 }
