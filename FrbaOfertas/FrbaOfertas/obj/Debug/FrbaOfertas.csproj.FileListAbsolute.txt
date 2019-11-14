@@ -19,3 +19,14 @@ C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOf
 C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmCliente.FiltrarCliente.resources
 C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmCliente.ModificarCliente.resources
 C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmCliente.NuevoCliente.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmProveedor.AccionesProveedor.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmProveedor.FiltrarProveedor.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmProveedor.ModificarProveedor.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmProveedor.NuevoProveedor.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmProveedor.ProveedorEncontrado.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmRol.AccionesRol.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmRol.NuevoRol.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.CargaCredito.Cargar.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmRol.FiltrarRol.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmRol.ModificarRol.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmRol.RolEncontrado.resources

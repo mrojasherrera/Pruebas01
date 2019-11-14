@@ -93,6 +93,26 @@ namespace FrbaOfertas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_file_8846 {
+            get {
+                object obj = ResourceManager.GetObject("add_file_8846", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icono_planificar_acciones_comerciales {
+            get {
+                object obj = ResourceManager.GetObject("icono_planificar_acciones_comerciales", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
@@ -113,9 +133,29 @@ namespace FrbaOfertas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images11 {
+            get {
+                object obj = ResourceManager.GetObject("images11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_user_computer_icons_form_password_others {
             get {
                 object obj = ResourceManager.GetObject("login_user_computer_icons_form_password_others", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logview_icon {
+            get {
+                object obj = ResourceManager.GetObject("logview_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

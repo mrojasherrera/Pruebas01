@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace FrbaOfertas.AbmRol
 {
-    public partial class Form1 : Form
+    public partial class FiltrarRol : Form
     {
-        public Form1()
+        public FiltrarRol()
         {
             InitializeComponent();
+        }
+
+        private void BuscarBtn_Click(object sender, EventArgs e)
+        {
+            AbmRol.RolEncontrado encontrado = new AbmRol.RolEncontrado();
+            encontrado.Show();
         }
     }
 }

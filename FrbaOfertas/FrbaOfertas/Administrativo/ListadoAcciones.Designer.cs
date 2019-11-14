@@ -36,7 +36,9 @@
             this.RolBtn = new System.Windows.Forms.Button();
             this.CreditoBtn = new System.Windows.Forms.Button();
             this.SalirBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -100,6 +102,7 @@
             this.RolBtn.TabIndex = 3;
             this.RolBtn.Text = "ABM Rol";
             this.RolBtn.UseVisualStyleBackColor = true;
+            this.RolBtn.Click += new System.EventHandler(this.RolBtn_Click);
             // 
             // CreditoBtn
             // 
@@ -113,7 +116,7 @@
             // 
             // SalirBtn
             // 
-            this.SalirBtn.Location = new System.Drawing.Point(206, 347);
+            this.SalirBtn.Location = new System.Drawing.Point(206, 332);
             this.SalirBtn.Name = "SalirBtn";
             this.SalirBtn.Size = new System.Drawing.Size(128, 56);
             this.SalirBtn.TabIndex = 10;
@@ -121,16 +124,28 @@
             this.SalirBtn.UseVisualStyleBackColor = true;
             this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources.icono_planificar_acciones_comerciales;
+            this.pictureBox1.Location = new System.Drawing.Point(550, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(331, 305);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // ListadoAcciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 434);
+            this.ClientSize = new System.Drawing.Size(900, 405);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SalirBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "ListadoAcciones";
             this.Text = "ListadoAcciones";
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -145,5 +160,6 @@
         private System.Windows.Forms.Button RolBtn;
         private System.Windows.Forms.Button CreditoBtn;
         private System.Windows.Forms.Button SalirBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

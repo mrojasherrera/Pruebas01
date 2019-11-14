@@ -39,5 +39,11 @@ namespace FrbaOfertas.Administrativo
             CargaCredito.Cargar cargar = new CargaCredito.Cargar();
             cargar.Show();
         }
+
+        private void RolBtn_Click(object sender, EventArgs e)
+        {
+            AbmRol.AccionesRol rol = new AbmRol.AccionesRol();
+            rol.Show();
+        }
     }
 }

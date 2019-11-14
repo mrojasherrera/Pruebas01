@@ -50,6 +50,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.VolverBtn = new System.Windows.Forms.Button();
             this.NuevoBtn = new System.Windows.Forms.Button();
+            this.LimpiarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -246,7 +247,7 @@
             // 
             // VolverBtn
             // 
-            this.VolverBtn.Location = new System.Drawing.Point(638, 393);
+            this.VolverBtn.Location = new System.Drawing.Point(638, 356);
             this.VolverBtn.Name = "VolverBtn";
             this.VolverBtn.Size = new System.Drawing.Size(106, 49);
             this.VolverBtn.TabIndex = 2;
@@ -263,11 +264,22 @@
             this.NuevoBtn.Text = "Nuevo";
             this.NuevoBtn.UseVisualStyleBackColor = true;
             // 
+            // LimpiarBtn
+            // 
+            this.LimpiarBtn.Location = new System.Drawing.Point(638, 432);
+            this.LimpiarBtn.Name = "LimpiarBtn";
+            this.LimpiarBtn.Size = new System.Drawing.Size(106, 47);
+            this.LimpiarBtn.TabIndex = 4;
+            this.LimpiarBtn.Text = "Limpiar";
+            this.LimpiarBtn.UseVisualStyleBackColor = true;
+            this.LimpiarBtn.Click += new System.EventHandler(this.LimpiarBtn_Click);
+            // 
             // NuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 491);
+            this.Controls.Add(this.LimpiarBtn);
             this.Controls.Add(this.NuevoBtn);
             this.Controls.Add(this.VolverBtn);
             this.Controls.Add(this.pictureBox1);
@@ -305,5 +317,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button VolverBtn;
         private System.Windows.Forms.Button NuevoBtn;
+        private System.Windows.Forms.Button LimpiarBtn;
     }
 }

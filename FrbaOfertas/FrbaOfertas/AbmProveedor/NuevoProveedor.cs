@@ -16,5 +16,18 @@ namespace FrbaOfertas.AbmProveedor
         {
             InitializeComponent();
         }
+
+        private void LimpiarBtn_Click(object sender, EventArgs e)
+        {
+            RaSoTB.Text = String.Empty;
+            CuitTB.Text = String.Empty;
+            MailTB.Text = String.Empty;
+            TelefonoTB.Text = String.Empty;
+            DirTB.Text = String.Empty;
+            CodPosTB.Text = String.Empty;
+            CiudadTB.Text = String.Empty;
+            RubroTB.Text = String.Empty;
+            NomConTB.Text = String.Empty;
+        }
     }
 }

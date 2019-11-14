@@ -104,11 +104,35 @@
     <Compile Include="AbmProveedor\ProveedorEncontrado.Designer.cs">
       <DependentUpon>ProveedorEncontrado.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmRol\Form1.cs">
+    <Compile Include="AbmRol\AccionesRol.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmRol\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AbmRol\AccionesRol.Designer.cs">
+      <DependentUpon>AccionesRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\FiltrarRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\FiltrarRol.Designer.cs">
+      <DependentUpon>FiltrarRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\ModificarRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\ModificarRol.Designer.cs">
+      <DependentUpon>ModificarRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\NuevoRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\NuevoRol.Designer.cs">
+      <DependentUpon>NuevoRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AbmRol\RolEncontrado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AbmRol\RolEncontrado.Designer.cs">
+      <DependentUpon>RolEncontrado.cs</DependentUpon>
     </Compile>
     <Compile Include="Administrativo\ListadoAcciones.cs">
       <SubType>Form</SubType>
@@ -144,6 +168,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GD2C2019DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GD2C2019DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GD2C2019DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -207,6 +236,21 @@
     <EmbeddedResource Include="AbmProveedor\ProveedorEncontrado.resx">
       <DependentUpon>ProveedorEncontrado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\AccionesRol.resx">
+      <DependentUpon>AccionesRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\FiltrarRol.resx">
+      <DependentUpon>FiltrarRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\ModificarRol.resx">
+      <DependentUpon>ModificarRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\NuevoRol.resx">
+      <DependentUpon>NuevoRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AbmRol\RolEncontrado.resx">
+      <DependentUpon>RolEncontrado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrativo\ListadoAcciones.resx">
       <DependentUpon>ListadoAcciones.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +296,17 @@
     <None Include="GD2C2019DataSet.xss">
       <DependentUpon>GD2C2019DataSet.xsd</DependentUpon>
     </None>
+    <None Include="GD2C2019DataSet1.xsc">
+      <DependentUpon>GD2C2019DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GD2C2019DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GD2C2019DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GD2C2019DataSet1.xss">
+      <DependentUpon>GD2C2019DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -288,6 +343,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Oplata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono-planificar-acciones-comerciales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_file_8846.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logview-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

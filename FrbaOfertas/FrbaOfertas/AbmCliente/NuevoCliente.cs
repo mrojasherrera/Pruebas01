@@ -21,5 +21,18 @@ namespace FrbaOfertas.AbmCliente
         {
             Close();
         }
+
+        private void LimpiarBtn_Click(object sender, EventArgs e)
+        {
+            NombreTB.Text = String.Empty;
+            ApellidoTB.Text = String.Empty;
+            DniTB.Text = String.Empty;
+            MailTB.Text = String.Empty;
+            TelefonoTB.Text = String.Empty;
+            DireccionTB.Text = String.Empty;
+            CiudadTB.Text = String.Empty;
+            CodPostTB.Text = String.Empty;
+            FechNacTB.Text = String.Empty;
+        }
     }
 }
