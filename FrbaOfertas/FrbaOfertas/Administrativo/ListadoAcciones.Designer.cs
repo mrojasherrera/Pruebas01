@@ -81,6 +81,7 @@
             this.ProveedorBtn.TabIndex = 2;
             this.ProveedorBtn.Text = "ABM Proveedor";
             this.ProveedorBtn.UseVisualStyleBackColor = true;
+            this.ProveedorBtn.Click += new System.EventHandler(this.ProveedorBtn_Click);
             // 
             // FacturarBtn
             // 

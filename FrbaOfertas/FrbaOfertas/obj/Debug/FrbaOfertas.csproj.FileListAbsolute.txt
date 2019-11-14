@@ -14,3 +14,8 @@ C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOf
 C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.PantallaUsuarios.PantallaProveedor.resources
 C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.CrearOferta.NuevaOferta.resources
 C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.ComprarOferta.Comprar.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmCliente.AccionesCliente.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmCliente.ClienteEncontrado.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmCliente.FiltrarCliente.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmCliente.ModificarCliente.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmCliente.NuevoCliente.resources

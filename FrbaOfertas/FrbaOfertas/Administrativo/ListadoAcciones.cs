@@ -27,5 +27,11 @@ namespace FrbaOfertas.Administrativo
             AbmCliente.AccionesCliente abmCliente = new AbmCliente.AccionesCliente();
             abmCliente.Show();
         }
+
+        private void ProveedorBtn_Click(object sender, EventArgs e)
+        {
+            AbmProveedor.AccionesProveedor proveedor = new AbmProveedor.AccionesProveedor();
+            proveedor.Show();
+        }
     }
 }

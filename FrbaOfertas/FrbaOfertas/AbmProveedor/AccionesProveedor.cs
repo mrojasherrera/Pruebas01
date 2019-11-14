@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FrbaOfertas.AbmProveedor
+{
+    public partial class AccionesProveedor : Form
+    {
+        public AccionesProveedor()
+        {
+            InitializeComponent();
+        }
+
+        private void SalirBtn_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+    }
+}
