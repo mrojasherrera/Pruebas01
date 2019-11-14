@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrbaOfertas.ComprarOferta
+namespace FrbaOfertas.CrearOferta
 {
-    public partial class Comprar : Form
+    public partial class NuevaOferta : Form
     {
-        public Comprar(String unCliente)
+        public NuevaOferta()
         {
             InitializeComponent();
-            UsuarioTB.Text = unCliente;
         }
 
         private void VolverBtn_Click(object sender, EventArgs e)

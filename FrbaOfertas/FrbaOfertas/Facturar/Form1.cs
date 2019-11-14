@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrbaOfertas.ComprarOferta
+namespace FrbaOfertas.Facturar
 {
-    public partial class Comprar : Form
+    public partial class Form1 : Form
     {
-        public Comprar(String unCliente)
+        public Form1()
         {
             InitializeComponent();
-            UsuarioTB.Text = unCliente;
-        }
-
-        private void VolverBtn_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

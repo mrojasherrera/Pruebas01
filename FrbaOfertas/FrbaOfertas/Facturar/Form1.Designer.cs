@@ -1,6 +1,6 @@
-﻿namespace FrbaOfertas.AbmCliente
+﻿namespace FrbaOfertas.Facturar
 {
-    partial class AccionesCliente
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // AccionesCliente
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 395);
-            this.Name = "AccionesCliente";
             this.Text = "Form1";
-            this.ResumeLayout(false);
-
         }
 
         #endregion

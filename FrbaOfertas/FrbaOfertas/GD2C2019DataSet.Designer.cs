@@ -279,11 +279,7 @@ namespace FrbaOfertas {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class RoleDataTable : global::System.Data.TypedTableBase<RoleRow> {
             
-            private global::System.Data.DataColumn columnRol_Id;
-            
             private global::System.Data.DataColumn columnRol_Nombre;
-            
-            private global::System.Data.DataColumn columnHabilitado;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -320,25 +316,9 @@ namespace FrbaOfertas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Rol_IdColumn {
-                get {
-                    return this.columnRol_Id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn Rol_NombreColumn {
                 get {
                     return this.columnRol_Nombre;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn HabilitadoColumn {
-                get {
-                    return this.columnHabilitado;
                 }
             }
             
@@ -379,12 +359,10 @@ namespace FrbaOfertas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RoleRow AddRoleRow(string Rol_Nombre, bool Habilitado) {
+            public RoleRow AddRoleRow(string Rol_Nombre) {
                 RoleRow rowRoleRow = ((RoleRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        Rol_Nombre,
-                        Habilitado};
+                        Rol_Nombre};
                 rowRoleRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRoleRow);
                 return rowRoleRow;
@@ -407,25 +385,14 @@ namespace FrbaOfertas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnRol_Id = base.Columns["Rol_Id"];
                 this.columnRol_Nombre = base.Columns["Rol_Nombre"];
-                this.columnHabilitado = base.Columns["Habilitado"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnRol_Id = new global::System.Data.DataColumn("Rol_Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRol_Id);
                 this.columnRol_Nombre = new global::System.Data.DataColumn("Rol_Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRol_Nombre);
-                this.columnHabilitado = new global::System.Data.DataColumn("Habilitado", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHabilitado);
-                this.columnRol_Id.AutoIncrement = true;
-                this.columnRol_Id.AutoIncrementSeed = -1;
-                this.columnRol_Id.AutoIncrementStep = -1;
-                this.columnRol_Id.AllowDBNull = false;
-                this.columnRol_Id.ReadOnly = true;
                 this.columnRol_Nombre.MaxLength = 255;
             }
             
@@ -569,17 +536,6 @@ namespace FrbaOfertas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Rol_Id {
-                get {
-                    return ((int)(this[this.tableRole.Rol_IdColumn]));
-                }
-                set {
-                    this[this.tableRole.Rol_IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Rol_Nombre {
                 get {
                     try {
@@ -596,22 +552,6 @@ namespace FrbaOfertas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Habilitado {
-                get {
-                    try {
-                        return ((bool)(this[this.tableRole.HabilitadoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Habilitado\' de la tabla \'Role\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableRole.HabilitadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsRol_NombreNull() {
                 return this.IsNull(this.tableRole.Rol_NombreColumn);
             }
@@ -620,18 +560,6 @@ namespace FrbaOfertas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetRol_NombreNull() {
                 this[this.tableRole.Rol_NombreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsHabilitadoNull() {
-                return this.IsNull(this.tableRole.HabilitadoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetHabilitadoNull() {
-                this[this.tableRole.HabilitadoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -794,17 +722,13 @@ namespace FrbaOfertas.GD2C2019DataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Role";
-            tableMapping.ColumnMappings.Add("Rol_Id", "Rol_Id");
             tableMapping.ColumnMappings.Add("Rol_Nombre", "Rol_Nombre");
-            tableMapping.ColumnMappings.Add("Habilitado", "Habilitado");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [LOS_BORBOTONES].[Role] ([Rol_Nombre], [Habilitado]) VALUES (@Rol_Nom" +
-                "bre, @Habilitado)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [LOS_BORBOTONES].[Role] ([Rol_Nombre]) VALUES (@Rol_Nombre)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Rol_Nombre", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Rol_Nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Habilitado", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Habilitado", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -820,7 +744,7 @@ namespace FrbaOfertas.GD2C2019DataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Rol_Id, Rol_Nombre, Habilitado FROM LOS_BORBOTONES.Role";
+            this._commandCollection[0].CommandText = "SELECT Rol_Nombre FROM LOS_BORBOTONES.Role";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -881,18 +805,12 @@ namespace FrbaOfertas.GD2C2019DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Rol_Nombre, global::System.Nullable<bool> Habilitado) {
+        public virtual int Insert(string Rol_Nombre) {
             if ((Rol_Nombre == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Rol_Nombre));
-            }
-            if ((Habilitado.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((bool)(Habilitado.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
