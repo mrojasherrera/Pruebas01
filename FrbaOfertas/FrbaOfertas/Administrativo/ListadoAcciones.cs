@@ -33,5 +33,11 @@ namespace FrbaOfertas.Administrativo
             AbmProveedor.AccionesProveedor proveedor = new AbmProveedor.AccionesProveedor();
             proveedor.Show();
         }
+
+        private void CreditoBtn_Click(object sender, EventArgs e)
+        {
+            CargaCredito.Cargar cargar = new CargaCredito.Cargar();
+            cargar.Show();
+        }
     }
 }

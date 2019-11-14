@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FrbaOfertas.CragaCredito
+namespace FrbaOfertas.CargaCredito
 {
-    public partial class Form1 : Form
+    public partial class Cargar : Form
     {
-        public Form1()
+        public Cargar()
         {
             InitializeComponent();
+        }
+
+        private void VolverBtn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

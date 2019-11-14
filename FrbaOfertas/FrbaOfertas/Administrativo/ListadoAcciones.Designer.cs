@@ -109,6 +109,7 @@
             this.CreditoBtn.TabIndex = 4;
             this.CreditoBtn.Text = "Cargar Crédito";
             this.CreditoBtn.UseVisualStyleBackColor = true;
+            this.CreditoBtn.Click += new System.EventHandler(this.CreditoBtn_Click);
             // 
             // SalirBtn
             // 

@@ -103,9 +103,29 @@ namespace FrbaOfertas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap images1 {
+            get {
+                object obj = ResourceManager.GetObject("images1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_user_computer_icons_form_password_others {
             get {
                 object obj = ResourceManager.GetObject("login_user_computer_icons_form_password_others", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Oplata {
+            get {
+                object obj = ResourceManager.GetObject("Oplata", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
