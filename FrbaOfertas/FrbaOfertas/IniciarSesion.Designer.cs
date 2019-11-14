@@ -39,12 +39,12 @@
             this.IngresarBtn = new System.Windows.Forms.Button();
             this.SalirBtn = new System.Windows.Forms.Button();
             this.RolCB = new System.Windows.Forms.ComboBox();
-            this.gD2C2019DataSet4 = new FrbaOfertas.GD2C2019DataSet4();
             this.roleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gD2C2019DataSet4 = new FrbaOfertas.GD2C2019DataSet4();
             this.roleTableAdapter = new FrbaOfertas.GD2C2019DataSet4TableAdapters.RoleTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -137,17 +137,18 @@
             this.RolCB.Name = "RolCB";
             this.RolCB.Size = new System.Drawing.Size(177, 21);
             this.RolCB.TabIndex = 21;
+            this.RolCB.Text = "Elegir una opción...";
             this.RolCB.ValueMember = "Rol_Nombre";
-            // 
-            // gD2C2019DataSet4
-            // 
-            this.gD2C2019DataSet4.DataSetName = "GD2C2019DataSet4";
-            this.gD2C2019DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // roleBindingSource1
             // 
             this.roleBindingSource1.DataMember = "Role";
             this.roleBindingSource1.DataSource = this.gD2C2019DataSet4;
+            // 
+            // gD2C2019DataSet4
+            // 
+            this.gD2C2019DataSet4.DataSetName = "GD2C2019DataSet4";
+            this.gD2C2019DataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // roleTableAdapter
             // 
@@ -171,8 +172,8 @@
             this.Text = "IniciarSesion";
             this.Load += new System.EventHandler(this.IniciarSesion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
