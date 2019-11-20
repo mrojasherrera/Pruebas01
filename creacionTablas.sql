@@ -160,8 +160,7 @@ GO
 create table LOS_BORBOTONES.Usuario
 (User_name nvarchar(50) NOT NULL,
 Password varbinary(70) NOT NULL,
-Habilitado bit DEFAULT(1),
-Cant_Log_Fallidos tinyint default(0)
+Habilitado bit DEFAULT(1)
 );
 
 /***TABLA CLIENTE***/
