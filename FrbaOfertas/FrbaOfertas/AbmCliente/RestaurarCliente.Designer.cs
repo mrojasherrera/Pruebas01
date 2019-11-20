@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Apellido = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
             this.ApellidoTB = new System.Windows.Forms.TextBox();
             this.NombreTB = new System.Windows.Forms.TextBox();
+            this.CliBorradoCB = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RestaurarBtn = new System.Windows.Forms.Button();
             this.VolverBtn = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             this.groupBox1.Controls.Add(this.Nombre);
             this.groupBox1.Controls.Add(this.ApellidoTB);
             this.groupBox1.Controls.Add(this.NombreTB);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.CliBorradoCB);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
@@ -56,24 +56,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cliente";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(25, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "USUARIO:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(161, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(177, 21);
-            this.comboBox1.TabIndex = 1;
             // 
             // Apellido
             // 
@@ -111,6 +93,25 @@
             this.NombreTB.Size = new System.Drawing.Size(177, 20);
             this.NombreTB.TabIndex = 52;
             // 
+            // CliBorradoCB
+            // 
+            this.CliBorradoCB.FormattingEnabled = true;
+            this.CliBorradoCB.Location = new System.Drawing.Point(161, 33);
+            this.CliBorradoCB.Name = "CliBorradoCB";
+            this.CliBorradoCB.Size = new System.Drawing.Size(177, 21);
+            this.CliBorradoCB.TabIndex = 1;
+            this.CliBorradoCB.SelectedIndexChanged += new System.EventHandler(this.CliBorradoCB_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "USUARIO:";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources._account_profile_user_uploadload_upload__512;
@@ -138,6 +139,7 @@
             this.VolverBtn.TabIndex = 3;
             this.VolverBtn.Text = "Volver";
             this.VolverBtn.UseVisualStyleBackColor = true;
+            this.VolverBtn.Click += new System.EventHandler(this.VolverBtn_Click);
             // 
             // RestaurarCliente
             // 
@@ -161,7 +163,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CliBorradoCB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Apellido;
         private System.Windows.Forms.Label Nombre;

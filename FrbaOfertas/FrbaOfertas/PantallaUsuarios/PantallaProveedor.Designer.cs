@@ -117,6 +117,7 @@
             this.SalirBtn.TabIndex = 2;
             this.SalirBtn.Text = "Salir";
             this.SalirBtn.UseVisualStyleBackColor = true;
+            this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
             // 
             // PantallaProveedor
             // 

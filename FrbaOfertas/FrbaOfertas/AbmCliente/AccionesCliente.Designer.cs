@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RestaurarBtn = new System.Windows.Forms.Button();
             this.NuevoBtn = new System.Windows.Forms.Button();
             this.FiltrarBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.RestaurarBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +49,16 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
+            // 
+            // RestaurarBtn
+            // 
+            this.RestaurarBtn.Location = new System.Drawing.Point(66, 173);
+            this.RestaurarBtn.Name = "RestaurarBtn";
+            this.RestaurarBtn.Size = new System.Drawing.Size(140, 44);
+            this.RestaurarBtn.TabIndex = 3;
+            this.RestaurarBtn.Text = "Restaurar Cliente";
+            this.RestaurarBtn.UseVisualStyleBackColor = true;
+            this.RestaurarBtn.Click += new System.EventHandler(this.RestaurarBtn_Click);
             // 
             // NuevoBtn
             // 
@@ -78,15 +88,6 @@
             this.button1.Text = "SALIR";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // RestaurarBtn
-            // 
-            this.RestaurarBtn.Location = new System.Drawing.Point(66, 173);
-            this.RestaurarBtn.Name = "RestaurarBtn";
-            this.RestaurarBtn.Size = new System.Drawing.Size(140, 44);
-            this.RestaurarBtn.TabIndex = 3;
-            this.RestaurarBtn.Text = "Restaurar Cliente";
-            this.RestaurarBtn.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 

@@ -26,7 +26,9 @@ namespace FrbaOfertas.PantallaUsuarios
 
         private void SalirBtn_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
+            FrbaOfertas.Login login = new FrbaOfertas.Login();
+            login.Show();
         }
     }
 }
