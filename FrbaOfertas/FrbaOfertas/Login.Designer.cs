@@ -137,6 +137,7 @@
             this.SalirBtn.TabIndex = 1;
             this.SalirBtn.Text = "Salir";
             this.SalirBtn.UseVisualStyleBackColor = true;
+            this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click_1);
             // 
             // IngresarBtn
             // 
