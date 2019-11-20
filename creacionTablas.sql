@@ -191,7 +191,7 @@ Habilitado bit DEFAULT(1)
 /*** MIGRACION USUARIOS ***/
 
 insert into LOS_BORBOTONES.Usuario (User_name, Password)
-	select distinct  Cli_Dni, HASHBYTES('SHA2_256', CAST( Cli_Dni AS varbinary(70))) 
+	select distinct  Cli_Dni, HASHBYTES('SHA2_256', CAST( (cast (Cli_Dni as nvarchar(70))) AS varbinary(70))) 
 	from gd_esquema.Maestra
 
 insert into LOS_BORBOTONES.Usuario (User_name, Password)

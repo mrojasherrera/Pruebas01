@@ -98,7 +98,7 @@ namespace FrbaOfertas
             {
                 conexion.Open();
 
-                SqlCommand comando = new SqlCommand("select u.User_name, r.Rol_Nombre from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre ='Cliente' and u.User_Name=@usuario and Password = HASHBYTES('SHA2_256', CAST( (cast (@pass as numeric (18,0))) AS varbinary(70)))", conexion);
+                SqlCommand comando = new SqlCommand("select u.User_name, r.Rol_Nombre from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre ='Cliente' and u.User_Name=@usuario and Password = HASHBYTES('SHA2_256', CAST( (cast (@pass as nvarchar(70))) AS varbinary(70)))", conexion);
                 comando.Parameters.AddWithValue("usuario", usuario);
                 comando.Parameters.AddWithValue("pass", pass);
                 SqlDataAdapter data = new SqlDataAdapter(comando);
@@ -147,6 +147,7 @@ namespace FrbaOfertas
                 loguearAdministrador(this.UsuarioTB.Text, this.PassTB.Text);
             }
         }
+
 
     }
 }
