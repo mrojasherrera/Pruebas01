@@ -179,7 +179,7 @@ Cli_Fecha_Nac datetime,
 Cli_Ciudad nvarchar(255),
 Cli_CodigoPostal nvarchar(10),
 User_name nvarchar(50),
-Cli_Saldo numeric(18,2)   default(0.0),
+Cli_Saldo numeric(18,2) default(0.0),
 Habilitado bit DEFAULT(1)
 );
 

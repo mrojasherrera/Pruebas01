@@ -115,7 +115,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources._account_profile_user_uploadload_upload__512;
-            this.pictureBox1.Location = new System.Drawing.Point(404, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(403, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(172, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -130,6 +130,7 @@
             this.RestaurarBtn.TabIndex = 2;
             this.RestaurarBtn.Text = "Restaurar";
             this.RestaurarBtn.UseVisualStyleBackColor = true;
+            this.RestaurarBtn.Click += new System.EventHandler(this.RestaurarBtn_Click);
             // 
             // VolverBtn
             // 

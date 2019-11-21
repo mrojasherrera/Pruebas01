@@ -63,3 +63,5 @@ C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaO
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.PantallaUsuarios.PantallaProveedor.resources
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.Properties.Resources.resources
 C:\Users\ABM\Documents\gprueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.csproj.GenerateResource.Cache
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmCliente.RestaurarCliente.resources
+C:\Users\ABM\Desktop\gdPrueba\Pruebas01\FrbaOfertas\FrbaOfertas\obj\Debug\FrbaOfertas.AbmRol.RestaurarRol.resources
