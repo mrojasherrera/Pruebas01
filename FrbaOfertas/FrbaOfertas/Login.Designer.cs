@@ -38,10 +38,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.SalirBtn = new System.Windows.Forms.Button();
             this.IngresarBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.roleTableAdapter = new FrbaOfertas.GD2C2019DataSetTableAdapters.RoleTableAdapter();
+            this.SalirBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet)).BeginInit();
@@ -129,16 +129,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "USUARIO:";
             // 
-            // SalirBtn
-            // 
-            this.SalirBtn.Location = new System.Drawing.Point(68, 280);
-            this.SalirBtn.Name = "SalirBtn";
-            this.SalirBtn.Size = new System.Drawing.Size(100, 38);
-            this.SalirBtn.TabIndex = 1;
-            this.SalirBtn.Text = "Salir";
-            this.SalirBtn.UseVisualStyleBackColor = true;
-            this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click_1);
-            // 
             // IngresarBtn
             // 
             this.IngresarBtn.Location = new System.Drawing.Point(254, 280);
@@ -163,14 +153,24 @@
             // 
             this.roleTableAdapter.ClearBeforeFill = true;
             // 
+            // SalirBtn
+            // 
+            this.SalirBtn.Location = new System.Drawing.Point(93, 280);
+            this.SalirBtn.Name = "SalirBtn";
+            this.SalirBtn.Size = new System.Drawing.Size(100, 38);
+            this.SalirBtn.TabIndex = 4;
+            this.SalirBtn.Text = "Salir";
+            this.SalirBtn.UseVisualStyleBackColor = true;
+            this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 350);
+            this.Controls.Add(this.SalirBtn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.IngresarBtn);
-            this.Controls.Add(this.SalirBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "Login";
             this.Text = "Inicio de sesión";
@@ -193,12 +193,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button SalirBtn;
         private System.Windows.Forms.Button IngresarBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private GD2C2019DataSet gD2C2019DataSet;
         private System.Windows.Forms.BindingSource roleBindingSource;
         private GD2C2019DataSetTableAdapters.RoleTableAdapter roleTableAdapter;
+        private System.Windows.Forms.Button SalirBtn;
     }
 }
 

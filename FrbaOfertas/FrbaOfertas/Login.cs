@@ -33,11 +33,11 @@ namespace FrbaOfertas
             try
             {
                 conexion.Open();
-                SqlCommand comando2 = new SqlCommand("select u.User_name, r.Rol_Nombre, u.Habilitado from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre = 'Proveedor' and u.User_Name=@usuario and Password = HASHBYTES('SHA2_256', CAST( (cast(@pass as nvarchar(20))) AS varbinary(70)))", conexion);
-                comando2.Parameters.AddWithValue("usuario", usuario);
-                comando2.Parameters.AddWithValue("pass", pass);
+                SqlCommand comandoProv = new SqlCommand("select u.User_name, r.Rol_Nombre, u.Habilitado from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre = 'Proveedor' and u.User_Name=@usuario and Password = HASHBYTES('SHA2_256', CAST( (cast(@pass as nvarchar(20))) AS varbinary(70)))", conexion);
+                comandoProv.Parameters.AddWithValue("usuario", usuario);
+                comandoProv.Parameters.AddWithValue("pass", pass);
 
-                SqlDataAdapter data2 = new SqlDataAdapter(comando2);
+                SqlDataAdapter data2 = new SqlDataAdapter(comandoProv);
                 DataTable tabla2 = new DataTable();
                 data2.Fill(tabla2);
                 if (tabla2.Rows.Count == 1)
@@ -64,15 +64,7 @@ namespace FrbaOfertas
                     {
 
                         MessageBox.Show("Se terminaron tus 3 intentos...");
-                        SqlCommand comando = new SqlCommand("UPDATE LOS_BORBOTONES.Usuario SET Habilitado = 0 WHERE User_name = @usuario2", conexion);
-                        comando.Parameters.AddWithValue("usuario2", usuario);
-                        int cant;
-                        cant = comando.ExecuteNonQuery();
-                        if (cant == 1)
-                        {
-                            MessageBox.Show("El usuario ha sido bloqueado...");
-                            Application.Exit();
-                        }
+                        bloquear(usuario);
 
                     }
                 }
@@ -91,11 +83,11 @@ namespace FrbaOfertas
             try
             {
                 conexion.Open();
-                SqlCommand comando3 = new SqlCommand("select u.User_name, r.Rol_Nombre, u.Habilitado from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre = 'Administrador General' and u.User_Name=@usuario and Password = HASHBYTES('SHA2_256', CAST( cast(@pass as nvarchar(20)) AS varbinary(70)))", conexion);
-                comando3.Parameters.AddWithValue("usuario", usuario);
-                comando3.Parameters.AddWithValue("pass", pass);
+                SqlCommand comandoAdm = new SqlCommand("select u.User_name, r.Rol_Nombre, u.Habilitado from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre = 'Administrador General' and u.User_Name=@usuario and Password = HASHBYTES('SHA2_256', CAST( cast(@pass as nvarchar(20)) AS varbinary(70)))", conexion);
+                comandoAdm.Parameters.AddWithValue("usuario", usuario);
+                comandoAdm.Parameters.AddWithValue("pass", pass);
 
-                SqlDataAdapter data3 = new SqlDataAdapter(comando3);
+                SqlDataAdapter data3 = new SqlDataAdapter(comandoAdm);
                 DataTable tabla3 = new DataTable();
                 data3.Fill(tabla3);
                 if (tabla3.Rows.Count == 1)
@@ -122,15 +114,7 @@ namespace FrbaOfertas
                     {
 
                         MessageBox.Show("Se terminaron tus 3 intentos...");
-                        SqlCommand comando2 = new SqlCommand("UPDATE LOS_BORBOTONES.Usuario SET Habilitado = 0 WHERE User_name = @usuario2", conexion);
-                        comando2.Parameters.AddWithValue("usuario2", usuario);
-                        int cant;
-                        cant = comando2.ExecuteNonQuery();
-                        if (cant == 1)
-                        {
-                            MessageBox.Show("El usuario ha sido bloqueado...");
-                            Application.Exit();
-                        }
+                        bloquear(usuario);
 
                     }
                 }
@@ -149,10 +133,10 @@ namespace FrbaOfertas
             {
                 conexion.Open();
 
-                SqlCommand comando = new SqlCommand("select u.User_name, r.Rol_Nombre, u.Habilitado from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre ='Cliente' and u.User_name=@usuario and Password = HASHBYTES('SHA2_256', CAST( (cast (@pass as nvarchar(70))) AS varbinary(70)))", conexion);
-                comando.Parameters.AddWithValue("usuario", usuario);
-                comando.Parameters.AddWithValue("pass", pass);
-                SqlDataAdapter data = new SqlDataAdapter(comando);
+                SqlCommand comandoCliente = new SqlCommand("select u.User_name, r.Rol_Nombre, u.Habilitado from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre ='Cliente' and u.User_name=@usuario and Password = HASHBYTES('SHA2_256', CAST( (cast (@pass as nvarchar(20))) AS varbinary(70)))", conexion);
+                comandoCliente.Parameters.AddWithValue("usuario", usuario);
+                comandoCliente.Parameters.AddWithValue("pass", pass);
+                SqlDataAdapter data = new SqlDataAdapter(comandoCliente);
                 DataTable tabla = new DataTable();
                 data.Fill(tabla);
 
@@ -181,15 +165,7 @@ namespace FrbaOfertas
                     if(acumulador.Equals(3)){
                         
                         MessageBox.Show("Se terminaron tus 3 intentos...");
-                        SqlCommand comando2 = new SqlCommand("UPDATE LOS_BORBOTONES.Usuario SET Habilitado = 0 WHERE User_name = @usuario2", conexion);
-                        comando2.Parameters.AddWithValue("usuario2", usuario);
-                        int cant;
-                        cant = comando2.ExecuteNonQuery();
-                        if (cant == 1)
-                        {
-                            MessageBox.Show("El usuario ha sido bloqueado...");
-                            Application.Exit();
-                        }
+                        this.bloquear(usuario);
                         
                     }
 
@@ -204,12 +180,24 @@ namespace FrbaOfertas
             finally { conexion.Close(); }
         }
 
+        public void bloquear(String unUsuario)
+        {
+            
+                SqlCommand comandoBloquear = new SqlCommand("UPDATE LOS_BORBOTONES.Usuario SET Habilitado = 0 WHERE User_name = @usuario", conexion);
+                comandoBloquear.Parameters.AddWithValue("@usuario", unUsuario);
+                int cant;
+                cant = comandoBloquear.ExecuteNonQuery();
+                if (cant == 1)
+                {
+                    MessageBox.Show("Estas bloqueado, intente con otro usuario...");
+                
+                }            
+            UsuarioTB.Clear();
+            PassTB.Clear();
+        }
        
 
-        private void SalirBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void IngresarBtn_Click(object sender, EventArgs e)
         {
@@ -229,11 +217,11 @@ namespace FrbaOfertas
             }
         }
 
-        private void SalirBtn_Click_1(object sender, EventArgs e)
+        private void SalirBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-
+        
     }
 }
