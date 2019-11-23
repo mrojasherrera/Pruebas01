@@ -13,9 +13,11 @@ namespace FrbaOfertas.AbmCliente
 {
     public partial class BuscarCliente : Form
     {
+       // public static BuscarCliente bc;
         public BuscarCliente()
         {
             InitializeComponent();
+           // bc = this;
             cargarDatos();
         }
 
@@ -23,7 +25,11 @@ namespace FrbaOfertas.AbmCliente
         SqlConnection conexion = new SqlConnection("Data Source=localhost\\SQLSERVER2012;Initial Catalog=GD2C2019;Persist Security Info=True;User ID=gdCupon2019;Password=gd2019");
         
         public void cargarDatos() {
-            SqlCommand comando = new SqlCommand("SELECT c.Cli_Nombre Cliente, c.Cli_Apellido Apellido, c.Cli_Dni Dni, c.Cli_Mail Email FROM LOS_BORBOTONES.Cliente c JOIN LOS_BORBOTONES.Usuario u ON (c.User_name = u.User_name) WHERE u.Habilitado = 1 ", conexion);
+            String cadena;
+            cadena = "SELECT c.Cli_Nombre Cliente, c.Cli_Apellido Apellido, c.Cli_Dni Dni, c.Cli_Mail Email ";
+            cadena += "FROM LOS_BORBOTONES.Cliente c JOIN LOS_BORBOTONES.Usuario u ON (c.User_name = u.User_name) ";
+            cadena += "WHERE u.Habilitado = 1 ";
+            SqlCommand comando = new SqlCommand(cadena, conexion);
             SqlDataAdapter data = new SqlDataAdapter(comando);
             DataSet dataSet = new DataSet();
             data.Fill(dataSet);
@@ -78,10 +84,12 @@ namespace FrbaOfertas.AbmCliente
            
         }
 
-        private void NuevoTB_Click(object sender, EventArgs e)
+        private void ModificarTB_Click(object sender, EventArgs e)
         {
-            AbmCliente.NuevoCliente nuevo = new AbmCliente.NuevoCliente();
-            nuevo.Show();
+            this.Hide();
+            int dni = Convert.ToInt32(ClienteDGV.CurrentRow.Cells[2].Value.ToString());
+            AbmCliente.ModificarCliente nuevo = new AbmCliente.ModificarCliente( dni);
+            nuevo.ShowDialog();
         }
 
         private void EliminarTB_Click(object sender, EventArgs e)
@@ -95,7 +103,7 @@ namespace FrbaOfertas.AbmCliente
             cant = comandoEliminar.ExecuteNonQuery();
             if (cant == 1)
             {
-                MessageBox.Show("El cliente está bloqueado...");
+                MessageBox.Show("El cliente se bloqueó exitosamente...");
                 
             }
             conexion.Close();

@@ -33,7 +33,7 @@
             this.BusquedaTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.NuevoTB = new System.Windows.Forms.Button();
+            this.ModificarTB = new System.Windows.Forms.Button();
             this.EliminarTB = new System.Windows.Forms.Button();
             this.VolverTB = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteDGV)).BeginInit();
@@ -89,15 +89,15 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // NuevoTB
+            // ModificarTB
             // 
-            this.NuevoTB.Location = new System.Drawing.Point(589, 202);
-            this.NuevoTB.Name = "NuevoTB";
-            this.NuevoTB.Size = new System.Drawing.Size(118, 39);
-            this.NuevoTB.TabIndex = 3;
-            this.NuevoTB.Text = "Nuevo Cliente";
-            this.NuevoTB.UseVisualStyleBackColor = true;
-            this.NuevoTB.Click += new System.EventHandler(this.NuevoTB_Click);
+            this.ModificarTB.Location = new System.Drawing.Point(589, 202);
+            this.ModificarTB.Name = "ModificarTB";
+            this.ModificarTB.Size = new System.Drawing.Size(118, 39);
+            this.ModificarTB.TabIndex = 3;
+            this.ModificarTB.Text = "Modificar Cliente";
+            this.ModificarTB.UseVisualStyleBackColor = true;
+            this.ModificarTB.Click += new System.EventHandler(this.ModificarTB_Click);
             // 
             // EliminarTB
             // 
@@ -126,7 +126,7 @@
             this.ClientSize = new System.Drawing.Size(769, 450);
             this.Controls.Add(this.VolverTB);
             this.Controls.Add(this.EliminarTB);
-            this.Controls.Add(this.NuevoTB);
+            this.Controls.Add(this.ModificarTB);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ClienteDGV);
@@ -149,7 +149,7 @@
         private System.Windows.Forms.TextBox BusquedaTB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button NuevoTB;
+        private System.Windows.Forms.Button ModificarTB;
         private System.Windows.Forms.Button EliminarTB;
         private System.Windows.Forms.Button VolverTB;
     }

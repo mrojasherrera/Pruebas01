@@ -49,8 +49,6 @@
             this.NombreTB = new System.Windows.Forms.TextBox();
             this.ModificarBtn = new System.Windows.Forms.Button();
             this.VolverBtn = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.PassCB = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,8 +56,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.PassCB);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.CiudadTB);
             this.groupBox1.Controls.Add(this.Ciudad);
@@ -80,7 +76,7 @@
             this.groupBox1.Controls.Add(this.NombreTB);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(563, 364);
+            this.groupBox1.Size = new System.Drawing.Size(563, 338);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modificar cliente";
@@ -219,7 +215,6 @@
             // 
             // DniTB
             // 
-            this.DniTB.Enabled = false;
             this.DniTB.Location = new System.Drawing.Point(277, 93);
             this.DniTB.Name = "DniTB";
             this.DniTB.Size = new System.Drawing.Size(259, 20);
@@ -247,6 +242,7 @@
             this.ModificarBtn.TabIndex = 40;
             this.ModificarBtn.Text = "Modificar";
             this.ModificarBtn.UseVisualStyleBackColor = true;
+            this.ModificarBtn.Click += new System.EventHandler(this.ModificarBtn_Click);
             // 
             // VolverBtn
             // 
@@ -257,23 +253,6 @@
             this.VolverBtn.Text = "Volver";
             this.VolverBtn.UseVisualStyleBackColor = true;
             this.VolverBtn.Click += new System.EventHandler(this.VolverBtn_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 316);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 20);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "CONTRASEÑA:";
-            // 
-            // PassCB
-            // 
-            this.PassCB.Location = new System.Drawing.Point(277, 316);
-            this.PassCB.Name = "PassCB";
-            this.PassCB.Size = new System.Drawing.Size(259, 20);
-            this.PassCB.TabIndex = 61;
             // 
             // pictureBox1
             // 
@@ -327,7 +306,5 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ModificarBtn;
         private System.Windows.Forms.Button VolverBtn;
-        private System.Windows.Forms.TextBox PassCB;
-        private System.Windows.Forms.Label label2;
     }
 }
