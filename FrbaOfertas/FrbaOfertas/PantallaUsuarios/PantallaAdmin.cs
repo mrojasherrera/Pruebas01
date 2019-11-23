@@ -29,25 +29,25 @@ namespace FrbaOfertas.PantallaUsuarios
         private void ClienteBtn_Click(object sender, EventArgs e)
         {
             AbmCliente.AccionesCliente abmCliente = new AbmCliente.AccionesCliente();
-            abmCliente.Show();
+            abmCliente.ShowDialog(); 
         }
 
         private void ProveedorBtn_Click(object sender, EventArgs e)
         {
             AbmProveedor.AccionesProveedor proveedor = new AbmProveedor.AccionesProveedor();
-            proveedor.Show();
+            proveedor.ShowDialog();
         }
 
         private void RolBtn_Click(object sender, EventArgs e)
         {
             AbmRol.AccionesRol rol = new AbmRol.AccionesRol();
-            rol.Show();
+            rol.ShowDialog();
         }
 
         private void CreditoBtn_Click(object sender, EventArgs e)
         {
             CargaCredito.Cargar cargar = new CargaCredito.Cargar();
-            cargar.Show();
+            cargar.ShowDialog();
         }
 
         private void FacturarBtn_Click(object sender, EventArgs e)

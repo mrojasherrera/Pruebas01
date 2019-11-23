@@ -16,34 +16,24 @@ namespace FrbaOfertas.AbmCliente
         public BuscarCliente()
         {
             InitializeComponent();
+            cargarDatos();
         }
 
-        DataSet resultados = new DataSet();
-        DataView busqueda;
-        SqlConnection conexion = new SqlConnection("Data Source=localhost\\SQLSERVER2012;Initial Catalog=GD2C2019;Persist Security Info=True;User ID=gdCupon2019;Password=gd2019");
-                
-        public void leer_datos(String query, ref DataSet principal, String tabla) 
-        {
-            try
-            {
-                SqlCommand comando = new SqlCommand(query, conexion);
-                conexion.Open();
-                SqlDataAdapter data = new SqlDataAdapter(comando);
-                data.Fill(principal, tabla);
-                data.Dispose();
-                conexion.Close();
-            }
-            catch(Exception error) {
-                MessageBox.Show(error.Message);
-            }
         
+        SqlConnection conexion = new SqlConnection("Data Source=localhost\\SQLSERVER2012;Initial Catalog=GD2C2019;Persist Security Info=True;User ID=gdCupon2019;Password=gd2019");
+        
+        public void cargarDatos() {
+            SqlCommand comando = new SqlCommand("SELECT c.Cli_Nombre Cliente, c.Cli_Apellido Apellido, c.Cli_Dni Dni, c.Cli_Mail Email FROM LOS_BORBOTONES.Cliente c JOIN LOS_BORBOTONES.Usuario u ON (c.User_name = u.User_name) WHERE u.Habilitado = 1 ", conexion);
+            SqlDataAdapter data = new SqlDataAdapter(comando);
+            DataSet dataSet = new DataSet();
+            data.Fill(dataSet);
+            ClienteDGV.DataSource = dataSet.Tables[0];
         }
+        
 
         private void BuscarCliente_Load(object sender, EventArgs e)
         {
-            this.leer_datos("SELECT c.Cli_Nombre Cliente, c.Cli_Apellido Apellido, c.Cli_Dni Dni, c.Cli_Mail Email FROM LOS_BORBOTONES.Cliente c JOIN LOS_BORBOTONES.Usuario u ON (c.User_name = u.User_name) WHERE u.Habilitado = 1 ", ref resultados, "LOS_BORBOTONES.Cliente");
-            this.busqueda = ((DataTable)resultados.Tables["LOS_BORBOTONES.Cliente"]).DefaultView;
-            this.ClienteDGV.DataSource = busqueda;
+           
 
         }
 
@@ -78,15 +68,14 @@ namespace FrbaOfertas.AbmCliente
             }
             else
             {
-                this.leer_datos("SELECT c.Cli_Nombre Cliente, c.Cli_Apellido Apellido, c.Cli_Dni Dni, c.Cli_Mail Email FROM LOS_BORBOTONES.Cliente c JOIN LOS_BORBOTONES.Usuario u ON (c.User_name = u.User_name) WHERE u.Habilitado = 1 ", ref resultados, "LOS_BORBOTONES.Cliente");
-                this.busqueda = ((DataTable)resultados.Tables["LOS_BORBOTONES.Cliente"]).DefaultView;
-                this.ClienteDGV.DataSource = busqueda;
+                cargarDatos();
             }
         }
 
         private void VolverTB_Click(object sender, EventArgs e)
         {
             this.Close();
+           
         }
 
         private void NuevoTB_Click(object sender, EventArgs e)
@@ -107,10 +96,13 @@ namespace FrbaOfertas.AbmCliente
             if (cant == 1)
             {
                 MessageBox.Show("El cliente está bloqueado...");
-
+                
             }
             conexion.Close();
-            
+            ClienteDGV.Refresh();
+            ClienteDGV.Parent.Refresh();
+            cargarDatos();
+            //
         }
     }
 }

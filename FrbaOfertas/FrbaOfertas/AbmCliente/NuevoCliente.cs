@@ -20,6 +20,7 @@ namespace FrbaOfertas.AbmCliente
         private void VolverBtn_Click(object sender, EventArgs e)
         {
             Close();
+            
         }
 
         private void LimpiarBtn_Click(object sender, EventArgs e)

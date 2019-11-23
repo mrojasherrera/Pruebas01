@@ -24,20 +24,23 @@ namespace FrbaOfertas.AbmCliente
 
         private void NuevoBtn_Click(object sender, EventArgs e)
         {
+           
             AbmCliente.NuevoCliente nuevo = new AbmCliente.NuevoCliente();
-            nuevo.Show();
+            nuevo.ShowDialog();
         }
 
         private void RestaurarBtn_Click(object sender, EventArgs e)
         {
+            
             AbmCliente.RestaurarCliente restaurar = new AbmCliente.RestaurarCliente();
-            restaurar.Show();
+            restaurar.ShowDialog();
         }
 
         private void FiltrarBtn_Click(object sender, EventArgs e)
         {
+          
             AbmCliente.BuscarCliente buscar = new AbmCliente.BuscarCliente();
-            buscar.Show();
+            buscar.ShowDialog();
         }
     }
 }

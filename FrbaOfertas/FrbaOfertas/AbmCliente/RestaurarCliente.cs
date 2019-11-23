@@ -75,6 +75,7 @@ namespace FrbaOfertas.AbmCliente
         private void VolverBtn_Click(object sender, EventArgs e)
         {
             Close();
+            
         }
 
         public void habilitar(String unUsuario) 
