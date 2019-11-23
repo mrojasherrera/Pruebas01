@@ -30,8 +30,8 @@
         {
             this.ClienteDGV = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.BusquedaTB = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.NuevoTB = new System.Windows.Forms.Button();
             this.EliminarTB = new System.Windows.Forms.Button();
@@ -48,7 +48,7 @@
             this.ClienteDGV.Location = new System.Drawing.Point(12, 145);
             this.ClienteDGV.Name = "ClienteDGV";
             this.ClienteDGV.Size = new System.Drawing.Size(514, 291);
-            this.ClienteDGV.TabIndex = 0;
+            this.ClienteDGV.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -61,6 +61,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Busqueda";
             // 
+            // BusquedaTB
+            // 
+            this.BusquedaTB.Location = new System.Drawing.Point(116, 34);
+            this.BusquedaTB.Name = "BusquedaTB";
+            this.BusquedaTB.Size = new System.Drawing.Size(265, 20);
+            this.BusquedaTB.TabIndex = 0;
+            this.BusquedaTB.TextChanged += new System.EventHandler(this.BusquedaTB_TextChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -70,14 +78,6 @@
             this.label1.Size = new System.Drawing.Size(88, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "CLIENTE:";
-            // 
-            // BusquedaTB
-            // 
-            this.BusquedaTB.Location = new System.Drawing.Point(116, 34);
-            this.BusquedaTB.Name = "BusquedaTB";
-            this.BusquedaTB.Size = new System.Drawing.Size(265, 20);
-            this.BusquedaTB.TabIndex = 1;
-            this.BusquedaTB.TextChanged += new System.EventHandler(this.BusquedaTB_TextChanged);
             // 
             // pictureBox1
             // 

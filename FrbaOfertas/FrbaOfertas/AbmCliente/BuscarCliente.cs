@@ -57,10 +57,12 @@ namespace FrbaOfertas.AbmCliente
             if (BusquedaTB.Text!="")
             {
                 ClienteDGV.CurrentCell = null;
+                //oculta las filas
                 foreach (DataGridViewRow r in ClienteDGV.Rows)
                 {
                     r.Visible = false;
                 }
+                //muestra la busqueda
                 foreach (DataGridViewRow r in ClienteDGV.Rows)
                 {
                     foreach (DataGridViewCell c in r.Cells)
@@ -108,7 +110,7 @@ namespace FrbaOfertas.AbmCliente
 
             }
             conexion.Close();
-            ClienteDGV.Show();
+            
         }
     }
 }
