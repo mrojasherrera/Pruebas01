@@ -76,8 +76,9 @@
             this.FiltrarBtn.Name = "FiltrarBtn";
             this.FiltrarBtn.Size = new System.Drawing.Size(140, 44);
             this.FiltrarBtn.TabIndex = 2;
-            this.FiltrarBtn.Text = "Filtrar Cliente";
+            this.FiltrarBtn.Text = "Buscar Cliente";
             this.FiltrarBtn.UseVisualStyleBackColor = true;
+            this.FiltrarBtn.Click += new System.EventHandler(this.FiltrarBtn_Click);
             // 
             // button1
             // 

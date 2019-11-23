@@ -18,17 +18,46 @@ namespace FrbaOfertas.PantallaUsuarios
             AdmTB.Text = unAdm;
         }
 
-        private void FuncionalidadesBtn_Click(object sender, EventArgs e)
-        {
-            Administrativo.ListadoAcciones listado = new Administrativo.ListadoAcciones();
-            listado.Show();
-        }
 
         private void SalirBtn_Click(object sender, EventArgs e)
         {
             this.Close();
             FrbaOfertas.Login login = new FrbaOfertas.Login();
             login.Show();
+        }
+
+        private void ClienteBtn_Click(object sender, EventArgs e)
+        {
+            AbmCliente.AccionesCliente abmCliente = new AbmCliente.AccionesCliente();
+            abmCliente.Show();
+        }
+
+        private void ProveedorBtn_Click(object sender, EventArgs e)
+        {
+            AbmProveedor.AccionesProveedor proveedor = new AbmProveedor.AccionesProveedor();
+            proveedor.Show();
+        }
+
+        private void RolBtn_Click(object sender, EventArgs e)
+        {
+            AbmRol.AccionesRol rol = new AbmRol.AccionesRol();
+            rol.Show();
+        }
+
+        private void CreditoBtn_Click(object sender, EventArgs e)
+        {
+            CargaCredito.Cargar cargar = new CargaCredito.Cargar();
+            cargar.Show();
+        }
+
+        private void FacturarBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EstadisticoBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

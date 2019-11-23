@@ -115,7 +115,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources._account_profile_user_uploadload_upload__512;
-            this.pictureBox1.Location = new System.Drawing.Point(403, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(384, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(172, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -146,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 219);
+            this.ClientSize = new System.Drawing.Size(571, 219);
             this.Controls.Add(this.VolverBtn);
             this.Controls.Add(this.RestaurarBtn);
             this.Controls.Add(this.pictureBox1);

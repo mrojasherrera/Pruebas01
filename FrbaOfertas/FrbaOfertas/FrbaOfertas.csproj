@@ -50,17 +50,11 @@
     <Compile Include="AbmCliente\AccionesCliente.Designer.cs">
       <DependentUpon>AccionesCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmCliente\ClienteEncontrado.cs">
+    <Compile Include="AbmCliente\BuscarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmCliente\ClienteEncontrado.Designer.cs">
-      <DependentUpon>ClienteEncontrado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AbmCliente\FiltrarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AbmCliente\FiltrarCliente.Designer.cs">
-      <DependentUpon>FiltrarCliente.cs</DependentUpon>
+    <Compile Include="AbmCliente\BuscarCliente.Designer.cs">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmCliente\ModificarCliente.cs">
       <SubType>Form</SubType>
@@ -146,12 +140,6 @@
     <Compile Include="AbmRol\RolEncontrado.Designer.cs">
       <DependentUpon>RolEncontrado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Administrativo\ListadoAcciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Administrativo\ListadoAcciones.Designer.cs">
-      <DependentUpon>ListadoAcciones.cs</DependentUpon>
-    </Compile>
     <Compile Include="CargaCredito\Cargar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,11 +209,8 @@
     <EmbeddedResource Include="AbmCliente\AccionesCliente.resx">
       <DependentUpon>AccionesCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AbmCliente\ClienteEncontrado.resx">
-      <DependentUpon>ClienteEncontrado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AbmCliente\FiltrarCliente.resx">
-      <DependentUpon>FiltrarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="AbmCliente\BuscarCliente.resx">
+      <DependentUpon>BuscarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmCliente\ModificarCliente.resx">
       <DependentUpon>ModificarCliente.cs</DependentUpon>
@@ -268,9 +253,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AbmRol\RolEncontrado.resx">
       <DependentUpon>RolEncontrado.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Administrativo\ListadoAcciones.resx">
-      <DependentUpon>ListadoAcciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CargaCredito\Cargar.resx">
       <DependentUpon>Cargar.cs</DependentUpon>

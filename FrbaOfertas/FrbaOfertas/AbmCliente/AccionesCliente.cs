@@ -33,5 +33,11 @@ namespace FrbaOfertas.AbmCliente
             AbmCliente.RestaurarCliente restaurar = new AbmCliente.RestaurarCliente();
             restaurar.Show();
         }
+
+        private void FiltrarBtn_Click(object sender, EventArgs e)
+        {
+            AbmCliente.BuscarCliente buscar = new AbmCliente.BuscarCliente();
+            buscar.Show();
+        }
     }
 }
