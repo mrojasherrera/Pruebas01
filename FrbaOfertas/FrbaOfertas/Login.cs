@@ -16,6 +16,11 @@ namespace FrbaOfertas
         public Login()
         {
             InitializeComponent();
+            RolCB.DropDownStyle = ComboBoxStyle.DropDownList;
+            RolRegCB.DropDownStyle = ComboBoxStyle.DropDownList;
+            cargarCB(RolCB);
+            cargarCB(RolRegCB);
+            RolRegCB.Items.Remove("Administrador General");
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -27,6 +32,20 @@ namespace FrbaOfertas
 
         SqlConnection conexion = new SqlConnection("Data Source=localhost\\SQLSERVER2012;Initial Catalog=GD2C2019;Persist Security Info=True;User ID=gdCupon2019;Password=gd2019");
         int acumulador = 0;
+
+        //CARGAR COMBO BOX CON ROLES
+        public void cargarCB(ComboBox combo) {
+            conexion.Open();
+            SqlCommand comandoCB = new SqlCommand("SELECT Rol_Nombre FROM LOS_BORBOTONES.Role where Habilitado = 1", conexion);
+            SqlDataReader dataCB = comandoCB.ExecuteReader();
+            while (dataCB.Read())
+            {
+                combo.Items.Add(dataCB[0].ToString());
+            }
+            conexion.Close();
+            combo.Items.Insert(0, "Elegir una opción...");
+            combo.SelectedIndex = 0;
+        }
 
         //LOGUEO DEL PROVEEDOR
         public void loguearProveedor(String usuario, string pass)
@@ -84,7 +103,7 @@ namespace FrbaOfertas
             try
             {
                 conexion.Open();
-                SqlCommand comandoAdm = new SqlCommand("select u.User_name, r.Rol_Nombre, u.Habilitado from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre = 'Administrador General' and u.User_Name=@usuario and Password = HASHBYTES('SHA2_256', CAST( cast(@pass as nvarchar(20)) AS varbinary(70)))", conexion);
+                SqlCommand comandoAdm = new SqlCommand("select u.User_name, r.Rol_Nombre from LOS_BORBOTONES.Usuario u join LOS_BORBOTONES.Rol_Usuario ru on (u.User_name = ru.User_name) join LOS_BORBOTONES.Role r on(ru.Rol_Id = r.Rol_Id) where r.Rol_Nombre = 'Administrador General' and u.User_Name=@usuario and Password = HASHBYTES('SHA2_256', CAST( cast(@pass as nvarchar(20)) AS varbinary(70)))", conexion);
                 comandoAdm.Parameters.AddWithValue("usuario", usuario);
                 comandoAdm.Parameters.AddWithValue("pass", pass);
 
@@ -202,25 +221,57 @@ namespace FrbaOfertas
 
         private void IngresarBtn_Click(object sender, EventArgs e)
         {
-            String unaSeleccion = RolCB.SelectedValue.ToString();
+            if(RolCB.SelectedIndex > 0){
+                String unaSeleccion = RolCB.SelectedIndex.ToString();
 
-            if (unaSeleccion.Equals("Cliente"))
-            {
-                logearCliente(this.UsuarioTB.Text, this.PassTB.Text);
-            }
-            else if (unaSeleccion.Equals("Proveedor"))
-            {
-                loguearProveedor(this.UsuarioTB.Text, this.PassTB.Text);
+                if (unaSeleccion.Equals("Cliente"))
+                {
+                    logearCliente(this.UsuarioTB.Text, this.PassTB.Text);
+                }
+                else if (unaSeleccion.Equals("Proveedor"))
+                {
+                    loguearProveedor(this.UsuarioTB.Text, this.PassTB.Text);
+                }
+                else
+                {
+                    loguearAdministrador(this.UsuarioTB.Text, this.PassTB.Text);
+                }
             }
             else
             {
-                loguearAdministrador(this.UsuarioTB.Text, this.PassTB.Text);
+                MessageBox.Show("Por favor elige un rol...");
             }
         }
 
         private void SalirBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void RegistrarBtn_Click(object sender, EventArgs e)
+        {
+            if (RolRegCB.SelectedIndex > 0)
+            {
+                String unaSeleccion = RolRegCB.SelectedIndex.ToString();
+
+                if (unaSeleccion.Equals("Cliente"))
+                {
+                    AbmCliente.NuevoCliente nuevo = new AbmCliente.NuevoCliente();
+                    nuevo.Show();
+                    
+                }
+                else 
+                {
+                    AbmProveedor.NuevoProveedor nuevo = new AbmProveedor.NuevoProveedor();
+                    nuevo.Show();
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Para registrarte tienes que elegir un tipo...");
+            }
+
         }
 
         

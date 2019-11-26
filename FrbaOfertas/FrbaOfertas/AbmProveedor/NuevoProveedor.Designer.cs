@@ -253,6 +253,7 @@
             this.VolverBtn.TabIndex = 2;
             this.VolverBtn.Text = "Volver";
             this.VolverBtn.UseVisualStyleBackColor = true;
+            this.VolverBtn.Click += new System.EventHandler(this.VolverBtn_Click);
             // 
             // NuevoBtn
             // 

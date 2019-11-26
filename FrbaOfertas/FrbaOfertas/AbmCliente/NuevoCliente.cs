@@ -19,7 +19,7 @@ namespace FrbaOfertas.AbmCliente
 
         private void VolverBtn_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
             
         }
 

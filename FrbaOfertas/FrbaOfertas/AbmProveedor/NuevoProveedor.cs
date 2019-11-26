@@ -29,5 +29,10 @@ namespace FrbaOfertas.AbmProveedor
             RubroTB.Text = String.Empty;
             NomConTB.Text = String.Empty;
         }
+
+        private void VolverBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

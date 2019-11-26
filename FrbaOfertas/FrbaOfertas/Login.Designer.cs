@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.RolCB = new System.Windows.Forms.ComboBox();
             this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gD2C2019DataSet = new FrbaOfertas.GD2C2019DataSet();
             this.PassTB = new System.Windows.Forms.TextBox();
@@ -42,37 +41,35 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.roleTableAdapter = new FrbaOfertas.GD2C2019DataSetTableAdapters.RoleTableAdapter();
             this.SalirBtn = new System.Windows.Forms.Button();
+            this.RolCB = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RolRegCB = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.RegistrarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.RolCB);
+            this.groupBox1.Controls.Add(this.SalirBtn);
             this.groupBox1.Controls.Add(this.PassTB);
+            this.groupBox1.Controls.Add(this.IngresarBtn);
             this.groupBox1.Controls.Add(this.UsuarioTB);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(37, 42);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(375, 192);
+            this.groupBox1.Size = new System.Drawing.Size(375, 215);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
-            // 
-            // RolCB
-            // 
-            this.RolCB.DataSource = this.roleBindingSource;
-            this.RolCB.DisplayMember = "Rol_Nombre";
-            this.RolCB.FormattingEnabled = true;
-            this.RolCB.Location = new System.Drawing.Point(173, 120);
-            this.RolCB.Name = "RolCB";
-            this.RolCB.Size = new System.Drawing.Size(185, 21);
-            this.RolCB.TabIndex = 5;
-            this.RolCB.ValueMember = "Rol_Nombre";
             // 
             // roleBindingSource
             // 
@@ -90,14 +87,14 @@
             this.PassTB.Name = "PassTB";
             this.PassTB.PasswordChar = '*';
             this.PassTB.Size = new System.Drawing.Size(185, 20);
-            this.PassTB.TabIndex = 4;
+            this.PassTB.TabIndex = 1;
             // 
             // UsuarioTB
             // 
             this.UsuarioTB.Location = new System.Drawing.Point(173, 35);
             this.UsuarioTB.Name = "UsuarioTB";
             this.UsuarioTB.Size = new System.Drawing.Size(185, 20);
-            this.UsuarioTB.TabIndex = 3;
+            this.UsuarioTB.TabIndex = 0;
             // 
             // label3
             // 
@@ -131,10 +128,10 @@
             // 
             // IngresarBtn
             // 
-            this.IngresarBtn.Location = new System.Drawing.Point(254, 280);
+            this.IngresarBtn.Location = new System.Drawing.Point(217, 171);
             this.IngresarBtn.Name = "IngresarBtn";
             this.IngresarBtn.Size = new System.Drawing.Size(100, 38);
-            this.IngresarBtn.TabIndex = 2;
+            this.IngresarBtn.TabIndex = 3;
             this.IngresarBtn.Text = "Ingresar";
             this.IngresarBtn.UseVisualStyleBackColor = true;
             this.IngresarBtn.Click += new System.EventHandler(this.IngresarBtn_Click);
@@ -142,9 +139,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources.secrecy_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(441, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(393, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(255, 276);
+            this.pictureBox1.Size = new System.Drawing.Size(191, 215);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -155,7 +152,7 @@
             // 
             // SalirBtn
             // 
-            this.SalirBtn.Location = new System.Drawing.Point(93, 280);
+            this.SalirBtn.Location = new System.Drawing.Point(56, 171);
             this.SalirBtn.Name = "SalirBtn";
             this.SalirBtn.Size = new System.Drawing.Size(100, 38);
             this.SalirBtn.TabIndex = 4;
@@ -163,14 +160,62 @@
             this.SalirBtn.UseVisualStyleBackColor = true;
             this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
             // 
+            // RolCB
+            // 
+            this.RolCB.FormattingEnabled = true;
+            this.RolCB.Location = new System.Drawing.Point(173, 120);
+            this.RolCB.Name = "RolCB";
+            this.RolCB.Size = new System.Drawing.Size(185, 21);
+            this.RolCB.TabIndex = 2;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.RegistrarBtn);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.RolRegCB);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(591, 13);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(230, 172);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Registrar";
+            // 
+            // RolRegCB
+            // 
+            this.RolRegCB.FormattingEnabled = true;
+            this.RolRegCB.Location = new System.Drawing.Point(25, 66);
+            this.RolRegCB.Name = "RolRegCB";
+            this.RolRegCB.Size = new System.Drawing.Size(173, 21);
+            this.RolRegCB.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 32);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "TIPO DE USUARIO:";
+            // 
+            // RegistrarBtn
+            // 
+            this.RegistrarBtn.Location = new System.Drawing.Point(71, 109);
+            this.RegistrarBtn.Name = "RegistrarBtn";
+            this.RegistrarBtn.Size = new System.Drawing.Size(100, 38);
+            this.RegistrarBtn.TabIndex = 6;
+            this.RegistrarBtn.Text = "Registrar";
+            this.RegistrarBtn.UseVisualStyleBackColor = true;
+            this.RegistrarBtn.Click += new System.EventHandler(this.RegistrarBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 350);
-            this.Controls.Add(this.SalirBtn);
+            this.ClientSize = new System.Drawing.Size(837, 238);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.IngresarBtn);
             this.Controls.Add(this.groupBox1);
             this.Name = "Login";
             this.Text = "Inicio de sesión";
@@ -180,6 +225,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -187,7 +234,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox RolCB;
         private System.Windows.Forms.TextBox PassTB;
         private System.Windows.Forms.TextBox UsuarioTB;
         private System.Windows.Forms.Label label3;
@@ -199,6 +245,11 @@
         private System.Windows.Forms.BindingSource roleBindingSource;
         private GD2C2019DataSetTableAdapters.RoleTableAdapter roleTableAdapter;
         private System.Windows.Forms.Button SalirBtn;
+        private System.Windows.Forms.ComboBox RolCB;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button RegistrarBtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox RolRegCB;
     }
 }
 
