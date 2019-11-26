@@ -28,6 +28,7 @@ namespace FrbaOfertas
         SqlConnection conexion = new SqlConnection("Data Source=localhost\\SQLSERVER2012;Initial Catalog=GD2C2019;Persist Security Info=True;User ID=gdCupon2019;Password=gd2019");
         int acumulador = 0;
 
+        //LOGUEO DEL PROVEEDOR
         public void loguearProveedor(String usuario, string pass)
         {
             try
@@ -77,7 +78,7 @@ namespace FrbaOfertas
         }
 
 
-
+        //LOGUEO DEL ADMINISTRADOR
         public void loguearAdministrador(string usuario, string pass)
         {
             try
@@ -92,31 +93,31 @@ namespace FrbaOfertas
                 data3.Fill(tabla3);
                 if (tabla3.Rows.Count == 1)
                 {
-                    int habilitado = Convert.ToInt32(tabla3.Rows[0][2]);
-                    if (habilitado.Equals(1) && acumulador < 4)
-                    {
+                    //int habilitado = Convert.ToInt32(tabla3.Rows[0][2]);
+                    //if (habilitado.Equals(1) && acumulador < 4)
+                    //{
                         this.Hide();
                         PantallaUsuarios.PantallaAdmin adm = new PantallaUsuarios.PantallaAdmin(tabla3.Rows[0][0].ToString());
                         adm.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("El usuario se encuentra bloqueado...");
+                    //}
+                    //else
+                    //{
+                        //MessageBox.Show("El usuario se encuentra bloqueado...");
 
-                    }
+                    //}
                 }
                 else
                 {
                     MessageBox.Show("Los datos del administrador ingresado son incorrectos...");
-                    acumulador++;
+                    //acumulador++;
 
-                    if (acumulador.Equals(3))
+                    /*if (acumulador.Equals(3))
                     {
 
                         MessageBox.Show("Se terminaron tus 3 intentos...");
                         bloquear(usuario);
 
-                    }
+                    }*/
                 }
             }
             catch (Exception error)
@@ -126,7 +127,7 @@ namespace FrbaOfertas
             finally { conexion.Close(); }
         }
 
-
+        //LOGUEO DEL CLIENTE
         public void logearCliente(String usuario, String pass)
         {
             try
@@ -190,7 +191,7 @@ namespace FrbaOfertas
                 if (cant == 1)
                 {
                     MessageBox.Show("Estas bloqueado, intente con otro usuario...");
-                
+                    acumulador = 0;
                 }            
             UsuarioTB.Clear();
             PassTB.Clear();
