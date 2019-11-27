@@ -257,13 +257,13 @@ namespace FrbaOfertas
                 if (unaSeleccion.Equals("Cliente"))
                 {
                     AbmCliente.NuevoCliente nuevo = new AbmCliente.NuevoCliente();
-                    nuevo.Show();
+                    nuevo.ShowDialog();
                     
                 }
                 else 
                 {
                     AbmProveedor.NuevoProveedor nuevo = new AbmProveedor.NuevoProveedor();
-                    nuevo.Show();
+                    nuevo.ShowDialog();
                 }
                 
             }

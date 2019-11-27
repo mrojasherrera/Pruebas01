@@ -104,7 +104,7 @@ namespace FrbaOfertas.AbmCliente
             }
             else
             {
-                MessageBox.Show("El cliente ya esta registrado...");
+                MessageBox.Show("El cliente ya se encuentra registrado, intente nuevamente...");
             }
             conexion.Close();
 
