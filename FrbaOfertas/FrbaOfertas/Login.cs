@@ -222,7 +222,7 @@ namespace FrbaOfertas
         private void IngresarBtn_Click(object sender, EventArgs e)
         {
             if(RolCB.SelectedIndex > 0){
-                String unaSeleccion = RolCB.SelectedIndex.ToString();
+                String unaSeleccion = RolCB.Text;
 
                 if (unaSeleccion.Equals("Cliente"))
                 {
@@ -252,7 +252,7 @@ namespace FrbaOfertas
         {
             if (RolRegCB.SelectedIndex > 0)
             {
-                String unaSeleccion = RolRegCB.SelectedIndex.ToString();
+                String unaSeleccion = RolRegCB.Text;
 
                 if (unaSeleccion.Equals("Cliente"))
                 {

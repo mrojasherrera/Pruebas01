@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.RestaurarBtn = new System.Windows.Forms.Button();
             this.NuevoBtn = new System.Windows.Forms.Button();
             this.FiltrarBtn = new System.Windows.Forms.Button();
             this.SalirBtn = new System.Windows.Forms.Button();
-            this.RestaurarBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,6 +50,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Acciones";
             // 
+            // RestaurarBtn
+            // 
+            this.RestaurarBtn.Location = new System.Drawing.Point(46, 175);
+            this.RestaurarBtn.Name = "RestaurarBtn";
+            this.RestaurarBtn.Size = new System.Drawing.Size(138, 50);
+            this.RestaurarBtn.TabIndex = 3;
+            this.RestaurarBtn.Text = "Restaurar Proveedor";
+            this.RestaurarBtn.UseVisualStyleBackColor = true;
+            this.RestaurarBtn.Click += new System.EventHandler(this.RestaurarBtn_Click);
+            // 
             // NuevoBtn
             // 
             this.NuevoBtn.Location = new System.Drawing.Point(46, 29);
@@ -58,6 +68,7 @@
             this.NuevoBtn.TabIndex = 1;
             this.NuevoBtn.Text = "Nuevo Proveedor";
             this.NuevoBtn.UseVisualStyleBackColor = true;
+            this.NuevoBtn.Click += new System.EventHandler(this.NuevoBtn_Click);
             // 
             // FiltrarBtn
             // 
@@ -67,6 +78,7 @@
             this.FiltrarBtn.TabIndex = 2;
             this.FiltrarBtn.Text = "Filtrar Proveedor";
             this.FiltrarBtn.UseVisualStyleBackColor = true;
+            this.FiltrarBtn.Click += new System.EventHandler(this.FiltrarBtn_Click);
             // 
             // SalirBtn
             // 
@@ -77,15 +89,6 @@
             this.SalirBtn.Text = "SALIR";
             this.SalirBtn.UseVisualStyleBackColor = true;
             this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
-            // 
-            // RestaurarBtn
-            // 
-            this.RestaurarBtn.Location = new System.Drawing.Point(46, 175);
-            this.RestaurarBtn.Name = "RestaurarBtn";
-            this.RestaurarBtn.Size = new System.Drawing.Size(138, 50);
-            this.RestaurarBtn.TabIndex = 3;
-            this.RestaurarBtn.Text = "Restaurar Proveedor";
-            this.RestaurarBtn.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 

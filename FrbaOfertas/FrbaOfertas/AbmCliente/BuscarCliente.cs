@@ -13,11 +13,10 @@ namespace FrbaOfertas.AbmCliente
 {
     public partial class BuscarCliente : Form
     {
-       // public static BuscarCliente bc;
+       
         public BuscarCliente()
         {
             InitializeComponent();
-           // bc = this;
             cargarDatos();
         }
 
@@ -103,7 +102,7 @@ namespace FrbaOfertas.AbmCliente
             cant = comandoEliminar.ExecuteNonQuery();
             if (cant == 1)
             {
-                MessageBox.Show("El cliente se bloqueó exitosamente...");
+                MessageBox.Show("Se eliminó exitosamente al cliente...");
                 
             }
             conexion.Close();

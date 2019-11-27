@@ -24,8 +24,6 @@ namespace FrbaOfertas.AbmCliente
         private void VolverBtn_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //this.Close();
-            //BuscarCliente.bc.Text = "Actualizado";
             AbmCliente.BuscarCliente buscar = new BuscarCliente();
             buscar.ShowDialog();
         }

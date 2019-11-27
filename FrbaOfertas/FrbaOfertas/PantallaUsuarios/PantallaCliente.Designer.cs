@@ -38,6 +38,7 @@
             this.ComprarBtn = new System.Windows.Forms.Button();
             this.SalirBtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.CambiarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -133,6 +134,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.CambiarBtn);
             this.groupBox2.Controls.Add(this.ComprarBtn);
             this.groupBox2.Location = new System.Drawing.Point(367, 12);
             this.groupBox2.Name = "groupBox2";
@@ -140,6 +142,15 @@
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
+            // 
+            // CambiarBtn
+            // 
+            this.CambiarBtn.Location = new System.Drawing.Point(43, 111);
+            this.CambiarBtn.Name = "CambiarBtn";
+            this.CambiarBtn.Size = new System.Drawing.Size(115, 44);
+            this.CambiarBtn.TabIndex = 7;
+            this.CambiarBtn.Text = "Cambiar contraseña";
+            this.CambiarBtn.UseVisualStyleBackColor = true;
             // 
             // PantallaCliente
             // 
@@ -170,5 +181,6 @@
         private System.Windows.Forms.Button ComprarBtn;
         private System.Windows.Forms.Button SalirBtn;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button CambiarBtn;
     }
 }

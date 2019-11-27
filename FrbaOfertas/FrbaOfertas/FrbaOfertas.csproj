@@ -98,11 +98,11 @@
     <Compile Include="AbmProveedor\NuevoProveedor.Designer.cs">
       <DependentUpon>NuevoProveedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="AbmProveedor\ProveedorEncontrado.cs">
+    <Compile Include="AbmProveedor\RestaurarProveedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AbmProveedor\ProveedorEncontrado.Designer.cs">
-      <DependentUpon>ProveedorEncontrado.cs</DependentUpon>
+    <Compile Include="AbmProveedor\RestaurarProveedor.Designer.cs">
+      <DependentUpon>RestaurarProveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="AbmRol\AccionesRol.cs">
       <SubType>Form</SubType>
@@ -233,8 +233,8 @@
     <EmbeddedResource Include="AbmProveedor\NuevoProveedor.resx">
       <DependentUpon>NuevoProveedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AbmProveedor\ProveedorEncontrado.resx">
-      <DependentUpon>ProveedorEncontrado.cs</DependentUpon>
+    <EmbeddedResource Include="AbmProveedor\RestaurarProveedor.resx">
+      <DependentUpon>RestaurarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AbmRol\AccionesRol.resx">
       <DependentUpon>AccionesRol.cs</DependentUpon>
