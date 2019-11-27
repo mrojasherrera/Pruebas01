@@ -146,11 +146,11 @@
     <Compile Include="CargaCredito\Cargar.Designer.cs">
       <DependentUpon>Cargar.cs</DependentUpon>
     </Compile>
-    <Compile Include="ComprarOferta\Comprar.cs">
+    <Compile Include="ComprarOferta\CompraOferta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComprarOferta\Comprar.Designer.cs">
-      <DependentUpon>Comprar.cs</DependentUpon>
+    <Compile Include="ComprarOferta\CompraOferta.Designer.cs">
+      <DependentUpon>CompraOferta.cs</DependentUpon>
     </Compile>
     <Compile Include="CrearOferta\NuevaOferta.cs">
       <SubType>Form</SubType>
@@ -257,8 +257,8 @@
     <EmbeddedResource Include="CargaCredito\Cargar.resx">
       <DependentUpon>Cargar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComprarOferta\Comprar.resx">
-      <DependentUpon>Comprar.cs</DependentUpon>
+    <EmbeddedResource Include="ComprarOferta\CompraOferta.resx">
+      <DependentUpon>CompraOferta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearOferta\NuevaOferta.resx">
       <DependentUpon>NuevaOferta.cs</DependentUpon>
@@ -365,6 +365,7 @@
   <ItemGroup>
     <None Include="Resources\-account-profile-user-uploadload-upload--512.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

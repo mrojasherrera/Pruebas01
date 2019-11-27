@@ -107,6 +107,7 @@ create table LOS_BORBOTONES.Cupon
 (Cupon_Id int IDENTITY NOT NULL,
 Oferta_Codigo nvarchar(50),
 Cli_Dni numeric(18, 0),
+Cant_Comprada numeric(18, 0) DEFAULT(1),
 Cli_Dest_Nombre nvarchar(255),
 Cli_Dest_Apellido nvarchar(255),
 Cli_Dest_Dni numeric(18, 0),
@@ -200,15 +201,6 @@ insert into LOS_BORBOTONES.Usuario (User_name, Password)
 insert into LOS_BORBOTONES.Usuario(User_name, Password)
 	values('admin', HASHBYTES('SHA2_256', CAST( cast('w23e' as nvarchar(20)) AS varbinary(70))))
 
-/*** MIGRACION CLIENTES ***/
-
-insert into LOS_BORBOTONES.Cliente (Cli_Nombre, Cli_Apellido,Cli_Dni, Cli_Direccion, 
-			Cli_Telefono, Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, User_name, Cli_Saldo)
-	select  Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
-			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, Cli_Dni, coalesce( (sum(Carga_Credito) - sum(Oferta_Precio)),0)
-	from gd_esquema.Maestra
-	group by Cli_Nombre, Cli_Apellido, Cli_Dni, Cli_Direccion, Cli_Telefono, 
-			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad
 
 /*** MIGRACION ROLE ***/
 
@@ -241,7 +233,7 @@ insert into LOS_BORBOTONES.TipoDePago (Tipo_Pago_Desc)
 /*** MIGRACION CARGA***/
 
 insert into LOS_BORBOTONES.Carga (Cli_Dni, Carga_Credito, Carga_Fecha, Tipo_Pago_Id)
-	select Cli_Dni, Carga_Credito, Carga_Fecha, Tipo_Pago_Id 
+	select distinct Cli_Dni, Carga_Credito, Carga_Fecha, Tipo_Pago_Id 
 		from gd_esquema.Maestra g join LOS_BORBOTONES.TipoDePago t 
 		on (g.Tipo_Pago_Desc = t.Tipo_Pago_Desc)
 
@@ -292,6 +284,16 @@ insert into LOS_BORBOTONES.Cupon (
 		where Oferta_Fecha_Compra is not null
 		order by Cli_Dni, Oferta_Fecha_Compra
 ;
+
+/*** MIGRACION CLIENTES ***/
+
+insert into LOS_BORBOTONES.Cliente (Cli_Nombre, Cli_Apellido,Cli_Dni, Cli_Direccion, 
+			Cli_Telefono, Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, User_name, Cli_Saldo)
+	select  Cli_Nombre, Cli_Apellido, m.Cli_Dni, Cli_Direccion, Cli_Telefono, 
+			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad, m.Cli_Dni, coalesce( (select sum(Carga_Credito) from LOS_BORBOTONES.Carga c where c.Cli_Dni =m.Cli_Dni ) - (select sum( c.Cant_Comprada*o.Oferta_Precio) from LOS_BORBOTONES.Cupon c join LOS_BORBOTONES.Oferta o on (c.Oferta_Codigo = o.Oferta_Codigo) where c.Cli_Dni = m.Cli_Dni),0)
+	from gd_esquema.Maestra m
+	group by Cli_Nombre, Cli_Apellido, m.Cli_Dni, Cli_Direccion, Cli_Telefono, 
+			Cli_Mail, Cli_Fecha_Nac, Cli_Ciudad
 
 /*** MIGRACION ROL_USUARIO ***/
 
