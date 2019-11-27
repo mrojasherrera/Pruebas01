@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gD2C2019DataSet = new FrbaOfertas.GD2C2019DataSet();
+            this.RolCB = new System.Windows.Forms.ComboBox();
+            this.SalirBtn = new System.Windows.Forms.Button();
             this.PassTB = new System.Windows.Forms.TextBox();
+            this.IngresarBtn = new System.Windows.Forms.Button();
             this.UsuarioTB = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.IngresarBtn = new System.Windows.Forms.Button();
+            this.roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gD2C2019DataSet = new FrbaOfertas.GD2C2019DataSet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.roleTableAdapter = new FrbaOfertas.GD2C2019DataSetTableAdapters.RoleTableAdapter();
-            this.SalirBtn = new System.Windows.Forms.Button();
-            this.RolCB = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.RolRegCB = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.RegistrarBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.RolRegCB = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gD2C2019DataSet)).BeginInit();
@@ -71,15 +71,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
             // 
-            // roleBindingSource
+            // RolCB
             // 
-            this.roleBindingSource.DataMember = "Role";
-            this.roleBindingSource.DataSource = this.gD2C2019DataSet;
+            this.RolCB.FormattingEnabled = true;
+            this.RolCB.Location = new System.Drawing.Point(173, 120);
+            this.RolCB.Name = "RolCB";
+            this.RolCB.Size = new System.Drawing.Size(185, 21);
+            this.RolCB.TabIndex = 2;
             // 
-            // gD2C2019DataSet
+            // SalirBtn
             // 
-            this.gD2C2019DataSet.DataSetName = "GD2C2019DataSet";
-            this.gD2C2019DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.SalirBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.SalirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalirBtn.Location = new System.Drawing.Point(56, 171);
+            this.SalirBtn.Name = "SalirBtn";
+            this.SalirBtn.Size = new System.Drawing.Size(100, 38);
+            this.SalirBtn.TabIndex = 4;
+            this.SalirBtn.Text = "Salir";
+            this.SalirBtn.UseVisualStyleBackColor = false;
+            this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
             // 
             // PassTB
             // 
@@ -88,6 +98,17 @@
             this.PassTB.PasswordChar = '*';
             this.PassTB.Size = new System.Drawing.Size(185, 20);
             this.PassTB.TabIndex = 1;
+            // 
+            // IngresarBtn
+            // 
+            this.IngresarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IngresarBtn.Location = new System.Drawing.Point(217, 171);
+            this.IngresarBtn.Name = "IngresarBtn";
+            this.IngresarBtn.Size = new System.Drawing.Size(100, 38);
+            this.IngresarBtn.TabIndex = 3;
+            this.IngresarBtn.Text = "Ingresar";
+            this.IngresarBtn.UseVisualStyleBackColor = true;
+            this.IngresarBtn.Click += new System.EventHandler(this.IngresarBtn_Click);
             // 
             // UsuarioTB
             // 
@@ -126,15 +147,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "USUARIO:";
             // 
-            // IngresarBtn
+            // roleBindingSource
             // 
-            this.IngresarBtn.Location = new System.Drawing.Point(217, 171);
-            this.IngresarBtn.Name = "IngresarBtn";
-            this.IngresarBtn.Size = new System.Drawing.Size(100, 38);
-            this.IngresarBtn.TabIndex = 3;
-            this.IngresarBtn.Text = "Ingresar";
-            this.IngresarBtn.UseVisualStyleBackColor = true;
-            this.IngresarBtn.Click += new System.EventHandler(this.IngresarBtn_Click);
+            this.roleBindingSource.DataMember = "Role";
+            this.roleBindingSource.DataSource = this.gD2C2019DataSet;
+            // 
+            // gD2C2019DataSet
+            // 
+            this.gD2C2019DataSet.DataSetName = "GD2C2019DataSet";
+            this.gD2C2019DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pictureBox1
             // 
@@ -150,24 +171,6 @@
             // 
             this.roleTableAdapter.ClearBeforeFill = true;
             // 
-            // SalirBtn
-            // 
-            this.SalirBtn.Location = new System.Drawing.Point(56, 171);
-            this.SalirBtn.Name = "SalirBtn";
-            this.SalirBtn.Size = new System.Drawing.Size(100, 38);
-            this.SalirBtn.TabIndex = 4;
-            this.SalirBtn.Text = "Salir";
-            this.SalirBtn.UseVisualStyleBackColor = true;
-            this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
-            // 
-            // RolCB
-            // 
-            this.RolCB.FormattingEnabled = true;
-            this.RolCB.Location = new System.Drawing.Point(173, 120);
-            this.RolCB.Name = "RolCB";
-            this.RolCB.Size = new System.Drawing.Size(185, 21);
-            this.RolCB.TabIndex = 2;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.RegistrarBtn);
@@ -181,13 +184,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Registrar";
             // 
-            // RolRegCB
+            // RegistrarBtn
             // 
-            this.RolRegCB.FormattingEnabled = true;
-            this.RolRegCB.Location = new System.Drawing.Point(25, 66);
-            this.RolRegCB.Name = "RolRegCB";
-            this.RolRegCB.Size = new System.Drawing.Size(173, 21);
-            this.RolRegCB.TabIndex = 5;
+            this.RegistrarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistrarBtn.Location = new System.Drawing.Point(71, 109);
+            this.RegistrarBtn.Name = "RegistrarBtn";
+            this.RegistrarBtn.Size = new System.Drawing.Size(100, 38);
+            this.RegistrarBtn.TabIndex = 6;
+            this.RegistrarBtn.Text = "Registrar";
+            this.RegistrarBtn.UseVisualStyleBackColor = true;
+            this.RegistrarBtn.Click += new System.EventHandler(this.RegistrarBtn_Click);
             // 
             // label4
             // 
@@ -199,15 +205,13 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "TIPO DE USUARIO:";
             // 
-            // RegistrarBtn
+            // RolRegCB
             // 
-            this.RegistrarBtn.Location = new System.Drawing.Point(71, 109);
-            this.RegistrarBtn.Name = "RegistrarBtn";
-            this.RegistrarBtn.Size = new System.Drawing.Size(100, 38);
-            this.RegistrarBtn.TabIndex = 6;
-            this.RegistrarBtn.Text = "Registrar";
-            this.RegistrarBtn.UseVisualStyleBackColor = true;
-            this.RegistrarBtn.Click += new System.EventHandler(this.RegistrarBtn_Click);
+            this.RolRegCB.FormattingEnabled = true;
+            this.RolRegCB.Location = new System.Drawing.Point(25, 66);
+            this.RolRegCB.Name = "RolRegCB";
+            this.RolRegCB.Size = new System.Drawing.Size(173, 21);
+            this.RolRegCB.TabIndex = 5;
             // 
             // Login
             // 

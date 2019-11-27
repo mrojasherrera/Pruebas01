@@ -114,9 +114,10 @@
             // 
             // ComprarBtn
             // 
-            this.ComprarBtn.Location = new System.Drawing.Point(43, 34);
+            this.ComprarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComprarBtn.Location = new System.Drawing.Point(28, 33);
             this.ComprarBtn.Name = "ComprarBtn";
-            this.ComprarBtn.Size = new System.Drawing.Size(115, 44);
+            this.ComprarBtn.Size = new System.Drawing.Size(141, 53);
             this.ComprarBtn.TabIndex = 6;
             this.ComprarBtn.Text = "Comprar Oferta";
             this.ComprarBtn.UseVisualStyleBackColor = true;
@@ -124,12 +125,14 @@
             // 
             // SalirBtn
             // 
-            this.SalirBtn.Location = new System.Drawing.Point(157, 233);
+            this.SalirBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.SalirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalirBtn.Location = new System.Drawing.Point(157, 207);
             this.SalirBtn.Name = "SalirBtn";
             this.SalirBtn.Size = new System.Drawing.Size(112, 49);
             this.SalirBtn.TabIndex = 7;
             this.SalirBtn.Text = "Salir";
-            this.SalirBtn.UseVisualStyleBackColor = true;
+            this.SalirBtn.UseVisualStyleBackColor = false;
             this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
             // 
             // groupBox2
@@ -145,18 +148,19 @@
             // 
             // CambiarBtn
             // 
-            this.CambiarBtn.Location = new System.Drawing.Point(43, 111);
+            this.CambiarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CambiarBtn.Location = new System.Drawing.Point(28, 110);
             this.CambiarBtn.Name = "CambiarBtn";
-            this.CambiarBtn.Size = new System.Drawing.Size(115, 44);
+            this.CambiarBtn.Size = new System.Drawing.Size(141, 53);
             this.CambiarBtn.TabIndex = 7;
-            this.CambiarBtn.Text = "Cambiar contraseña";
+            this.CambiarBtn.Text = "Cambiar Contraseña";
             this.CambiarBtn.UseVisualStyleBackColor = true;
             // 
             // PantallaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 306);
+            this.ClientSize = new System.Drawing.Size(585, 266);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.SalirBtn);
             this.Controls.Add(this.groupBox1);

@@ -36,6 +36,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.OfertaBtn = new System.Windows.Forms.Button();
             this.SalirBtn = new System.Windows.Forms.Button();
+            this.CambiarBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -91,19 +92,21 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.CambiarBtn);
             this.groupBox2.Controls.Add(this.OfertaBtn);
             this.groupBox2.Location = new System.Drawing.Point(412, 13);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(307, 158);
+            this.groupBox2.Size = new System.Drawing.Size(202, 158);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Acciones";
             // 
             // OfertaBtn
             // 
-            this.OfertaBtn.Location = new System.Drawing.Point(80, 27);
+            this.OfertaBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OfertaBtn.Location = new System.Drawing.Point(30, 34);
             this.OfertaBtn.Name = "OfertaBtn";
-            this.OfertaBtn.Size = new System.Drawing.Size(164, 41);
+            this.OfertaBtn.Size = new System.Drawing.Size(140, 47);
             this.OfertaBtn.TabIndex = 0;
             this.OfertaBtn.Text = "Nueva oferta";
             this.OfertaBtn.UseVisualStyleBackColor = true;
@@ -111,19 +114,31 @@
             // 
             // SalirBtn
             // 
-            this.SalirBtn.Location = new System.Drawing.Point(148, 195);
+            this.SalirBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.SalirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalirBtn.Location = new System.Drawing.Point(148, 177);
             this.SalirBtn.Name = "SalirBtn";
             this.SalirBtn.Size = new System.Drawing.Size(125, 40);
             this.SalirBtn.TabIndex = 2;
             this.SalirBtn.Text = "Salir";
-            this.SalirBtn.UseVisualStyleBackColor = true;
+            this.SalirBtn.UseVisualStyleBackColor = false;
             this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
+            // 
+            // CambiarBtn
+            // 
+            this.CambiarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CambiarBtn.Location = new System.Drawing.Point(30, 93);
+            this.CambiarBtn.Name = "CambiarBtn";
+            this.CambiarBtn.Size = new System.Drawing.Size(140, 47);
+            this.CambiarBtn.TabIndex = 1;
+            this.CambiarBtn.Text = "Cambiar Contraseña";
+            this.CambiarBtn.UseVisualStyleBackColor = true;
             // 
             // PantallaProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(731, 253);
+            this.ClientSize = new System.Drawing.Size(631, 226);
             this.Controls.Add(this.SalirBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -146,6 +161,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button OfertaBtn;
         private System.Windows.Forms.Button SalirBtn;
+        private System.Windows.Forms.Button CambiarBtn;
 
     }
 }

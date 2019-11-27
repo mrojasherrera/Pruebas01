@@ -44,10 +44,11 @@
             // ClienteDGV
             // 
             this.ClienteDGV.AllowUserToAddRows = false;
+            this.ClienteDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.ClienteDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClienteDGV.Location = new System.Drawing.Point(12, 145);
             this.ClienteDGV.Name = "ClienteDGV";
-            this.ClienteDGV.Size = new System.Drawing.Size(514, 291);
+            this.ClienteDGV.Size = new System.Drawing.Size(461, 291);
             this.ClienteDGV.TabIndex = 1;
             // 
             // groupBox1
@@ -82,7 +83,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources._29461_200;
-            this.pictureBox1.Location = new System.Drawing.Point(539, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(436, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(201, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -91,9 +92,10 @@
             // 
             // ModificarTB
             // 
-            this.ModificarTB.Location = new System.Drawing.Point(589, 202);
+            this.ModificarTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModificarTB.Location = new System.Drawing.Point(506, 168);
             this.ModificarTB.Name = "ModificarTB";
-            this.ModificarTB.Size = new System.Drawing.Size(118, 39);
+            this.ModificarTB.Size = new System.Drawing.Size(131, 49);
             this.ModificarTB.TabIndex = 3;
             this.ModificarTB.Text = "Modificar Cliente";
             this.ModificarTB.UseVisualStyleBackColor = true;
@@ -101,9 +103,10 @@
             // 
             // EliminarTB
             // 
-            this.EliminarTB.Location = new System.Drawing.Point(589, 268);
+            this.EliminarTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarTB.Location = new System.Drawing.Point(506, 243);
             this.EliminarTB.Name = "EliminarTB";
-            this.EliminarTB.Size = new System.Drawing.Size(118, 39);
+            this.EliminarTB.Size = new System.Drawing.Size(131, 49);
             this.EliminarTB.TabIndex = 4;
             this.EliminarTB.Text = "Eliminar Cliente";
             this.EliminarTB.UseVisualStyleBackColor = true;
@@ -111,9 +114,10 @@
             // 
             // VolverTB
             // 
-            this.VolverTB.Location = new System.Drawing.Point(589, 333);
+            this.VolverTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VolverTB.Location = new System.Drawing.Point(506, 326);
             this.VolverTB.Name = "VolverTB";
-            this.VolverTB.Size = new System.Drawing.Size(118, 39);
+            this.VolverTB.Size = new System.Drawing.Size(131, 49);
             this.VolverTB.TabIndex = 5;
             this.VolverTB.Text = "Volver";
             this.VolverTB.UseVisualStyleBackColor = true;
@@ -123,7 +127,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 450);
+            this.ClientSize = new System.Drawing.Size(664, 450);
             this.Controls.Add(this.VolverTB);
             this.Controls.Add(this.EliminarTB);
             this.Controls.Add(this.ModificarTB);

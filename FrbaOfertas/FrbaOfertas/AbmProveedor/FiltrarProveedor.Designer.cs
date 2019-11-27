@@ -82,9 +82,10 @@
             // 
             // ModificarBtn
             // 
-            this.ModificarBtn.Location = new System.Drawing.Point(502, 198);
+            this.ModificarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModificarBtn.Location = new System.Drawing.Point(502, 194);
             this.ModificarBtn.Name = "ModificarBtn";
-            this.ModificarBtn.Size = new System.Drawing.Size(114, 41);
+            this.ModificarBtn.Size = new System.Drawing.Size(145, 55);
             this.ModificarBtn.TabIndex = 10;
             this.ModificarBtn.Text = "Modificar Proveedor";
             this.ModificarBtn.UseVisualStyleBackColor = true;
@@ -92,9 +93,10 @@
             // 
             // VolverBtn
             // 
-            this.VolverBtn.Location = new System.Drawing.Point(502, 370);
+            this.VolverBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VolverBtn.Location = new System.Drawing.Point(502, 366);
             this.VolverBtn.Name = "VolverBtn";
-            this.VolverBtn.Size = new System.Drawing.Size(114, 41);
+            this.VolverBtn.Size = new System.Drawing.Size(145, 55);
             this.VolverBtn.TabIndex = 9;
             this.VolverBtn.Text = "Volver";
             this.VolverBtn.UseVisualStyleBackColor = true;
@@ -113,9 +115,10 @@
             // 
             // EliminarBtn
             // 
-            this.EliminarBtn.Location = new System.Drawing.Point(502, 282);
+            this.EliminarBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EliminarBtn.Location = new System.Drawing.Point(502, 278);
             this.EliminarBtn.Name = "EliminarBtn";
-            this.EliminarBtn.Size = new System.Drawing.Size(114, 41);
+            this.EliminarBtn.Size = new System.Drawing.Size(145, 55);
             this.EliminarBtn.TabIndex = 11;
             this.EliminarBtn.Text = "Eliminar Proveedor";
             this.EliminarBtn.UseVisualStyleBackColor = true;
@@ -125,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(630, 498);
+            this.ClientSize = new System.Drawing.Size(666, 498);
             this.Controls.Add(this.EliminarBtn);
             this.Controls.Add(this.ProveeDGV);
             this.Controls.Add(this.ModificarBtn);

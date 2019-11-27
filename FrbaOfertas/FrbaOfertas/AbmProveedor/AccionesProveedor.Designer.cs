@@ -52,7 +52,7 @@
             // 
             // RestaurarBtn
             // 
-            this.RestaurarBtn.Location = new System.Drawing.Point(46, 175);
+            this.RestaurarBtn.Location = new System.Drawing.Point(46, 177);
             this.RestaurarBtn.Name = "RestaurarBtn";
             this.RestaurarBtn.Size = new System.Drawing.Size(138, 50);
             this.RestaurarBtn.TabIndex = 3;
@@ -82,18 +82,20 @@
             // 
             // SalirBtn
             // 
-            this.SalirBtn.Location = new System.Drawing.Point(283, 204);
+            this.SalirBtn.BackColor = System.Drawing.SystemColors.Highlight;
+            this.SalirBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalirBtn.Location = new System.Drawing.Point(267, 189);
             this.SalirBtn.Name = "SalirBtn";
-            this.SalirBtn.Size = new System.Drawing.Size(138, 53);
+            this.SalirBtn.Size = new System.Drawing.Size(138, 50);
             this.SalirBtn.TabIndex = 6;
-            this.SalirBtn.Text = "SALIR";
-            this.SalirBtn.UseVisualStyleBackColor = true;
+            this.SalirBtn.Text = "Salir";
+            this.SalirBtn.UseVisualStyleBackColor = false;
             this.SalirBtn.Click += new System.EventHandler(this.SalirBtn_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources.icono_planificar_acciones_comerciales;
-            this.pictureBox1.Location = new System.Drawing.Point(283, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(253, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(163, 159);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -104,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 277);
+            this.ClientSize = new System.Drawing.Size(431, 271);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SalirBtn);
             this.Controls.Add(this.groupBox1);
