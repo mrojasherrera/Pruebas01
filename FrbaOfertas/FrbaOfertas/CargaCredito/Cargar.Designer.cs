@@ -29,80 +29,65 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.DniCB = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TipoPago = new System.Windows.Forms.ComboBox();
-            this.Monto = new System.Windows.Forms.NumericUpDown();
+            this.TipoPagoCB = new System.Windows.Forms.ComboBox();
             this.DatoTarjeta = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CargarBtn = new System.Windows.Forms.Button();
             this.VolverBtn = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Monto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.DniCB);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.TipoPago);
-            this.groupBox1.Controls.Add(this.Monto);
+            this.groupBox1.Controls.Add(this.TipoPagoCB);
             this.groupBox1.Controls.Add(this.DatoTarjeta);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(408, 201);
+            this.groupBox1.Size = new System.Drawing.Size(408, 266);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cargar crédito";
-            // 
-            // DniCB
-            // 
-            this.DniCB.DisplayMember = "Cli_Dni";
-            this.DniCB.FormattingEnabled = true;
-            this.DniCB.Location = new System.Drawing.Point(224, 150);
-            this.DniCB.Name = "DniCB";
-            this.DniCB.Size = new System.Drawing.Size(166, 21);
-            this.DniCB.TabIndex = 18;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 151);
+            this.label5.Location = new System.Drawing.Point(18, 226);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 20);
+            this.label5.Size = new System.Drawing.Size(135, 20);
             this.label5.TabIndex = 17;
-            this.label5.Text = "DNI:";
+            this.label5.Text = "DNI del Cliente:";
             // 
-            // TipoPago
+            // TipoPagoCB
             // 
-            this.TipoPago.DisplayMember = "Tipo_Pago_Desc";
-            this.TipoPago.FormattingEnabled = true;
-            this.TipoPago.Location = new System.Drawing.Point(224, 33);
-            this.TipoPago.Name = "TipoPago";
-            this.TipoPago.Size = new System.Drawing.Size(167, 21);
-            this.TipoPago.TabIndex = 16;
-            // 
-            // Monto
-            // 
-            this.Monto.Location = new System.Drawing.Point(224, 72);
-            this.Monto.Name = "Monto";
-            this.Monto.Size = new System.Drawing.Size(166, 20);
-            this.Monto.TabIndex = 15;
+            this.TipoPagoCB.DisplayMember = "Tipo_Pago_Desc";
+            this.TipoPagoCB.FormattingEnabled = true;
+            this.TipoPagoCB.Location = new System.Drawing.Point(224, 33);
+            this.TipoPagoCB.Name = "TipoPagoCB";
+            this.TipoPagoCB.Size = new System.Drawing.Size(167, 21);
+            this.TipoPagoCB.TabIndex = 1;
             // 
             // DatoTarjeta
             // 
             this.DatoTarjeta.Location = new System.Drawing.Point(224, 113);
+            this.DatoTarjeta.Multiline = true;
             this.DatoTarjeta.Name = "DatoTarjeta";
-            this.DatoTarjeta.Size = new System.Drawing.Size(166, 20);
-            this.DatoTarjeta.TabIndex = 14;
+            this.DatoTarjeta.Size = new System.Drawing.Size(166, 88);
+            this.DatoTarjeta.TabIndex = 3;
             // 
             // label4
             // 
@@ -134,6 +119,38 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "TIPO DE PAGO:";
             // 
+            // CargarBtn
+            // 
+            this.CargarBtn.Location = new System.Drawing.Point(612, 238);
+            this.CargarBtn.Name = "CargarBtn";
+            this.CargarBtn.Size = new System.Drawing.Size(95, 41);
+            this.CargarBtn.TabIndex = 5;
+            this.CargarBtn.Text = "Cargar";
+            this.CargarBtn.UseVisualStyleBackColor = true;
+            // 
+            // VolverBtn
+            // 
+            this.VolverBtn.Location = new System.Drawing.Point(438, 238);
+            this.VolverBtn.Name = "VolverBtn";
+            this.VolverBtn.Size = new System.Drawing.Size(95, 41);
+            this.VolverBtn.TabIndex = 6;
+            this.VolverBtn.Text = "Volver";
+            this.VolverBtn.UseVisualStyleBackColor = true;
+            this.VolverBtn.Click += new System.EventHandler(this.VolverBtn_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.DecimalPlaces = 2;
+            this.numericUpDown1.Location = new System.Drawing.Point(224, 75);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(166, 20);
+            this.numericUpDown1.TabIndex = 2;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::FrbaOfertas.Properties.Resources.images1;
@@ -144,30 +161,20 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // CargarBtn
+            // textBox1
             // 
-            this.CargarBtn.Location = new System.Drawing.Point(263, 238);
-            this.CargarBtn.Name = "CargarBtn";
-            this.CargarBtn.Size = new System.Drawing.Size(95, 41);
-            this.CargarBtn.TabIndex = 10;
-            this.CargarBtn.Text = "Cargar";
-            this.CargarBtn.UseVisualStyleBackColor = true;
-            // 
-            // VolverBtn
-            // 
-            this.VolverBtn.Location = new System.Drawing.Point(123, 238);
-            this.VolverBtn.Name = "VolverBtn";
-            this.VolverBtn.Size = new System.Drawing.Size(95, 41);
-            this.VolverBtn.TabIndex = 9;
-            this.VolverBtn.Text = "Volver";
-            this.VolverBtn.UseVisualStyleBackColor = true;
-            this.VolverBtn.Click += new System.EventHandler(this.VolverBtn_Click);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(224, 226);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 26);
+            this.textBox1.TabIndex = 18;
+            this.textBox1.DoubleClick += new System.EventHandler(this.textBox1_DoubleClick);
             // 
             // Cargar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 298);
+            this.ClientSize = new System.Drawing.Size(729, 311);
             this.Controls.Add(this.CargarBtn);
             this.Controls.Add(this.VolverBtn);
             this.Controls.Add(this.pictureBox1);
@@ -176,7 +183,7 @@
             this.Text = "Cargar";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Monto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -185,10 +192,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox DniCB;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox TipoPago;
-        private System.Windows.Forms.NumericUpDown Monto;
+        private System.Windows.Forms.ComboBox TipoPagoCB;
         private System.Windows.Forms.TextBox DatoTarjeta;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -196,5 +201,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button CargarBtn;
         private System.Windows.Forms.Button VolverBtn;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
