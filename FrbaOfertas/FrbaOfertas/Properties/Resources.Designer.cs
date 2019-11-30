@@ -113,6 +113,16 @@ namespace FrbaOfertas.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fac {
+            get {
+                object obj = ResourceManager.GetObject("fac", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icono_planificar_acciones_comerciales {
             get {
                 object obj = ResourceManager.GetObject("icono_planificar_acciones_comerciales", resourceCulture);

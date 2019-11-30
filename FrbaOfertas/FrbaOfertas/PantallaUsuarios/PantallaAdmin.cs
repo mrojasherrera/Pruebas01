@@ -52,7 +52,8 @@ namespace FrbaOfertas.PantallaUsuarios
 
         private void FacturarBtn_Click(object sender, EventArgs e)
         {
-
+            Facturar.FacturarProv facturar = new Facturar.FacturarProv();
+            facturar.ShowDialog();
         }
 
         private void EstadisticoBtn_Click(object sender, EventArgs e)

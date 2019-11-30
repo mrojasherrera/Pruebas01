@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NuevoBtn = new System.Windows.Forms.Button();
+            this.LimpiarBtn = new System.Windows.Forms.Button();
             this.NomConTB = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.RubroTB = new System.Windows.Forms.TextBox();
@@ -49,11 +53,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.VolverBtn = new System.Windows.Forms.Button();
-            this.NuevoBtn = new System.Windows.Forms.Button();
-            this.LimpiarBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ProveedorEP = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedorEP)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -85,6 +88,36 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo Proveedor";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(34, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "(*) Campos requeridos";
+            // 
+            // NuevoBtn
+            // 
+            this.NuevoBtn.Location = new System.Drawing.Point(153, 325);
+            this.NuevoBtn.Name = "NuevoBtn";
+            this.NuevoBtn.Size = new System.Drawing.Size(96, 43);
+            this.NuevoBtn.TabIndex = 3;
+            this.NuevoBtn.Text = "Nuevo";
+            this.NuevoBtn.UseVisualStyleBackColor = true;
+            this.NuevoBtn.Click += new System.EventHandler(this.NuevoBtn_Click);
+            // 
+            // LimpiarBtn
+            // 
+            this.LimpiarBtn.Location = new System.Drawing.Point(330, 325);
+            this.LimpiarBtn.Name = "LimpiarBtn";
+            this.LimpiarBtn.Size = new System.Drawing.Size(96, 43);
+            this.LimpiarBtn.TabIndex = 4;
+            this.LimpiarBtn.Text = "Limpiar";
+            this.LimpiarBtn.UseVisualStyleBackColor = true;
+            this.LimpiarBtn.Click += new System.EventHandler(this.LimpiarBtn_Click);
             // 
             // NomConTB
             // 
@@ -211,6 +244,7 @@
             this.CuitTB.Name = "CuitTB";
             this.CuitTB.Size = new System.Drawing.Size(245, 20);
             this.CuitTB.TabIndex = 29;
+            this.CuitTB.Validated += new System.EventHandler(this.CuitTB_Validated);
             // 
             // label9
             // 
@@ -228,6 +262,7 @@
             this.RaSoTB.Name = "RaSoTB";
             this.RaSoTB.Size = new System.Drawing.Size(245, 20);
             this.RaSoTB.TabIndex = 28;
+            this.RaSoTB.Validated += new System.EventHandler(this.RaSoTB_Validated);
             // 
             // label10
             // 
@@ -261,35 +296,9 @@
             this.VolverBtn.UseVisualStyleBackColor = false;
             this.VolverBtn.Click += new System.EventHandler(this.VolverBtn_Click);
             // 
-            // NuevoBtn
+            // ProveedorEP
             // 
-            this.NuevoBtn.Location = new System.Drawing.Point(153, 325);
-            this.NuevoBtn.Name = "NuevoBtn";
-            this.NuevoBtn.Size = new System.Drawing.Size(96, 43);
-            this.NuevoBtn.TabIndex = 3;
-            this.NuevoBtn.Text = "Nuevo";
-            this.NuevoBtn.UseVisualStyleBackColor = true;
-            this.NuevoBtn.Click += new System.EventHandler(this.NuevoBtn_Click);
-            // 
-            // LimpiarBtn
-            // 
-            this.LimpiarBtn.Location = new System.Drawing.Point(330, 325);
-            this.LimpiarBtn.Name = "LimpiarBtn";
-            this.LimpiarBtn.Size = new System.Drawing.Size(96, 43);
-            this.LimpiarBtn.TabIndex = 4;
-            this.LimpiarBtn.Text = "Limpiar";
-            this.LimpiarBtn.UseVisualStyleBackColor = true;
-            this.LimpiarBtn.Click += new System.EventHandler(this.LimpiarBtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(34, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 13);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "(*) Campos requeridos";
+            this.ProveedorEP.ContainerControl = this;
             // 
             // NuevoProveedor
             // 
@@ -304,6 +313,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProveedorEP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,5 +344,6 @@
         private System.Windows.Forms.Button NuevoBtn;
         private System.Windows.Forms.Button LimpiarBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider ProveedorEP;
     }
 }

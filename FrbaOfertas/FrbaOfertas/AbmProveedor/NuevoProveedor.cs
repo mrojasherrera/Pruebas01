@@ -101,5 +101,23 @@ namespace FrbaOfertas.AbmProveedor
             }
             conexion.Close();
         }
+
+        private void RaSoTB_Validated(object sender, EventArgs e)
+        {
+            if (RaSoTB.Text.Trim() == "")
+            {
+                ProveedorEP.SetError(RaSoTB, "Ingrese la Razón social...");
+                RaSoTB.Focus();
+            }
+        }
+
+        private void CuitTB_Validated(object sender, EventArgs e)
+        {
+            if (CuitTB.Text.Trim() == "")
+            {
+                ProveedorEP.SetError(CuitTB, "Ingrese el CUIT...");
+                CuitTB.Focus();
+            }
+        }
     }
 }

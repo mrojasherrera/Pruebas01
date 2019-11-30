@@ -37,7 +37,7 @@ namespace FrbaOfertas.PantallaUsuarios
         private void ComprarBtn_Click(object sender, EventArgs e)
         {
 
-            ComprarOferta.CompraOferta comprar = new ComprarOferta.CompraOferta(UsuarioTB.Text.ToString());
+            ComprarOferta.Ofertas comprar = new ComprarOferta.Ofertas(UsuarioTB.Text.ToString());
             comprar.ShowDialog();
         }
 

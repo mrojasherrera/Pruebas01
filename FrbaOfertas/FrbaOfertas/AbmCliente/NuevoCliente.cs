@@ -111,5 +111,14 @@ namespace FrbaOfertas.AbmCliente
 
             
         }
+
+        private void DniTB_Validated(object sender, EventArgs e)
+        {
+            if (DniTB.Text.Trim() == "")
+            {
+                ClienteEP.SetError(DniTB, "Ingrese el Dni...");
+                DniTB.Focus();
+            }
+        }
     }
 }

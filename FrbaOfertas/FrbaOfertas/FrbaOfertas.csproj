@@ -146,11 +146,11 @@
     <Compile Include="CargaCredito\Cargar.Designer.cs">
       <DependentUpon>Cargar.cs</DependentUpon>
     </Compile>
-    <Compile Include="ComprarOferta\CompraOferta.cs">
+    <Compile Include="ComprarOferta\Ofertas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ComprarOferta\CompraOferta.Designer.cs">
-      <DependentUpon>CompraOferta.cs</DependentUpon>
+    <Compile Include="ComprarOferta\Ofertas.Designer.cs">
+      <DependentUpon>Ofertas.cs</DependentUpon>
     </Compile>
     <Compile Include="CrearOferta\NuevaOferta.cs">
       <SubType>Form</SubType>
@@ -158,11 +158,17 @@
     <Compile Include="CrearOferta\NuevaOferta.Designer.cs">
       <DependentUpon>NuevaOferta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Facturar\Form1.cs">
+    <Compile Include="Facturar\EmitirFac.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Facturar\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Facturar\EmitirFac.Designer.cs">
+      <DependentUpon>EmitirFac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Facturar\FacturarProv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturar\FacturarProv.Designer.cs">
+      <DependentUpon>FacturarProv.cs</DependentUpon>
     </Compile>
     <Compile Include="GD2C2019DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -257,11 +263,17 @@
     <EmbeddedResource Include="CargaCredito\Cargar.resx">
       <DependentUpon>Cargar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ComprarOferta\CompraOferta.resx">
-      <DependentUpon>CompraOferta.cs</DependentUpon>
+    <EmbeddedResource Include="ComprarOferta\Ofertas.resx">
+      <DependentUpon>Ofertas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrearOferta\NuevaOferta.resx">
       <DependentUpon>NuevaOferta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturar\EmitirFac.resx">
+      <DependentUpon>EmitirFac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturar\FacturarProv.resx">
+      <DependentUpon>FacturarProv.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoEstadistico\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -365,7 +377,9 @@
   <ItemGroup>
     <None Include="Resources\-account-profile-user-uploadload-upload--512.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\fac.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
