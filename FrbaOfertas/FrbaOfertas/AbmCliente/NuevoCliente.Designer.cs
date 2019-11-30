@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.LimpiarBtn = new System.Windows.Forms.Button();
+            this.FechaNacDTP = new System.Windows.Forms.DateTimePicker();
+            this.NuevoBtn = new System.Windows.Forms.Button();
             this.CiudadTB = new System.Windows.Forms.TextBox();
             this.Ciudad = new System.Windows.Forms.Label();
             this.FechNac = new System.Windows.Forms.Label();
@@ -48,12 +53,10 @@
             this.NombreTB = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.VolverBtn = new System.Windows.Forms.Button();
-            this.NuevoBtn = new System.Windows.Forms.Button();
-            this.LimpiarBtn = new System.Windows.Forms.Button();
-            this.FechaNacDTP = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ClienteEP = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteEP)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -85,6 +88,43 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nuevo cliente";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(33, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "(*) Campo requerido";
+            // 
+            // LimpiarBtn
+            // 
+            this.LimpiarBtn.Location = new System.Drawing.Point(302, 365);
+            this.LimpiarBtn.Name = "LimpiarBtn";
+            this.LimpiarBtn.Size = new System.Drawing.Size(106, 47);
+            this.LimpiarBtn.TabIndex = 10;
+            this.LimpiarBtn.Text = "Limpiar";
+            this.LimpiarBtn.UseVisualStyleBackColor = true;
+            this.LimpiarBtn.Click += new System.EventHandler(this.LimpiarBtn_Click);
+            // 
+            // FechaNacDTP
+            // 
+            this.FechaNacDTP.Location = new System.Drawing.Point(285, 324);
+            this.FechaNacDTP.Name = "FechaNacDTP";
+            this.FechaNacDTP.Size = new System.Drawing.Size(259, 20);
+            this.FechaNacDTP.TabIndex = 8;
+            // 
+            // NuevoBtn
+            // 
+            this.NuevoBtn.Location = new System.Drawing.Point(171, 363);
+            this.NuevoBtn.Name = "NuevoBtn";
+            this.NuevoBtn.Size = new System.Drawing.Size(106, 49);
+            this.NuevoBtn.TabIndex = 9;
+            this.NuevoBtn.Text = "Nuevo";
+            this.NuevoBtn.UseVisualStyleBackColor = true;
+            this.NuevoBtn.Click += new System.EventHandler(this.NuevoBtn_Click);
             // 
             // CiudadTB
             // 
@@ -217,6 +257,7 @@
             this.DniTB.Name = "DniTB";
             this.DniTB.Size = new System.Drawing.Size(259, 20);
             this.DniTB.TabIndex = 2;
+            this.DniTB.Validated += new System.EventHandler(this.DniTB_Validated);
             // 
             // ApellidoTB
             // 
@@ -254,42 +295,9 @@
             this.VolverBtn.UseVisualStyleBackColor = false;
             this.VolverBtn.Click += new System.EventHandler(this.VolverBtn_Click);
             // 
-            // NuevoBtn
+            // ClienteEP
             // 
-            this.NuevoBtn.Location = new System.Drawing.Point(171, 363);
-            this.NuevoBtn.Name = "NuevoBtn";
-            this.NuevoBtn.Size = new System.Drawing.Size(106, 49);
-            this.NuevoBtn.TabIndex = 9;
-            this.NuevoBtn.Text = "Nuevo";
-            this.NuevoBtn.UseVisualStyleBackColor = true;
-            this.NuevoBtn.Click += new System.EventHandler(this.NuevoBtn_Click);
-            // 
-            // LimpiarBtn
-            // 
-            this.LimpiarBtn.Location = new System.Drawing.Point(302, 365);
-            this.LimpiarBtn.Name = "LimpiarBtn";
-            this.LimpiarBtn.Size = new System.Drawing.Size(106, 47);
-            this.LimpiarBtn.TabIndex = 10;
-            this.LimpiarBtn.Text = "Limpiar";
-            this.LimpiarBtn.UseVisualStyleBackColor = true;
-            this.LimpiarBtn.Click += new System.EventHandler(this.LimpiarBtn_Click);
-            // 
-            // FechaNacDTP
-            // 
-            this.FechaNacDTP.Location = new System.Drawing.Point(285, 324);
-            this.FechaNacDTP.Name = "FechaNacDTP";
-            this.FechaNacDTP.Size = new System.Drawing.Size(259, 20);
-            this.FechaNacDTP.TabIndex = 8;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(33, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 13);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "(*) Campo requerido";
+            this.ClienteEP.ContainerControl = this;
             // 
             // NuevoCliente
             // 
@@ -304,6 +312,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteEP)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,5 +343,6 @@
         private System.Windows.Forms.Button LimpiarBtn;
         private System.Windows.Forms.DateTimePicker FechaNacDTP;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ErrorProvider ClienteEP;
     }
 }

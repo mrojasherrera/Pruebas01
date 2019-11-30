@@ -152,6 +152,12 @@
     <Compile Include="CargaCredito\Cargar.Designer.cs">
       <DependentUpon>Cargar.cs</DependentUpon>
     </Compile>
+    <Compile Include="CargaCredito\DummyForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CargaCredito\DummyForm1.Designer.cs">
+      <DependentUpon>DummyForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComprarOferta\Comprar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CargaCredito\Cargar.resx">
       <DependentUpon>Cargar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CargaCredito\DummyForm1.resx">
+      <DependentUpon>DummyForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComprarOferta\Comprar.resx">
       <DependentUpon>Comprar.cs</DependentUpon>
